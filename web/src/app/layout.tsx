@@ -6,6 +6,7 @@ import "./styles/app.css";
 import { IconSprite } from "@/components/IconSprite";
 import { ToastProvider } from "@/components/ToastProvider";
 import { SaveProvider } from "@/components/SaveProvider";
+import { Analytics } from "@vercel/analytics/next"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -38,6 +39,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${inter.variable} ${newsreader.variable}`}>
       <body>
+        <Analytics />
         <IconSprite />
         <ToastProvider>
           <SaveProvider>{children}</SaveProvider>
