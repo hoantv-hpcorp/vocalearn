@@ -1,0 +1,694 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Find practical English articles for your workplace. Search by situation, industry, or topic. Each article leads to useful word packs that help you learn with context."
+    >
+    <meta name="theme-color" content="#f6f8fb">
+    <title>Blog & Library — WordStack</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+      .blog-page .blog-hero {
+        background: radial-gradient(circle at 20% 50%, rgb(219 234 254 / 40%), transparent 40%), var(--canvas);
+        padding-block: 56px 70px;
+      }
+
+      .blog-hero-inner {
+        display: grid;
+        gap: 34px;
+        align-items: center;
+      }
+
+      .blog-hero-copy {
+        max-width: 620px;
+      }
+
+      .blog-hero h1 {
+        margin-bottom: 18px;
+        font-size: clamp(2rem, 6vw, 3rem);
+      }
+
+      .blog-hero h1 span {
+        color: var(--blue);
+      }
+
+      .blog-hero .method-intro {
+        max-width: 540px;
+        margin-bottom: 26px;
+        font-size: 17px;
+      }
+
+      .loop-preview {
+        width: 100%;
+        padding: 24px;
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        background:
+          linear-gradient(180deg, rgb(255 255 255 / 0%) 0%, var(--pale-blue-2) 100%),
+          var(--surface);
+        box-shadow: 0 24px 48px -30px rgb(23 43 58 / 30%);
+      }
+
+      .loop-preview-label {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        margin: 0 0 18px;
+        color: var(--blue-deep);
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: .12em;
+        text-transform: uppercase;
+      }
+
+      .loop-preview-label::before {
+        content: "";
+        width: 6px;
+        height: 6px;
+        flex: none;
+        border-radius: 50%;
+        background: var(--blue);
+        box-shadow: 0 0 0 3px var(--pale-blue);
+      }
+
+      .loop-preview-label::after {
+        content: "";
+        height: 1px;
+        flex: 1;
+        background: linear-gradient(90deg, var(--border), rgb(217 226 235 / 0%));
+      }
+
+      .loop-preview ol {
+        display: grid;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .loop-preview li {
+        position: relative;
+        display: flex;
+        min-height: 52px;
+        align-items: center;
+        gap: 14px;
+        padding-block: 8px;
+        color: var(--ink);
+        font-size: 14.5px;
+        font-weight: 650;
+        letter-spacing: -.01em;
+        line-height: 1.35;
+      }
+
+      .loop-preview li::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 16px;
+        width: 1px;
+        background: #d5e3f7;
+      }
+
+      .loop-preview li:first-child::before {
+        top: 50%;
+      }
+
+      .loop-preview li:last-child::before {
+        bottom: 50%;
+      }
+
+      .loop-step {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        width: 34px;
+        height: 34px;
+        flex: 0 0 34px;
+        place-items: center;
+        border: 1px solid #d9e6fb;
+        border-radius: 50%;
+        color: var(--blue);
+        background: var(--surface);
+        box-shadow: 0 0 0 4px var(--surface), 0 1px 2px rgb(23 43 58 / 6%);
+        font-size: 11.5px;
+        font-weight: 800;
+        font-variant-numeric: tabular-nums;
+        letter-spacing: .02em;
+      }
+
+      .loop-preview li:last-child .loop-step {
+        border-color: #cfe9de;
+        color: var(--green-ink);
+        background: var(--green-soft);
+      }
+
+      .blog-search-section {
+        position: sticky;
+        top: 92px;
+        z-index: 3;
+        padding-block: 16px;
+        background: rgb(255 255 255 / 95%);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border);
+      }
+
+      .blog-search-inner {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .blog-search {
+        flex: 1;
+        min-width: 280px;
+        position: relative;
+      }
+
+      .blog-search input {
+        width: 100%;
+        min-height: 44px;
+        padding: 12px 16px;
+        padding-left: 42px;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        font-size: 14px;
+        background: var(--surface);
+      }
+
+      .blog-search input:focus {
+        outline: none;
+        border-color: var(--blue);
+        box-shadow: 0 0 0 3px rgb(37 99 235 / 12%);
+      }
+
+      .search-icon {
+        position: absolute;
+        left: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--muted);
+        font-size: 16px;
+      }
+
+      .blog-filters {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+
+      .blog-filter {
+        min-height: 44px;
+        padding: 8px 14px;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        background: var(--surface);
+        color: var(--body);
+        font: 600 13px/1.2 var(--font-body);
+        cursor: pointer;
+        transition: border-color 160ms ease, background-color 160ms ease, color 160ms ease;
+      }
+
+      .blog-filter:hover,
+      .blog-filter.active {
+        border-color: var(--blue);
+        background: var(--pale-blue);
+        color: var(--blue);
+      }
+
+      .blog-section {
+        padding-block: 60px;
+      }
+
+      .blog-section--featured {
+        background: var(--canvas);
+      }
+
+      .blog-grid {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      }
+
+      .blog-card {
+        position: relative;
+        padding: 24px;
+        border: 1px solid var(--border);
+        border-radius: var(--radius-card);
+        background: var(--surface);
+        transition: all 150ms ease;
+        cursor: pointer;
+      }
+
+      .blog-card:hover {
+        border-color: var(--blue);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgb(23 43 58 / 8%);
+      }
+
+      .blog-card.featured {
+        border-width: 2px;
+        border-color: var(--blue);
+      }
+
+      .blog-card.new {
+        background: linear-gradient(135deg, #f0f9ff 0%, var(--surface) 100%);
+      }
+
+      .blog-category {
+        display: inline-block;
+        margin-bottom: 12px;
+        padding: 4px 10px;
+        border-radius: 6px;
+        color: var(--blue);
+        background: var(--pale-blue);
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+
+      .blog-title {
+        margin-bottom: 8px;
+        font-size: 17px;
+        letter-spacing: -.025em;
+        line-height: 1.3;
+        color: var(--ink);
+      }
+
+      .blog-excerpt {
+        margin-bottom: 14px;
+        color: var(--body);
+        font-size: 14px;
+        line-height: 1.5;
+      }
+
+      .blog-meta {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        font-size: 12px;
+        color: var(--muted);
+      }
+
+      .blog-read-time {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
+
+      .blog-arrow {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--muted);
+        font-size: 14px;
+        opacity: 0;
+        transition: all 150ms ease;
+      }
+
+      .blog-card:hover .blog-arrow {
+        opacity: 1;
+        transform: translateY(-50%) translateX(-4px);
+        color: var(--blue);
+      }
+
+      .blog-stats {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 16px;
+        margin-top: 40px;
+        padding: 24px;
+        border: 1px solid var(--border);
+        border-radius: var(--radius-card);
+        background: var(--canvas);
+      }
+
+      .blog-stat {
+        text-align: center;
+      }
+
+      .blog-stat-value {
+        display: block;
+        color: var(--blue);
+        font-size: 24px;
+        font-weight: 800;
+        margin-bottom: 4px;
+      }
+
+      .blog-stat-label {
+        color: var(--muted);
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .empty-state {
+        text-align: center;
+        padding: 60px 20px;
+        color: var(--muted);
+      }
+
+      .empty-state-icon {
+        font-size: 48px;
+        margin-bottom: 16px;
+        opacity: 0.5;
+      }
+
+      @media (min-width: 620px) {
+        .blog-hero {
+          padding-block: 72px 88px;
+        }
+
+        .blog-hero-inner {
+          grid-template-columns: 1.1fr .9fr;
+          gap: 38px;
+        }
+
+        .loop-preview {
+          justify-self: end;
+        }
+
+        .blog-section {
+          padding-block: 72px;
+        }
+
+        .blog-stats {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      @media (min-width: 900px) {
+        .blog-hero {
+          padding-block: 88px 100px;
+        }
+
+        .blog-hero-inner {
+          gap: 50px;
+        }
+
+        .loop-preview {
+          padding: 26px;
+        }
+
+        .blog-section {
+          padding-block: 88px;
+        }
+
+        .blog-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+    </style>
+  </head>
+  <body class="blog-page">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" id="top">
+      <div class="header-inner">
+        <a class="wordmark" href="../index.html" aria-label="WordStack home">
+          <span class="wordmark-icon" aria-hidden="true">W</span>
+          <span>wordstack<span class="wordmark-period">.</span></span>
+        </a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="word-packs.html">Learn</a>
+          <a href="blog-library.html" aria-current="page">Blog</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="method.html">Method</a>
+          <a href="faq.html">FAQ</a>
+        </nav>
+
+        <div class="header-actions">
+          <a class="button button-small" href="start-here.html">Start free <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="blog-hero section-shell" aria-labelledby="blog-title">
+        <div class="blog-hero-inner">
+          <div class="blog-hero-copy">
+            <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span> Learn English through workplace questions</p>
+            <h1 id="blog-title">English for real work moments.</h1>
+            <p class="method-intro">
+              Find articles for the situations you actually need at work. Each answer leads to a word pack that puts those useful words into context for steady practice.
+            </p>
+            <div class="method-actions">
+              <a class="button" href="#popular">Browse by category <span aria-hidden="true">↓</span></a>
+            </div>
+          </div>
+
+          <aside class="loop-preview" aria-label="Your learning path">
+            <p class="loop-preview-label">Your learning path</p>
+            <ol>
+              <li><span class="loop-step" aria-hidden="true">01</span> Find the question you need</li>
+              <li><span class="loop-step" aria-hidden="true">02</span> Read the practical answer</li>
+              <li><span class="loop-step" aria-hidden="true">03</span> Start the related word pack</li>
+              <li><span class="loop-step" aria-hidden="true">04</span> Review what matters</li>
+            </ol>
+          </aside>
+        </div>
+      </section>
+
+      <section class="blog-search-section" aria-label="Search and filter">
+        <div class="section-shell blog-search-inner">
+          <div class="blog-search">
+            <span class="search-icon" aria-hidden="true">⌕</span>
+            <input type="search" id="blogSearch" placeholder="Search articles (e.g., 'business English for meetings'...)" aria-label="Search blog articles">
+          </div>
+          <div class="blog-filters">
+            <button class="blog-filter active" data-category="all">All articles</button>
+            <button class="blog-filter" data-category="meetings">Meetings</button>
+            <button class="blog-filter" data-category="emails">Emails</button>
+            <button class="blog-filter" data-category="interviews">Interviews</button>
+            <button class="blog-filter" data-category="presentations">Presentations</button>
+            <button class="blog-filter" data-category="negotiation">Negotiation</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="blog-section blog-section--featured" id="popular" aria-labelledby="featured-title">
+        <div class="section-shell">
+          <div class="section-heading">
+            <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span> Most popular</p>
+            <h2 id="featured-title">Workplace English questions and answers.</h2>
+            <p>Click on any article to see how the English helps in real work situations.</p>
+          </div>
+
+          <div class="blog-grid" id="blogGrid">
+            <article class="blog-card featured" data-category="meetings emails">
+              <span class="blog-category">MEETINGS</span>
+              <h3 class="blog-title">How to start a meeting professionally in English</h3>
+              <p class="blog-excerpt">Essential phrases for agendas, roll calls, and getting started. Covers "Let's begin our meeting," "Welcome everyone," and smooth transition phrases.</p>
+              <div class="blog-meta">
+                <span class="blog-read-time"><span aria-hidden="true">⏱️</span> 3 min read</span>
+                <span class="blog-dot" aria-hidden="true">·</span>
+                <span>125 words</span>
+              </div>
+              <span class="blog-arrow" aria-hidden="true">→</span>
+            </article>
+
+            <article class="blog-card new" data-category="emails">
+              <span class="blog-category">EMAILS</span>
+              <h3 class="blog-title">Polite phrases for declining meeting requests</h3>
+              <p class="blog-excerpt">"I'm grateful for the offer but I can't make it" and other professional ways to say no without damaging relationships.</p>
+              <div class="blog-meta">
+                <span class="blog-read-time"><span aria-hidden="true">⏱️</span> 2 min read</span>
+                <span class="blog-dot" aria-hidden="true">·</span>
+                <span>89 words</span>
+              </div>
+              <span class="blog-arrow" aria-hidden="true">→</span>
+            </article>
+
+            <article class="blog-card" data-category="interviews">
+              <span class="blog-category">INTERVIEWS</span>
+              <h3 class="blog-title">How to answer 'Tell me about yourself' in English</h3>
+              <p class="blog-excerpt">Structure your response to highlight relevant experience while keeping it concise and professional. Includes examples for different roles.</p>
+              <div class="blog-meta">
+                <span class="blog-read-time"><span aria-hidden="true">⏱️</span> 4 min read</span>
+                <span class="blog-dot" aria-hidden="true">·</span>
+                <span>156 words</span>
+              </div>
+              <span class="blog-arrow" aria-hidden="true">→</span>
+            </article>
+
+            <article class="blog-card" data-category="presentations">
+              <span class="blog-category">PRESENTATIONS</span>
+              <h3 class="blog-title">Opening phrases that command attention</h3>
+              <p class="blog-excerpt">Powerful ways to begin your presentation: from "Good morning everyone" to "Today I'm going to share insights about..." with confidence.</p>
+              <div class="blog-meta">
+                <span class="blog-read-time"><span aria-hidden="true">⏱️</span> 3 min read</span>
+                <span class="blog-dot" aria-hidden="true">·</span>
+                <span>112 words</span>
+              </div>
+              <span class="blog-arrow" aria-hidden="true">→</span>
+            </article>
+
+            <article class="blog-card featured" data-category="negotiation">
+              <span class="blog-category">NEGOTIATION</span>
+              <h3 class="blog-title">How to say no professionally in business English</h3>
+              <p class="blog-excerpt">Learn phrases like "I understand your point but I must decline" and "While I'd prefer to proceed, circumstances prevent it."</p>
+              <div class="blog-meta">
+                <span class="blog-read-time"><span aria-hidden="true">⏱️</span> 5 min read</span>
+                <span class="blog-dot" aria-hidden="true">·</span>
+                <span>198 words</span>
+              </div>
+              <span class="blog-arrow" aria-hidden="true">→</span>
+            </article>
+
+            <article class="blog-card" data-category="emails meetings">
+              <span class="blog-category">EMAILS</span>
+              <h3 class="blog-title">Subject lines that get responses</h3>
+              <p class="blog-excerpt">Effective email subject lines for different types of messages: urgent, informational, collaborative, and follow-up.</p>
+              <div class="blog-meta">
+                <span class="blog-read-time"><span aria-hidden="true">⏱️</span> 2 min read</span>
+                <span class="blog-dot" aria-hidden="true">·</span>
+                <span>95 words</span>
+              </div>
+              <span class="blog-arrow" aria-hidden="true">→</span>
+            </article>
+          </div>
+
+          <div class="empty-state" id="emptyState" style="display: none;">
+            <div class="empty-state-icon" aria-hidden="true">📚</div>
+            <p>No articles found matching your search.</p>
+          </div>
+
+          <div class="blog-stats">
+            <div class="blog-stat">
+              <span class="blog-stat-value">50</span>
+              <span class="blog-stat-label">Articles</span>
+            </div>
+            <div class="blog-stat">
+              <span class="blog-stat-value">8</span>
+              <span class="blog-stat-label">Categories</span>
+            </div>
+            <div class="blog-stat">
+              <span class="blog-stat-value">12k</span>
+              <span class="blog-stat-label">Monthly readers</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="closing-cta" aria-labelledby="closing-title">
+        <div class="section-shell closing-inner">
+          <div class="closing-mark" aria-hidden="true">W.</div>
+          <p class="eyebrow">Need a specific phrase?</p>
+          <h2 id="closing-title">Every workplace question has an answer here.</h2>
+          <p>Search for your exact English challenge and find the words that help you succeed.</p>
+          <a class="button button-light" href="word-packs.html">Browse word packs <span aria-hidden="true">→</span></a>
+          <p class="closing-note">New articles added monthly · Free to explore · No account needed</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="section-shell footer-main">
+        <div class="footer-brand">
+          <a class="wordmark" href="../index.html#top" aria-label="WordStack home">
+            <span class="wordmark-icon" aria-hidden="true">W</span>
+            <span>wordstack<span class="wordmark-period">.</span></span>
+          </a>
+          <p>Useful English for the work you do. One small session at a time.</p>
+        </div>
+        <div class="footer-links">
+          <div>
+            <strong>Explore</strong>
+            <a href="word-packs.html">Word packs</a>
+            <a href="method.html">Our method</a>
+            <a href="about.html">About</a>
+          </div>
+          <div>
+            <strong>WordStack</strong>
+            <a href="about.html">About</a>
+            <a href="faq.html">FAQ</a>
+            <a href="contact.html">Contact</a>
+          </div>
+          <div>
+            <strong>Good to know</strong>
+            <a href="privacy.html">Privacy</a>
+            <a href="terms.html">Terms</a>
+            <a href="#top">Back to top ↑</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom section-shell">
+        <span>© 2026 WordStack. Made for steady progress.</span>
+        <span>Working name — change freely.</span>
+      </div>
+    </footer>
+
+    <script>
+      // Blog search and filter functionality
+      document.addEventListener('DOMContentLoaded', function() {
+        const searchInput = document.getElementById('blogSearch');
+        const filters = document.querySelectorAll('.blog-filter');
+        const blogCards = document.querySelectorAll('.blog-card');
+        const emptyState = document.getElementById('emptyState');
+        
+        function filterBlogCards() {
+          const searchTerm = searchInput.value.toLowerCase();
+          const activeFilter = document.querySelector('.blog-filter.active');
+          const activeCategory = activeFilter ? activeFilter.getAttribute('data-category') : 'all';
+          
+          let visibleCount = 0;
+          
+          blogCards.forEach(card => {
+            const title = card.querySelector('.blog-title').textContent.toLowerCase();
+            const excerpt = card.querySelector('.blog-excerpt').textContent.toLowerCase();
+            const category = card.getAttribute('data-category');
+            
+            const matchesSearch = title.includes(searchTerm) || excerpt.includes(searchTerm);
+            const matchesFilter = activeCategory === 'all' || category.includes(activeCategory);
+            
+            if (matchesSearch && matchesFilter) {
+              card.style.display = 'block';
+              visibleCount++;
+            } else {
+              card.style.display = 'none';
+            }
+          });
+          
+          // Show/hide empty state
+          if (visibleCount === 0) {
+            emptyState.style.display = 'block';
+          } else {
+            emptyState.style.display = 'none';
+          }
+        }
+        
+        // Search input event
+        searchInput.addEventListener('input', filterBlogCards);
+        
+        // Filter buttons
+        filters.forEach(filter => {
+          filter.addEventListener('click', function() {
+            // Update active state
+            filters.forEach(f => f.classList.remove('active'));
+            this.classList.add('active');
+            
+            // Re-filter
+            filterBlogCards();
+          });
+        });
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+              target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

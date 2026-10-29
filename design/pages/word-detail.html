@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Learn how to use “align” in a real workplace conversation, with a clear definition, an example, and useful collocations."
+    >
+    <meta name="theme-color" content="#f6f8fb">
+    <title>Align — Meetings &amp; Pushback | WordStack</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+      .word-page {
+        min-height: 60vh;
+        padding-bottom: 64px;
+        background: var(--canvas);
+      }
+
+      .word-page-shell {
+        width: min(var(--content-width), 100% - 40px);
+        margin-inline: auto;
+      }
+
+      .word-breadcrumbs {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 7px;
+        padding-block: 23px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .word-breadcrumbs a {
+        color: var(--body);
+        text-decoration-thickness: 1px;
+        text-underline-offset: 3px;
+      }
+
+      .word-breadcrumbs a:hover {
+        color: var(--blue);
+      }
+
+      .breadcrumb-separator {
+        color: #94a3b8;
+      }
+
+      .word-page-heading {
+        max-width: 700px;
+        margin-bottom: 26px;
+      }
+
+      .word-page-heading .eyebrow {
+        margin-bottom: 10px;
+      }
+
+      .word-page-heading h1 {
+        margin-bottom: 10px;
+        font-size: clamp(2.25rem, 7vw, 3.5rem);
+      }
+
+      .word-page-heading > p:last-child {
+        max-width: 620px;
+        margin-bottom: 0;
+        color: var(--muted);
+        font-size: 16px;
+      }
+
+      .word-detail-layout {
+        display: grid;
+        gap: 18px;
+        align-items: start;
+      }
+
+      .word-record,
+      .usage-card,
+      .related-card {
+        border: 1px solid var(--border);
+        border-radius: var(--radius-card);
+        background: var(--surface);
+      }
+
+      .word-record {
+        padding: 22px;
+      }
+
+      .word-record-top {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        padding-bottom: 17px;
+        border-bottom: 1px solid #edf1f5;
+      }
+
+      .word-record-label,
+      .word-position {
+        margin: 0;
+        font-size: 12px;
+        font-weight: 750;
+      }
+
+      .word-record-label {
+        color: var(--blue);
+        letter-spacing: .08em;
+        text-transform: uppercase;
+      }
+
+      .word-position {
+        color: var(--muted);
+      }
+
+      .word-record h2 {
+        margin: 21px 0 2px;
+        font-size: clamp(2.5rem, 10vw, 3.5rem);
+        letter-spacing: -.06em;
+        line-height: 1.08;
+      }
+
+      .word-pronunciation {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 10px;
+        margin: 0 0 20px;
+        color: var(--muted);
+        font-size: 15px;
+      }
+
+      .part-of-speech {
+        padding: 3px 9px;
+        border-radius: 6px;
+        color: var(--blue);
+        background: var(--pale-blue);
+        font-size: 12px;
+        font-weight: 700;
+      }
+
+      .word-definition-label,
+      .workplace-example h3,
+      .usage-card h2,
+      .related-card h2 {
+        margin-bottom: 8px;
+        font-size: 15px;
+        letter-spacing: -.01em;
+      }
+
+      .word-definition {
+        max-width: 580px;
+        margin-bottom: 22px;
+        color: var(--body);
+        font-size: 17px;
+        line-height: 1.65;
+      }
+
+      .workplace-example {
+        padding: 17px;
+        border: 1px solid #e4ebf4;
+        border-radius: 11px;
+        background: #f8faff;
+      }
+
+      .workplace-example h3 {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 9px;
+      }
+
+      .example-icon {
+        color: var(--blue);
+        font-size: 18px;
+      }
+
+      .workplace-example blockquote {
+        margin: 0;
+        color: var(--body);
+        font-size: 15px;
+        line-height: 1.7;
+      }
+
+      .word-actions {
+        display: grid;
+        gap: 10px;
+        margin-top: 18px;
+      }
+
+      .word-action {
+        min-height: 48px;
+        border-radius: 8px;
+        font: 700 14px/1.3 var(--font);
+      }
+
+      .word-action:disabled {
+        cursor: not-allowed;
+        opacity: .78;
+      }
+
+      .word-action-primary {
+        border: 1px solid var(--blue);
+        color: #fff;
+        background: var(--blue);
+      }
+
+      .word-action-secondary {
+        border: 1px solid var(--border);
+        color: var(--body);
+        background: #fff;
+      }
+
+      .action-note {
+        margin: -3px 0 2px;
+        color: var(--muted);
+        font-size: 12px;
+        line-height: 1.5;
+      }
+
+      .usage-card {
+        padding: 22px;
+      }
+
+      .usage-card h2,
+      .related-card h2 {
+        margin-bottom: 7px;
+        font-size: 19px;
+      }
+
+      .usage-intro {
+        margin-bottom: 17px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .collocation-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .collocation-list li {
+        padding: 7px 10px;
+        border: 1px solid #dce9ff;
+        border-radius: 8px;
+        color: #1747a6;
+        background: #f4f8ff;
+        font-size: 13px;
+        font-weight: 650;
+      }
+
+      .usage-tip {
+        margin: 20px 0 0;
+        padding-top: 16px;
+        border-top: 1px solid #edf1f5;
+        color: var(--body);
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .usage-tip strong {
+        color: var(--ink);
+      }
+
+      .related-card {
+        margin-top: 18px;
+        padding: 20px 22px;
+      }
+
+      .related-card > p {
+        margin: 0 0 13px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .related-words {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .related-word {
+        padding: 5px 10px;
+        border-radius: 999px;
+        color: var(--body);
+        background: #f1f4f8;
+        font-size: 13px;
+        font-weight: 650;
+      }
+
+      .pack-word-navigation {
+        display: grid;
+        gap: 10px;
+        margin-top: 22px;
+      }
+
+      .pack-word-navigation a {
+        display: flex;
+        min-height: 58px;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 10px 15px;
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        color: var(--ink);
+        background: #fff;
+        text-decoration: none;
+      }
+
+      .pack-word-navigation a:hover {
+        border-color: #b8cdfa;
+        background: #f8faff;
+      }
+
+      .pack-word-navigation span {
+        display: block;
+        color: var(--muted);
+        font-size: 11px;
+        font-weight: 600;
+      }
+
+      .pack-word-navigation strong {
+        display: block;
+        font-size: 14px;
+      }
+
+      .pack-navigation-note {
+        margin: 10px 0 0;
+        color: var(--muted);
+        font-size: 12px;
+        line-height: 1.5;
+      }
+
+      @media (min-width: 620px) {
+        .word-page-shell {
+          width: min(var(--content-width), 100% - 64px);
+        }
+
+        .word-record,
+        .usage-card {
+          padding: 27px;
+        }
+
+        .word-actions {
+          grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        }
+
+        .action-note {
+          grid-column: 1 / -1;
+        }
+
+        .pack-word-navigation {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (min-width: 900px) {
+        .word-page {
+          padding-bottom: 82px;
+        }
+
+        .word-detail-layout {
+          grid-template-columns: minmax(0, 1.45fr) minmax(280px, .8fr);
+          gap: 22px;
+        }
+
+        .word-record {
+          padding: 32px;
+        }
+
+        .usage-card {
+          padding: 26px;
+        }
+
+        .related-card,
+        .pack-word-navigation,
+        .pack-navigation-note {
+          grid-column: 1 / -1;
+        }
+
+        .related-card {
+          margin-top: 0;
+        }
+
+        .pack-word-navigation {
+          margin-top: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" id="top">
+      <div class="header-inner">
+        <a class="wordmark" href="../index.html" aria-label="WordStack home">
+          <span class="wordmark-icon" aria-hidden="true">W</span>
+          <span>wordstack<span class="wordmark-period">.</span></span>
+        </a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="word-packs.html" aria-current="page">Learn</a>
+          <a href="blog-library.html">Blog</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="method.html">Method</a>
+          <a href="faq.html">FAQ</a>
+        </nav>
+
+        <div class="header-actions">
+          <a class="login-link" href="../index.html#start">Log in</a>
+          <a class="button button-small" href="start-here.html">Start free <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="word-page">
+      <div class="word-page-shell">
+        <nav class="word-breadcrumbs" aria-label="Breadcrumb">
+          <a href="../index.html">Home</a>
+          <span class="breadcrumb-separator" aria-hidden="true">/</span>
+          <a href="word-packs.html">Word packs</a>
+          <span class="breadcrumb-separator" aria-hidden="true">/</span>
+          <a href="word-pack.html">Meetings &amp; Pushback</a>
+          <span class="breadcrumb-separator" aria-hidden="true">/</span>
+          <span aria-current="page">align</span>
+        </nav>
+
+        <header class="word-page-heading">
+          <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span> Meetings &amp; Pushback</p>
+          <h1 id="page-title">One useful word for your next meeting.</h1>
+          <p>Learn the word, see it in a real work moment, and keep it handy for when you need it.</p>
+        </header>
+
+        <div class="word-detail-layout" aria-labelledby="page-title">
+          <article class="word-record" id="word-record" aria-labelledby="word-title">
+            <div class="word-record-top">
+              <p class="word-record-label">Meetings &amp; Pushback</p>
+              <p class="word-position">Word 03 <span aria-hidden="true">of</span> 15 in this pack</p>
+            </div>
+
+            <h2 id="word-title">align</h2>
+            <p class="word-pronunciation">
+              <span aria-label="Pronunciation">/əˈlaɪn/</span>
+              <span class="part-of-speech">verb</span>
+            </p>
+
+            <h3 class="word-definition-label">Plain definition</h3>
+            <p class="word-definition">To agree on a plan or make sure people and activities are working toward the same goal.</p>
+
+            <section class="workplace-example" aria-labelledby="example-title">
+              <h3 id="example-title"><span class="example-icon" aria-hidden="true">“</span> In a work conversation</h3>
+              <blockquote>
+                “Before we share the proposal with the client, let’s <strong>align</strong> on the timeline and who owns each next step.”
+              </blockquote>
+            </section>
+
+            <div class="word-actions" aria-label="Word actions">
+              <button
+                class="word-action word-action-primary"
+                type="button"
+                disabled
+                aria-describedby="save-note"
+              >Save to My Words <span aria-hidden="true">＋</span></button>
+              <button
+                class="word-action word-action-secondary"
+                type="button"
+                disabled
+                aria-describedby="audio-note"
+              ><span aria-hidden="true">♪</span> Listen to pronunciation</button>
+              <p class="action-note" id="save-note">Demo only — saving isn’t available on this static page.</p>
+              <p class="action-note" id="audio-note">Audio demo placeholder — playback isn’t available yet.</p>
+            </div>
+          </article>
+
+          <aside class="usage-card" aria-labelledby="usage-title">
+            <p class="eyebrow">Use it naturally</p>
+            <h2 id="usage-title">Common ways to say it</h2>
+            <p class="usage-intro">These combinations are useful when teams need to get on the same page.</p>
+            <ul class="collocation-list" aria-label="Collocations with align">
+              <li>align on a plan</li>
+              <li>align with the team</li>
+              <li>align expectations</li>
+              <li>get aligned</li>
+            </ul>
+            <p class="usage-tip"><strong>Helpful pattern:</strong> use “align on” for a shared decision, and “align with” for a person, goal, or set of priorities.</p>
+          </aside>
+
+          <section class="related-card" aria-labelledby="related-title">
+            <h2 id="related-title">Related words</h2>
+            <p>Words with a similar workplace feel—not extra entries in this view.</p>
+            <div class="related-words" aria-label="Related vocabulary">
+              <span class="related-word">coordinate</span>
+              <span class="related-word">agree</span>
+              <span class="related-word">sync</span>
+            </div>
+          </section>
+
+          <nav class="pack-word-navigation" id="pack-navigation" aria-label="Other words in the Meetings &amp; Pushback pack">
+            <a href="./word-detail.html?word=prepare#main">
+              <span><span>Previous in this pack</span><strong>← prepare</strong></span>
+              <span aria-hidden="true">02 / 15</span>
+            </a>
+            <a href="./word-detail.html?word=clarify#main">
+              <span><span>Next in this pack</span><strong>clarify →</strong></span>
+              <span aria-hidden="true">04 / 15</span>
+            </a>
+          </nav>
+          <p class="pack-navigation-note">This static preview shows one word record: “align.” The adjacent links represent separate word pages; the full pack isn’t loaded here.</p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="section-shell footer-main">
+        <div class="footer-brand">
+          <a class="wordmark" href="../index.html" aria-label="WordStack home">
+            <span class="wordmark-icon" aria-hidden="true">W</span>
+            <span>wordstack<span class="wordmark-period">.</span></span>
+          </a>
+          <p>Useful English for the work you do. One small session at a time.</p>
+        </div>
+        <div class="footer-links">
+          <div><strong>Explore</strong><a href="word-packs.html">Word packs</a><a href="method.html">Our method</a><a href="word-detail.html">Sample word</a></div>
+          <div><strong>WordStack</strong><a href="about.html">About</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a></div>
+          <div><strong>Good to know</strong><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="#top">Back to top ↑</a></div>
+        </div>
+      </div>
+      <div class="footer-bottom section-shell"><span>© 2026 WordStack. Made for steady progress.</span><span>Working name — change freely.</span></div>
+    </footer>
+  </body>
+</html>

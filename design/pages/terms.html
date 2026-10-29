@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Draft template for WordStack's Terms of Use. Review and complete all placeholders with qualified local counsel before launch."
+    >
+    <meta name="theme-color" content="#f6f8fb">
+    <title>Terms of Use — WordStack</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+      .terms-page {
+        background: var(--canvas);
+      }
+
+      .terms-page .site-header,
+      .terms-page .site-footer {
+        background: var(--surface);
+      }
+
+      .terms-hero {
+        padding-block: 48px 30px;
+      }
+
+      .terms-hero h1 {
+        max-width: 760px;
+        margin-bottom: 14px;
+        font-size: clamp(2.35rem, 7vw, 3.5rem);
+      }
+
+      .terms-hero h1 span {
+        color: var(--blue);
+      }
+
+      .terms-lede {
+        max-width: 680px;
+        margin: 0;
+        color: var(--body);
+        font-size: 17px;
+      }
+
+      .terms-draft-notice {
+        display: grid;
+        grid-template-columns: 40px minmax(0, 1fr);
+        gap: 14px;
+        align-items: start;
+        margin-top: 27px;
+        padding: 19px;
+        border: 1px solid #f0d39a;
+        border-radius: var(--radius-card);
+        background: #fffaf0;
+      }
+
+      .terms-draft-mark {
+        display: grid;
+        width: 40px;
+        height: 40px;
+        place-items: center;
+        border-radius: 12px;
+        color: var(--ink);
+        background: #f8e8bd;
+        font-size: 19px;
+        font-weight: 800;
+      }
+
+      .terms-draft-notice h2 {
+        margin: 0 0 5px;
+        font-size: 16px;
+        line-height: 1.4;
+      }
+
+      .terms-draft-notice p {
+        margin: 0;
+        color: var(--body);
+        font-size: 14px;
+      }
+
+      .terms-meta {
+        margin: 22px 0 0;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .terms-layout {
+        display: grid;
+        gap: 20px;
+        align-items: start;
+        padding-block: 20px 64px;
+      }
+
+      .terms-toc,
+      .terms-document {
+        border: 1px solid var(--border);
+        border-radius: var(--radius-card);
+        background: var(--surface);
+      }
+
+      .terms-toc {
+        padding: 20px;
+      }
+
+      .terms-toc h2 {
+        margin: 0 0 12px;
+        font-size: 16px;
+      }
+
+      .terms-toc ol {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 4px 16px;
+        margin: 0;
+        padding-left: 20px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .terms-toc a {
+        display: inline-block;
+        min-height: 36px;
+        padding-block: 6px;
+        color: var(--body);
+        text-underline-offset: 3px;
+      }
+
+      .terms-toc a:hover,
+      .terms-document a {
+        color: var(--blue);
+      }
+
+      .terms-document {
+        padding: 24px 20px;
+      }
+
+      .terms-section {
+        max-width: 740px;
+        padding-block: 5px 25px;
+        scroll-margin-top: 100px;
+      }
+
+      .terms-section + .terms-section {
+        padding-top: 23px;
+        border-top: 1px solid var(--border);
+      }
+
+      .terms-section h2 {
+        margin: 0 0 10px;
+        font-size: 20px;
+        letter-spacing: -.025em;
+        line-height: 1.35;
+      }
+
+      .terms-section p,
+      .terms-section li {
+        color: var(--body);
+        font-size: 15px;
+        line-height: 1.7;
+      }
+
+      .terms-section p {
+        margin: 0 0 12px;
+      }
+
+      .terms-section p:last-child {
+        margin-bottom: 0;
+      }
+
+      .terms-section ul {
+        display: grid;
+        gap: 7px;
+        margin: 0 0 12px;
+        padding-left: 22px;
+      }
+
+      .terms-placeholder {
+        color: var(--ink);
+        font-weight: 750;
+        text-decoration: underline;
+        text-decoration-style: dotted;
+        text-underline-offset: 3px;
+      }
+
+      .terms-endnote {
+        margin-top: 4px;
+        padding: 17px;
+        border-radius: 12px;
+        color: var(--body);
+        background: var(--pale-blue);
+        font-size: 14px;
+      }
+
+      .terms-endnote strong {
+        color: var(--ink);
+      }
+
+      @media (min-width: 760px) {
+        .terms-hero {
+          padding-block: 62px 34px;
+        }
+
+        .terms-draft-notice {
+          max-width: 820px;
+          padding: 22px;
+        }
+
+        .terms-layout {
+          grid-template-columns: 230px minmax(0, 1fr);
+          gap: 24px;
+        }
+
+        .terms-toc {
+          position: sticky;
+          top: 100px;
+          padding: 22px;
+        }
+
+        .terms-toc ol {
+          grid-template-columns: 1fr;
+        }
+
+        .terms-document {
+          padding: 32px clamp(24px, 5vw, 52px);
+        }
+
+        .terms-section {
+          padding-bottom: 29px;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .terms-page *,
+        .terms-page *::before,
+        .terms-page *::after {
+          scroll-behavior: auto;
+          transition-duration: .01ms !important;
+        }
+      }
+    </style>
+  </head>
+  <body class="terms-page">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" id="top">
+      <div class="header-inner">
+        <a class="wordmark" href="../index.html#top" aria-label="WordStack home">
+          <span class="wordmark-icon" aria-hidden="true">W</span>
+          <span>wordstack<span class="wordmark-period">.</span></span>
+        </a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="./word-packs.html">Learn</a>
+          <a href="./blog-library.html">Blog</a>
+          <a href="./pricing.html">Pricing</a>
+          <a href="./method.html">Method</a>
+          <a href="./faq.html">FAQ</a>
+        </nav>
+
+        <div class="header-actions">
+          <a class="button button-small" href="./start-here.html">
+            Start free <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="terms-hero section-shell" aria-labelledby="terms-title">
+        <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span> WordStack · Legal information</p>
+        <h1 id="terms-title">Terms of <span>Use.</span></h1>
+        <p class="terms-lede">
+          These draft terms describe the basic expectations for using WordStack.
+          They are a starting point for review, not a final legal document.
+        </p>
+
+        <aside class="terms-draft-notice" aria-labelledby="draft-heading">
+          <span class="terms-draft-mark" aria-hidden="true">!</span>
+          <div>
+            <h2 id="draft-heading">DRAFT TEMPLATE — NOT FOR LAUNCH</h2>
+            <p>
+              This page is a working template, not legal advice or enforceable final terms.
+              The owner must fill every bracketed placeholder and obtain jurisdiction-specific
+              legal review before publication or use.
+            </p>
+          </div>
+        </aside>
+        <p class="terms-meta">Draft effective date: <span class="terms-placeholder">[Effective date]</span></p>
+      </section>
+
+      <div class="terms-layout section-shell">
+        <nav class="terms-toc" aria-label="On this page">
+          <h2>On this page</h2>
+          <ol>
+            <li><a href="#agreement">Agreement</a></li>
+            <li><a href="#service">The service</a></li>
+            <li><a href="#accounts">Accounts</a></li>
+            <li><a href="#conduct">Your conduct</a></li>
+            <li><a href="#content">Content and rights</a></li>
+            <li><a href="#third-parties">Third-party services</a></li>
+            <li><a href="#disclaimers">Disclaimers</a></li>
+            <li><a href="#liability">Liability</a></li>
+            <li><a href="#termination">Suspension and termination</a></li>
+            <li><a href="#changes">Changes to these terms</a></li>
+            <li><a href="#law">Governing law</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ol>
+        </nav>
+
+        <article class="terms-document" aria-label="Draft Terms of Use">
+          <section class="terms-section" id="agreement" aria-labelledby="agreement-heading">
+            <h2 id="agreement-heading">1. Agreement to these terms</h2>
+            <p>
+              These Terms of Use are a draft for WordStack, operated by
+              <span class="terms-placeholder">[Operator / legal entity name]</span>
+              (“WordStack,” “we,” “us,” or “our”). They are intended to apply to your access
+              to or use of the WordStack website and related learning features (the “Service”).
+            </p>
+            <p>
+              Before these terms are used, the operator must confirm how acceptance works,
+              including any required notice or affirmative consent. Do not rely on this draft
+              as establishing an enforceable agreement. If you do not agree with the final
+              terms presented to you, do not use the Service.
+            </p>
+          </section>
+
+          <section class="terms-section" id="service" aria-labelledby="service-heading">
+            <h2 id="service-heading">2. The Service and availability</h2>
+            <p>
+              WordStack is intended to offer practical workplace-English learning materials,
+              such as word explanations, examples, practice activities, and review tools.
+              Features, content, and access may change as the Service develops.
+            </p>
+            <p>
+              We may need to maintain, update, pause, or discontinue some or all of the Service.
+              The final terms should explain any availability commitments, paid features,
+              refunds, or service-level promises that apply. Do not treat the Service as a
+              substitute for professional, employment, immigration, or other specialist advice.
+            </p>
+          </section>
+
+          <section class="terms-section" id="accounts" aria-labelledby="accounts-heading">
+            <h2 id="accounts-heading">3. Accounts, if offered</h2>
+            <p>
+              Some features may require an account. If accounts are offered, provide accurate
+              information, keep your sign-in credentials private, and promptly tell us if you
+              believe your account has been accessed without permission. You are responsible
+              for activity through your account to the extent permitted by applicable law.
+            </p>
+            <p>
+              The operator must complete this eligibility rule before launch:
+              <span class="terms-placeholder">[Minimum age to use the Service and any required
+              parent or guardian consent]</span>. Applicable age and consent requirements
+              depend on the places where the Service is offered.
+            </p>
+          </section>
+
+          <section class="terms-section" id="conduct" aria-labelledby="conduct-heading">
+            <h2 id="conduct-heading">4. Acceptable use</h2>
+            <p>Use the Service lawfully and respectfully. You must not:</p>
+            <ul>
+              <li>break applicable law or infringe another person’s rights;</li>
+              <li>interfere with, damage, disrupt, or attempt to gain unauthorized access to the Service or its systems;</li>
+              <li>use the Service to distribute malware, spam, or unlawful, threatening, or abusive material; or</li>
+              <li>misrepresent your identity or use another person’s account without permission.</li>
+            </ul>
+            <p>
+              The owner should tailor these rules to the actual features, community functions,
+              and legal requirements of the Service.
+            </p>
+          </section>
+
+          <section class="terms-section" id="content" aria-labelledby="content-heading">
+            <h2 id="content-heading">5. Content and intellectual property</h2>
+            <p>
+              The Service and its original text, design, software, and other materials are
+              owned by or licensed to <span class="terms-placeholder">[Operator / legal entity name]</span>
+              and are protected by applicable intellectual-property laws. Subject to the final
+              terms, you may use the Service for your personal, non-commercial learning.
+              No other rights are granted except those required by law or expressly stated
+              by the rights holder.
+            </p>
+            <p>
+              If the Service lets you submit content, you retain any rights you hold in your
+              submission. You should grant the operator only the permissions needed to host,
+              display, and operate that feature; the exact scope, duration, and handling of
+              submissions must be confirmed in the final terms. Do not submit material you
+              do not have the right to share.
+            </p>
+          </section>
+
+          <section class="terms-section" id="third-parties" aria-labelledby="third-parties-heading">
+            <h2 id="third-parties-heading">6. Third-party services and links</h2>
+            <p>
+              The Service may link to or rely on third-party websites or tools. Those services
+              are controlled by their own providers and terms. We do not control their content
+              or availability; review the relevant provider’s terms and privacy information
+              before using them.
+            </p>
+          </section>
+
+          <section class="terms-section" id="disclaimers" aria-labelledby="disclaimers-heading">
+            <h2 id="disclaimers-heading">7. Disclaimers</h2>
+            <p>
+              To the extent permitted by applicable law, the Service is provided on an
+              “as available” basis. The final terms must accurately state which warranties,
+              representations, and statutory consumer rights apply or cannot be excluded.
+              Nothing in this draft is intended to remove a right that cannot lawfully be
+              limited or excluded.
+            </p>
+          </section>
+
+          <section class="terms-section" id="liability" aria-labelledby="liability-heading">
+            <h2 id="liability-heading">8. Limits of liability</h2>
+            <p>
+              <span class="terms-placeholder">[Insert jurisdiction-reviewed liability language,
+              including the applicable cap or calculation, the types of loss addressed, any
+              required exceptions, and the treatment of non-excludable liability.]</span>
+              Do not publish this section until the operator has obtained jurisdiction-specific
+              legal review and confirmed that each limitation is lawful and appropriate.
+            </p>
+          </section>
+
+          <section class="terms-section" id="termination" aria-labelledby="termination-heading">
+            <h2 id="termination-heading">9. Suspension and termination</h2>
+            <p>
+              The final terms should explain when and how you may stop using the Service or
+              close an account, and when the operator may restrict access, suspend, or end
+              access (for example, to address a serious breach, security risk, or legal
+              requirement). Any process, notice, appeal, data-retention, or refund details
+              must be confirmed for the actual Service and applicable law.
+            </p>
+          </section>
+
+          <section class="terms-section" id="changes" aria-labelledby="changes-heading">
+            <h2 id="changes-heading">10. Changes to these terms</h2>
+            <p>
+              The operator should describe how it will notify users of material changes and
+              when those changes take effect. If a change requires your consent under
+              applicable law, we will seek that consent before it applies. The date at the top
+              of the published terms should be updated whenever the terms are revised.
+            </p>
+          </section>
+
+          <section class="terms-section" id="law" aria-labelledby="law-heading">
+            <h2 id="law-heading">11. Governing law and courts</h2>
+            <p>
+              <span class="terms-placeholder">[Specify the governing law and courts or venue
+              for disputes, after jurisdiction-specific legal review.]</span>
+              Any choice of law or forum is subject to mandatory rights and protections that
+              apply where you live.
+            </p>
+          </section>
+
+          <section class="terms-section" id="contact" aria-labelledby="contact-heading">
+            <h2 id="contact-heading">12. Contact</h2>
+            <p>
+              For questions about these terms, contact
+              <span class="terms-placeholder">[Operator / legal entity name]</span>
+              at <span class="terms-placeholder">[Contact email or postal address]</span>.
+              Confirm that this contact route is monitored before publishing final terms.
+            </p>
+            <p>
+              You can also visit our <a href="./contact.html">contact page</a> or read the
+              <a href="./privacy.html">Privacy Notice</a>.
+            </p>
+          </section>
+
+          <aside class="terms-endnote">
+            <strong>Before launch:</strong> fill every bracketed item, confirm that this text
+            matches the real Service and its data practices, and obtain qualified,
+            jurisdiction-specific legal review. This draft is not legal advice.
+          </aside>
+        </article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="section-shell footer-main">
+        <div class="footer-brand">
+          <a class="wordmark" href="../index.html#top" aria-label="WordStack home">
+            <span class="wordmark-icon" aria-hidden="true">W</span>
+            <span>wordstack<span class="wordmark-period">.</span></span>
+          </a>
+          <p>Useful English for the work you do. One small session at a time.</p>
+        </div>
+        <nav class="footer-links" aria-label="Footer">
+          <div>
+            <strong>Explore</strong>
+            <a href="./word-packs.html">Word packs</a>
+            <a href="./method.html">Our method</a>
+            <a href="./about.html">About</a>
+          </div>
+          <div>
+            <strong>WordStack</strong>
+            <a href="./contact.html">Contact</a>
+            <a href="./privacy.html">Privacy</a>
+            <a href="#top" aria-current="page">Terms</a>
+          </div>
+        </nav>
+      </div>
+      <div class="footer-bottom section-shell">
+        <span>© 2026 WordStack. Made for steady progress.</span>
+        <a href="../index.html">WordStack home</a>
+      </div>
+    </footer>
+  </body>
+</html>

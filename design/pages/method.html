@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="See how WordStack helps you choose useful work words, learn them in context, review at a comfortable pace, and put them to use."
+    >
+    <meta name="theme-color" content="#f6f8fb">
+    <title>Our method — WordStack</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+      .method-page .method-hero {
+        overflow: hidden;
+        background:
+          radial-gradient(ellipse at 88% 20%, rgb(219 234 254 / 72%), transparent 32%),
+          var(--canvas);
+      }
+
+      .method-hero-inner {
+        display: grid;
+        gap: 34px;
+        align-items: center;
+        padding-block: 58px 64px;
+      }
+
+      .method-hero-copy {
+        max-width: 620px;
+      }
+
+      .method-hero h1 {
+        margin-bottom: 18px;
+      }
+
+      .method-hero h1 span {
+        color: var(--blue);
+      }
+
+      .method-intro {
+        max-width: 540px;
+        margin-bottom: 24px;
+        color: var(--body);
+        font-size: 17px;
+      }
+
+      .method-actions {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 8px 20px;
+      }
+
+      .loop-preview {
+        max-width: 480px;
+        padding: 22px;
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        background: rgb(255 255 255 / 90%);
+        box-shadow: 0 12px 32px rgb(23 43 58 / 7%);
+      }
+
+      .loop-preview-label {
+        margin: 0 0 16px;
+        color: var(--muted);
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+
+      .loop-preview ol {
+        display: grid;
+        gap: 10px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .loop-preview li {
+        display: flex;
+        min-height: 52px;
+        align-items: center;
+        gap: 13px;
+        padding: 9px 12px;
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        color: var(--body);
+        font-size: 14px;
+        font-weight: 650;
+      }
+
+      .loop-preview li span {
+        display: grid;
+        width: 30px;
+        height: 30px;
+        flex: 0 0 30px;
+        place-items: center;
+        border-radius: 9px;
+        color: var(--blue);
+        background: var(--pale-blue);
+        font-size: 12px;
+        font-weight: 800;
+      }
+
+      .loop-preview li:last-child span {
+        color: var(--green);
+        background: #e8f7f0;
+      }
+
+      .method-loop-section {
+        padding-block: 58px;
+      }
+
+      .method-steps {
+        display: grid;
+        gap: 14px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .method-step {
+        min-height: 100%;
+        padding: 23px;
+        border: 1px solid var(--border);
+        border-radius: var(--radius-card);
+        background: var(--surface);
+      }
+
+      .method-step-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        margin-bottom: 18px;
+      }
+
+      .method-step-number {
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: .08em;
+      }
+
+      .method-step-icon {
+        display: grid;
+        width: 42px;
+        height: 42px;
+        place-items: center;
+        border-radius: 12px;
+        color: var(--blue);
+        background: var(--pale-blue);
+        font-size: 20px;
+        font-weight: 700;
+      }
+
+      .method-step:nth-child(2) .method-step-icon {
+        color: #6952a3;
+        background: #f1edff;
+      }
+
+      .method-step:nth-child(3) .method-step-icon {
+        color: var(--green);
+        background: #e8f7f0;
+      }
+
+      .method-step:nth-child(4) .method-step-icon {
+        color: #8b5b00;
+        background: #fff4d6;
+      }
+
+      .method-step h3 {
+        margin-bottom: 8px;
+        font-size: 19px;
+        letter-spacing: -.025em;
+        line-height: 1.3;
+      }
+
+      .method-step p {
+        margin-bottom: 0;
+        color: var(--body);
+        font-size: 15px;
+      }
+
+      .method-example {
+        padding-block: 50px;
+        background: var(--canvas);
+      }
+
+      .method-example-inner {
+        display: grid;
+        gap: 28px;
+        align-items: center;
+      }
+
+      .method-example-copy {
+        max-width: 480px;
+      }
+
+      .method-example-copy h2,
+      .method-next h2 {
+        margin-bottom: 12px;
+        font-size: clamp(1.85rem, 6vw, 2.55rem);
+        letter-spacing: -.045em;
+        line-height: 1.14;
+      }
+
+      .method-example-copy > p:last-child {
+        margin-bottom: 0;
+        color: var(--muted);
+      }
+
+      .work-example {
+        padding: 22px;
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        background: #fff;
+      }
+
+      .work-example-label {
+        display: inline-flex;
+        min-height: 28px;
+        align-items: center;
+        margin-bottom: 14px;
+        padding: 0 10px;
+        border-radius: 999px;
+        color: #6952a3;
+        background: #f1edff;
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: .06em;
+      }
+
+      .work-example h3 {
+        margin-bottom: 6px;
+        font-size: 26px;
+        letter-spacing: -.04em;
+      }
+
+      .work-example-definition {
+        margin-bottom: 15px;
+        color: var(--body);
+        font-size: 14px;
+      }
+
+      .work-example blockquote {
+        margin: 0;
+        padding: 15px 16px;
+        border-left: 3px solid var(--blue);
+        border-radius: 0 8px 8px 0;
+        color: var(--body);
+        background: var(--pale-blue);
+        font-size: 15px;
+      }
+
+      .work-example blockquote p {
+        margin: 0;
+      }
+
+      .method-next {
+        padding-block: 52px;
+        text-align: center;
+      }
+
+      .method-next p:not(.eyebrow) {
+        max-width: 560px;
+        margin: 0 auto 18px;
+        color: var(--muted);
+      }
+
+      .method-next .eyebrow {
+        justify-content: center;
+      }
+
+      @media (min-width: 620px) {
+        .method-hero-inner {
+          grid-template-columns: 1.1fr .9fr;
+          gap: 30px;
+          padding-block: 76px;
+        }
+
+        .loop-preview {
+          justify-self: end;
+          width: 100%;
+        }
+
+        .method-loop-section {
+          padding-block: 72px;
+        }
+
+        .method-steps {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .method-step {
+          padding: 25px;
+        }
+
+        .method-example {
+          padding-block: 68px;
+        }
+
+        .method-example-inner {
+          grid-template-columns: 1fr 1fr;
+          gap: 38px;
+        }
+
+        .method-next {
+          padding-block: 68px;
+        }
+      }
+
+      @media (min-width: 900px) {
+        .method-hero-inner {
+          min-height: 490px;
+          gap: 70px;
+          padding-block: 72px;
+        }
+
+        .loop-preview {
+          padding: 26px;
+        }
+
+        .method-loop-section {
+          padding-block: 88px;
+        }
+
+        .method-steps {
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+          gap: 16px;
+        }
+
+        .method-step {
+          padding: 25px 22px;
+        }
+      }
+    </style>
+  </head>
+  <body class="method-page">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" id="top">
+      <div class="header-inner">
+        <a class="wordmark" href="../index.html" aria-label="WordStack home">
+          <span class="wordmark-icon" aria-hidden="true">W</span>
+          <span>wordstack<span class="wordmark-period">.</span></span>
+        </a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="word-packs.html">Learn</a>
+          <a href="blog-library.html">Blog</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="#learning-loop" aria-current="page">Method</a>
+          <a href="faq.html">FAQ</a>
+        </nav>
+
+        <div class="header-actions">
+          <a class="login-link" href="../index.html#start">Log in</a>
+          <a class="button button-small" href="start-here.html">Start free <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="method-hero" aria-labelledby="page-title">
+        <div class="section-shell method-hero-inner">
+          <div class="method-hero-copy">
+            <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span> Our method</p>
+            <h1 id="page-title">A small learning loop for <span>the work you do.</span></h1>
+            <p class="method-intro">
+              Start with words that matter in your work. Meet them in useful context,
+              come back to them over time, and practise putting them into your own words.
+            </p>
+            <div class="method-actions">
+              <a class="button" href="word-detail.html">Try a sample word <span aria-hidden="true">→</span></a>
+              <a class="text-link" href="#learning-loop">Explore the four steps <span aria-hidden="true">↓</span></a>
+            </div>
+          </div>
+
+          <aside class="loop-preview" aria-label="The WordStack learning loop">
+            <p class="loop-preview-label">A steady way to practise</p>
+            <ol>
+              <li><span aria-hidden="true">01</span> Choose useful words</li>
+              <li><span aria-hidden="true">02</span> Learn with context</li>
+              <li><span aria-hidden="true">03</span> Review when it suits</li>
+              <li><span aria-hidden="true">04</span> Use them at work</li>
+            </ol>
+          </aside>
+        </div>
+      </section>
+
+      <section class="method-loop-section" id="learning-loop" aria-labelledby="loop-title">
+        <div class="section-shell">
+          <div class="section-heading">
+            <p class="eyebrow">Useful, not overwhelming</p>
+            <h2 id="loop-title">Four simple steps, at your pace.</h2>
+            <p>Each step connects learning to the situations you meet in a real workday.</p>
+          </div>
+          <ol class="method-steps">
+            <li class="method-step">
+              <div class="method-step-top">
+                <span class="method-step-number">STEP 01</span>
+                <span class="method-step-icon" aria-hidden="true">⌕</span>
+              </div>
+              <h3>Choose work-relevant words</h3>
+              <p>Start with a situation you care about—like writing a clear update, joining a meeting, or preparing for an interview.</p>
+            </li>
+            <li class="method-step">
+              <div class="method-step-top">
+                <span class="method-step-number">STEP 02</span>
+                <span class="method-step-icon" aria-hidden="true">“</span>
+              </div>
+              <h3>Learn with context</h3>
+              <p>See what a word means and how it can sound in a sentence, so it feels connected to a moment you might actually face.</p>
+            </li>
+            <li class="method-step">
+              <div class="method-step-top">
+                <span class="method-step-number">STEP 03</span>
+                <span class="method-step-icon" aria-hidden="true">↻</span>
+              </div>
+              <h3>Review at the right time</h3>
+              <p>Short reviews bring words back for another look. Keep the pace manageable and revisit what needs more practice.</p>
+            </li>
+            <li class="method-step">
+              <div class="method-step-top">
+                <span class="method-step-number">STEP 04</span>
+                <span class="method-step-icon" aria-hidden="true">↗</span>
+              </div>
+              <h3>Use them with confidence</h3>
+              <p>Try a new word in a message or conversation when it fits. Make it your own, and keep learning as your work changes.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="method-example" aria-labelledby="example-title">
+        <div class="section-shell method-example-inner">
+          <div class="method-example-copy">
+            <p class="eyebrow">A word in its element</p>
+            <h2 id="example-title">Meaning is clearer in a moment you recognize.</h2>
+            <p>Rather than meeting a word alone, connect it with a short, everyday work example. Then think of where you might use it.</p>
+          </div>
+          <article class="work-example" aria-label="Example learning card for the word clarify">
+            <span class="work-example-label">EMAILS &amp; MEETINGS</span>
+            <h3>clarify</h3>
+            <p class="work-example-definition">To make something easier to understand by explaining it clearly.</p>
+            <blockquote>
+              <p>“Could you <strong>clarify</strong> what you need from me by Thursday?”</p>
+            </blockquote>
+          </article>
+        </div>
+      </section>
+
+      <section class="method-next" aria-labelledby="next-title">
+        <div class="section-shell">
+          <p class="eyebrow">Start with one useful word</p>
+          <h2 id="next-title">See if the approach fits your day.</h2>
+          <p>Explore a sample or browse practical word packs for meetings, emails, and interviews.</p>
+          <a class="button" href="word-detail.html">Explore a sample <span aria-hidden="true">→</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="section-shell footer-main">
+        <div class="footer-brand">
+          <a class="wordmark" href="../index.html" aria-label="WordStack home">
+            <span class="wordmark-icon" aria-hidden="true">W</span>
+            <span>wordstack<span class="wordmark-period">.</span></span>
+          </a>
+          <p>Useful English for the work you do. One small session at a time.</p>
+        </div>
+        <div class="footer-links">
+          <div>
+            <strong>Explore</strong>
+            <a href="word-packs.html">Word packs</a>
+            <a href="#learning-loop">Our method</a>
+            <a href="word-detail.html">Sample word</a>
+          </div>
+          <div>
+            <strong>WordStack</strong>
+            <a href="about.html">About</a>
+            <a href="faq.html">FAQ</a>
+            <a href="contact.html">Contact</a>
+          </div>
+          <div>
+            <strong>Good to know</strong>
+            <a href="privacy.html">Privacy</a>
+            <a href="terms.html">Terms</a>
+            <a href="#top">Back to top ↑</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom section-shell">
+        <span>© 2026 WordStack. Made for steady progress.</span>
+        <span>Working name — change freely.</span>
+      </div>
+    </footer>
+  </body>
+</html>

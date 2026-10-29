@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Progress — WordStack</title>
+  <meta name="description" content="Twelve weeks of review activity, your level, recall accuracy, and the packs you are working through.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/base.css">
+  <link rel="stylesheet" href="assets/marketing.css">
+  <link rel="stylesheet" href="assets/app.css">
+  <script src="assets/icons.js" defer></script>
+  <script src="assets/app.js" defer></script>
+</head>
+<body class="has-tabbar">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="app-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="dashboard.html" aria-label="WordStack home">
+        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+        WordStack
+      </a>
+      <nav class="app-nav" aria-label="Product">
+        <a href="dashboard.html">Today</a>
+        <a href="packs.html">Learn</a>
+        <a href="session.html">Review <span class="dot-badge">9</span></a>
+        <a href="progress.html" aria-current="page">Progress</a>
+      </nav>
+      <div class="app-tools">
+        <a class="streak-pill" href="dashboard.html">
+          <svg class="icon" aria-hidden="true"><use href="#i-flame"></use></svg>
+          12-day
+        </a>
+        <a class="app-user" href="dashboard.html" aria-label="Minh Tran — back to today">MT</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="wrap app-main">
+    <div class="progress-head">
+      <div>
+        <h1>Your progress.</h1>
+        <p class="dash-sub">Small sessions, kept going. This is what six months of five-minute reviews looks like.</p>
+      </div>
+      <span class="progress-range">
+        <svg class="icon" aria-hidden="true"><use href="#i-calendar"></use></svg>
+        Last 6 months
+      </span>
+    </div>
+
+    <div class="stat-grid">
+      <div class="big-stat">
+        <span class="stat-label">Words learned</span>
+        <strong>214</strong>
+        <small>18 new this week</small>
+      </div>
+      <div class="big-stat">
+        <span class="stat-label">Current streak</span>
+        <strong>12 days</strong>
+        <small>Personal best: 12</small>
+      </div>
+      <div class="big-stat">
+        <span class="stat-label">Recall accuracy</span>
+        <strong>87%</strong>
+        <small>Last 30 days</small>
+      </div>
+      <div class="big-stat">
+        <span class="stat-label">Time reviewed</span>
+        <strong>4h 20m</strong>
+        <small>About 3 min a session</small>
+      </div>
+    </div>
+
+    <div class="progress-grid">
+      <div class="progress-main">
+        <section class="panel" aria-labelledby="activity-title">
+          <div class="panel-head">
+            <h2 id="activity-title">Review activity</h2>
+            <span class="mono-note">26 weeks · 1 square = 1 day</span>
+          </div>
+          <div class="heat-wrap">
+            <div class="heat-grid" id="activity-grid" aria-hidden="true"></div>
+          </div>
+          <p class="sr-only" id="heat-summary"></p>
+          <div class="heat-legend" aria-hidden="true">
+            <span>Less</span>
+            <i class="heat-cell"></i>
+            <i class="heat-cell heat-1"></i>
+            <i class="heat-cell heat-2"></i>
+            <i class="heat-cell heat-3"></i>
+            <i class="heat-cell heat-4"></i>
+            <span>More</span>
+          </div>
+          <div class="panel-foot">
+            <span id="heat-active-days">— active days</span>
+            <span id="heat-longest-gap">Longest gap: — days</span>
+          </div>
+        </section>
+
+        <section class="level-panel" aria-labelledby="level-title">
+          <span class="mono">Your level</span>
+          <h2 id="level-title">Intermediate, moving up</h2>
+          <div class="level-route">
+            <strong>B1</strong>
+            <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+            <strong class="level-next">B2</strong>
+          </div>
+          <div class="meter meter--on-dark" role="progressbar" aria-label="Progress through B1" aria-valuemin="0" aria-valuemax="100" aria-valuenow="68">
+            <span style="width:68%"></span>
+          </div>
+          <p>You’re 68% through B1. Keep reviewing and the next packs will move you toward upper intermediate.</p>
+        </section>
+
+        <section class="panel" aria-labelledby="accuracy-title">
+          <div class="panel-head">
+            <h2 id="accuracy-title">Recall accuracy</h2>
+            <span class="tag tag--forest">+8 pts</span>
+          </div>
+          <div class="spark-head">
+            <div>
+              <strong>87%</strong>
+              <span>Average over the last 30 days</span>
+            </div>
+            <span class="mono-note">Weeks 1–12</span>
+          </div>
+          <div class="spark-chart">
+            <svg viewBox="0 0 680 64" preserveAspectRatio="none" role="img" aria-label="Recall accuracy rose from 79 percent in week one to 87 percent in week twelve.">
+              <path class="spark-area" d="M0 46 L62 42 L124 45 L186 37 L248 39 L310 31 L372 33 L434 25 L496 27 L558 18 L620 20 L676 12 L676 64 L0 64 Z"></path>
+              <path class="spark-line" vector-effect="non-scaling-stroke" d="M0 46 L62 42 L124 45 L186 37 L248 39 L310 31 L372 33 L434 25 L496 27 L558 18 L620 20 L676 12"></path>
+            </svg>
+          </div>
+          <div class="spark-axis" aria-hidden="true">
+            <span>Wk 1</span>
+            <span>Wk 6</span>
+            <span>Wk 12</span>
+          </div>
+        </section>
+
+        <section class="panel" aria-labelledby="packs-title">
+          <div class="panel-head">
+            <h2 id="packs-title">Pack progress</h2>
+            <a class="link-arrow" href="packs.html">Find a pack <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></a>
+          </div>
+          <div class="pack-progress-list">
+            <div class="pack-progress-item">
+              <div class="pack-progress-top">
+                <strong>Office English Starter</strong>
+                <span>32 / 40</span>
+              </div>
+              <div class="meter"><span style="width:80%"></span></div>
+            </div>
+            <div class="pack-progress-item">
+              <div class="pack-progress-top">
+                <strong>Meetings &amp; Pushback</strong>
+                <span>21 / 55</span>
+              </div>
+              <div class="meter"><span style="width:38%"></span></div>
+            </div>
+            <div class="pack-progress-item">
+              <div class="pack-progress-top">
+                <strong>Email Tone</strong>
+                <span>16 / 25</span>
+              </div>
+              <div class="meter"><span style="width:64%"></span></div>
+            </div>
+            <div class="pack-progress-item">
+              <div class="pack-progress-top">
+                <strong>Interview English</strong>
+                <span>0 / 60</span>
+              </div>
+              <div class="meter"><span style="width:0%"></span></div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <aside class="progress-rail" aria-label="Saved words and milestones">
+        <section class="panel" id="words" aria-labelledby="words-title">
+          <div class="panel-head">
+            <h2 id="words-title">My words</h2>
+            <span class="mono-note">14 saved</span>
+          </div>
+          <div class="saved-words">
+            <a class="saved-chip" href="word.html">leverage <span>verb</span></a>
+            <a class="saved-chip" href="word.html">bandwidth <span>noun</span></a>
+            <a class="saved-chip" href="word.html">circle back <span>phrase</span></a>
+            <a class="saved-chip" href="word.html">stakeholder <span>noun</span></a>
+            <a class="saved-chip" href="word.html">buy-in <span>noun</span></a>
+            <a class="saved-chip" href="word.html">cadence <span>noun</span></a>
+            <a class="saved-chip" href="word.html">scope <span>noun</span></a>
+            <a class="saved-chip" href="word.html">pushback <span>noun</span></a>
+          </div>
+          <div class="panel-foot">
+            <span>Saved words return in review automatically.</span>
+          </div>
+        </section>
+
+        <section class="panel" aria-labelledby="milestones-title">
+          <div class="panel-head">
+            <h2 id="milestones-title">Milestones</h2>
+            <span class="mono-note">4 of 6</span>
+          </div>
+          <div class="milestone-list">
+            <div class="milestone">
+              <span class="milestone-mark"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg></span>
+              <div class="milestone-text">
+                <strong>First session</strong>
+                <span>21 September</span>
+              </div>
+            </div>
+            <div class="milestone">
+              <span class="milestone-mark"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg></span>
+              <div class="milestone-text">
+                <strong>7-day streak</strong>
+                <span>5 October</span>
+              </div>
+            </div>
+            <div class="milestone">
+              <span class="milestone-mark"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg></span>
+              <div class="milestone-text">
+                <strong>100 words learned</strong>
+                <span>14 October</span>
+              </div>
+            </div>
+            <div class="milestone">
+              <span class="milestone-mark"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg></span>
+              <div class="milestone-text">
+                <strong>12-day streak</strong>
+                <span>27 October</span>
+              </div>
+            </div>
+            <div class="milestone">
+              <span class="milestone-mark milestone-mark--locked"><svg class="icon" aria-hidden="true"><use href="#i-lock"></use></svg></span>
+              <div class="milestone-text">
+                <strong>250 words learned</strong>
+                <span>36 words to go</span>
+              </div>
+            </div>
+            <div class="milestone">
+              <span class="milestone-mark milestone-mark--locked"><svg class="icon" aria-hidden="true"><use href="#i-lock"></use></svg></span>
+              <div class="milestone-text">
+                <strong>30-day streak</strong>
+                <span>18 days to go</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <aside class="rail-quote">
+          <svg class="icon" aria-hidden="true"><use href="#i-quote"></use></svg>
+          <p>“You don’t need a perfect week. You need the next five minutes.”</p>
+          <span>From the method</span>
+        </aside>
+      </aside>
+    </div>
+  </main>
+
+  <nav class="tabbar" aria-label="Product">
+    <a href="dashboard.html">
+      <svg class="icon" aria-hidden="true"><use href="#i-home"></use></svg>
+      Today
+    </a>
+    <a href="packs.html">
+      <svg class="icon" aria-hidden="true"><use href="#i-book"></use></svg>
+      Learn
+    </a>
+    <a href="session.html">
+      <span class="tabbar-due" aria-hidden="true">9</span>
+      <svg class="icon" aria-hidden="true"><use href="#i-cards"></use></svg>
+      Review<span class="sr-only">, 9 cards due</span>
+    </a>
+    <a href="progress.html" aria-current="page">
+      <svg class="icon" aria-hidden="true"><use href="#i-chart"></use></svg>
+      Progress
+    </a>
+    <a href="word.html">
+      <svg class="icon" aria-hidden="true"><use href="#i-bookmark"></use></svg>
+      Word
+    </a>
+  </nav>
+</body>
+</html>

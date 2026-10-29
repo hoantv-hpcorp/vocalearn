@@ -1,0 +1,582 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Draft privacy policy template for WordStack. This page requires owner confirmation and jurisdiction-specific review before publication."
+    >
+    <meta name="theme-color" content="#f6f8fb">
+    <title>Privacy Policy — WordStack (Draft)</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+      .privacy-page {
+        background: var(--canvas);
+      }
+
+      .privacy-page .site-header,
+      .privacy-page .site-footer {
+        background: var(--surface);
+      }
+
+      .privacy-hero {
+        padding-block: 42px 30px;
+      }
+
+      .privacy-hero-inner {
+        max-width: 820px;
+      }
+
+      .privacy-hero .eyebrow {
+        justify-content: flex-start;
+      }
+
+      .privacy-hero h1 {
+        margin-bottom: 14px;
+        font-size: clamp(2.35rem, 7vw, 3.5rem);
+      }
+
+      .privacy-hero h1 span {
+        color: var(--blue);
+      }
+
+      .privacy-lede {
+        max-width: 690px;
+        margin: 0;
+        color: var(--body);
+        font-size: 17px;
+      }
+
+      .privacy-draft-notice {
+        display: grid;
+        grid-template-columns: 40px minmax(0, 1fr);
+        gap: 14px;
+        align-items: start;
+        margin-top: 26px;
+        padding: 20px;
+        border: 1px solid #e8d39d;
+        border-radius: var(--radius-card);
+        background: #fffaf0;
+      }
+
+      .privacy-draft-icon {
+        display: grid;
+        width: 40px;
+        height: 40px;
+        place-items: center;
+        border-radius: 11px;
+        color: var(--ink);
+        background: #f8e8bd;
+        font-size: 19px;
+        font-weight: 800;
+      }
+
+      .privacy-draft-notice h2 {
+        margin: 0 0 5px;
+        font-size: 17px;
+        letter-spacing: -.015em;
+        line-height: 1.4;
+      }
+
+      .privacy-draft-notice p {
+        margin: 0;
+        color: var(--body);
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .privacy-content {
+        display: grid;
+        gap: 24px;
+        align-items: start;
+        padding-block: 8px 64px;
+      }
+
+      .privacy-toc,
+      .privacy-article {
+        border: 1px solid var(--border);
+        border-radius: var(--radius-card);
+        background: var(--surface);
+      }
+
+      .privacy-toc {
+        padding: 20px;
+      }
+
+      .privacy-toc h2 {
+        margin: 0 0 12px;
+        font-size: 15px;
+        letter-spacing: -.01em;
+      }
+
+      .privacy-toc ol {
+        display: grid;
+        gap: 3px;
+        margin: 0;
+        padding-left: 21px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .privacy-toc a {
+        display: inline-block;
+        min-height: 34px;
+        padding-block: 5px;
+        color: var(--body);
+        text-decoration-thickness: 1px;
+        text-underline-offset: 3px;
+      }
+
+      .privacy-toc a:hover,
+      .privacy-article a:hover {
+        color: var(--blue-hover);
+      }
+
+      .privacy-article {
+        min-width: 0;
+        padding: 23px 20px;
+      }
+
+      .privacy-section + .privacy-section {
+        margin-top: 30px;
+        padding-top: 27px;
+        border-top: 1px solid var(--border);
+      }
+
+      .privacy-section h2 {
+        margin: 0 0 11px;
+        font-size: clamp(1.25rem, 4vw, 1.55rem);
+        letter-spacing: -.03em;
+        line-height: 1.25;
+      }
+
+      .privacy-section h3 {
+        margin: 21px 0 7px;
+        font-size: 17px;
+        letter-spacing: -.015em;
+        line-height: 1.35;
+      }
+
+      .privacy-section p,
+      .privacy-section li {
+        color: var(--body);
+        font-size: 15px;
+        line-height: 1.7;
+      }
+
+      .privacy-section p {
+        margin: 0 0 12px;
+      }
+
+      .privacy-section p:last-child {
+        margin-bottom: 0;
+      }
+
+      .privacy-section ul {
+        display: grid;
+        gap: 9px;
+        margin: 10px 0 14px;
+        padding-left: 22px;
+      }
+
+      .privacy-placeholder {
+        display: inline;
+        padding: 1px 4px;
+        border-radius: 4px;
+        color: #263746;
+        background: #eff6ff;
+        font-weight: 650;
+        overflow-wrap: anywhere;
+        box-decoration-break: clone;
+        -webkit-box-decoration-break: clone;
+      }
+
+      .privacy-checklist {
+        display: grid;
+        gap: 11px;
+        margin: 15px 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .privacy-checklist li {
+        padding: 14px;
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        background: #fbfcfe;
+      }
+
+      .privacy-checklist strong {
+        display: block;
+        margin-bottom: 3px;
+        color: var(--ink);
+        font-size: 14px;
+      }
+
+      .privacy-inline-note {
+        padding: 14px 16px;
+        border-left: 3px solid var(--blue);
+        border-radius: 0 8px 8px 0;
+        background: var(--pale-blue);
+      }
+
+      .privacy-inline-note p {
+        margin: 0;
+      }
+
+      .privacy-page .footer-links {
+        gap: 24px;
+      }
+
+      @media (min-width: 620px) {
+        .privacy-hero {
+          padding-block: 62px 34px;
+        }
+
+        .privacy-draft-notice {
+          padding: 23px 24px;
+        }
+
+        .privacy-content {
+          grid-template-columns: minmax(190px, 245px) minmax(0, 1fr);
+          gap: 28px;
+          padding-block: 10px 80px;
+        }
+
+        .privacy-toc {
+          position: sticky;
+          top: 98px;
+          padding: 22px;
+        }
+
+        .privacy-article {
+          padding: 34px 38px;
+        }
+
+        .privacy-section + .privacy-section {
+          margin-top: 36px;
+          padding-top: 32px;
+        }
+      }
+
+      @media (max-width: 420px) {
+        .privacy-draft-notice {
+          grid-template-columns: 1fr;
+          gap: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body class="privacy-page">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" id="top">
+      <div class="header-inner">
+        <a class="wordmark" href="../index.html#top" aria-label="WordStack home">
+          <span class="wordmark-icon" aria-hidden="true">W</span>
+          <span>wordstack<span class="wordmark-period">.</span></span>
+        </a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="word-packs.html">Learn</a>
+          <a href="blog-library.html">Blog</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="method.html">Method</a>
+          <a href="./faq.html">FAQ</a>
+        </nav>
+
+        <div class="header-actions">
+          <a class="button button-small" href="start-here.html">
+            Start free <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="privacy-hero section-shell" aria-labelledby="privacy-title">
+        <div class="privacy-hero-inner">
+          <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span> A clear starting point for your privacy policy</p>
+          <h1 id="privacy-title">Privacy <span>Policy</span></h1>
+          <p class="privacy-lede">
+            This draft template identifies the decisions WordStack’s owner must confirm
+            before describing how personal information is handled.
+          </p>
+
+          <aside class="privacy-draft-notice" aria-labelledby="draft-notice-title">
+            <span class="privacy-draft-icon" aria-hidden="true">!</span>
+            <div>
+              <h2 id="draft-notice-title">DRAFT — NOT FOR PUBLICATION</h2>
+              <p>
+                This is a working template, not legal advice and not a statement of
+                WordStack’s actual data practices. Replace every bracketed placeholder,
+                confirm the practices described, and obtain jurisdiction-specific
+                legal review before publishing.
+              </p>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <div class="privacy-content section-shell">
+        <nav class="privacy-toc" aria-label="On this page">
+          <h2>On this page</h2>
+          <ol>
+            <li><a href="#responsible">Who is responsible</a></li>
+            <li><a href="#information">Information categories</a></li>
+            <li><a href="#purposes">Purposes and legal basis</a></li>
+            <li><a href="#sharing">Sharing</a></li>
+            <li><a href="#storage">Storage and retention</a></li>
+            <li><a href="#choices">Your rights and choices</a></li>
+            <li><a href="#security">Security</a></li>
+            <li><a href="#children">Children</a></li>
+            <li><a href="#transfers">International transfers</a></li>
+            <li><a href="#changes">Policy changes</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ol>
+        </nav>
+
+        <article class="privacy-article" aria-label="Draft privacy policy">
+          <section class="privacy-section" id="responsible" aria-labelledby="responsible-title">
+            <h2 id="responsible-title">1. Who is responsible</h2>
+            <p>
+              WordStack is operated by <span class="privacy-placeholder">[OPERATOR LEGAL NAME AND ENTITY TYPE]</span>
+              (“we,” “us,” or “our”). Our operating address is
+              <span class="privacy-placeholder">[OPERATOR ADDRESS]</span>. The person or
+              team responsible for privacy matters is
+              <span class="privacy-placeholder">[PRIVACY CONTACT ROLE OR NAME]</span>.
+            </p>
+            <p>
+              This policy applies to <span class="privacy-placeholder">[CONFIRM THE WORDSTACK WEBSITE, SERVICES, AND FEATURES COVERED]</span>.
+              It is intended for users in
+              <span class="privacy-placeholder">[CONFIRM GOVERNING PRIVACY JURISDICTIONS AND THE LOCATIONS OR USERS TO WHICH THIS POLICY APPLIES]</span>.
+            </p>
+          </section>
+
+          <section class="privacy-section" id="information" aria-labelledby="information-title">
+            <h2 id="information-title">2. Information categories — to confirm</h2>
+            <p>
+              The categories below are a checklist for the owner, not a claim that
+              WordStack collects any of them. Confirm what is collected, whether it is
+              personal information, how it is obtained, and what is optional before
+              retaining or revising this section.
+            </p>
+            <ul class="privacy-checklist">
+              <li>
+                <strong>Account and profile details</strong>
+                <span class="privacy-placeholder">[CONFIRM WHETHER ACCOUNTS EXIST; IF SO, WHICH ACCOUNT, PROFILE, AND SIGN-IN DETAILS ARE REQUIRED OR OPTIONAL]</span>
+              </li>
+              <li>
+                <strong>Learning activity and submitted content</strong>
+                <span class="privacy-placeholder">[CONFIRM WHETHER WORDS, ANSWERS, PROGRESS, PREFERENCES, OR OTHER LEARNING INPUTS ARE STORED]</span>
+              </li>
+              <li>
+                <strong>Device, log, and usage data</strong>
+                <span class="privacy-placeholder">[CONFIRM WHETHER IP ADDRESS, DEVICE OR BROWSER DETAILS, DIAGNOSTIC LOGS, OR USAGE EVENTS ARE COLLECTED]</span>
+              </li>
+              <li>
+                <strong>Analytics and similar technologies</strong>
+                <span class="privacy-placeholder">[CONFIRM WHETHER ANALYTICS, COOKIES, OR OTHER TRACKING TECHNOLOGIES ARE USED; NAME THEM AND EXPLAIN CONTROLS]</span>
+              </li>
+              <li>
+                <strong>Email and support communications</strong>
+                <span class="privacy-placeholder">[CONFIRM WHETHER EMAIL ADDRESSES OR SUPPORT MESSAGES ARE COLLECTED, AND WHETHER ANY EMAILS ARE SENT]</span>
+              </li>
+              <li>
+                <strong>Payments or transactions, if applicable</strong>
+                <span class="privacy-placeholder">[CONFIRM WHETHER PAYMENTS ARE OFFERED AND WHAT TRANSACTION INFORMATION WORDSTACK OR A PROVIDER HANDLES]</span>
+              </li>
+            </ul>
+            <p>
+              Information may also be provided directly by a user or generated through
+              use of a feature only as described after the owner confirms the relevant
+              practice: <span class="privacy-placeholder">[CONFIRM SOURCES AND COLLECTION METHODS, INCLUDING ANY THIRD-PARTY SOURCES]</span>.
+            </p>
+          </section>
+
+          <section class="privacy-section" id="purposes" aria-labelledby="purposes-title">
+            <h2 id="purposes-title">3. Purposes and legal basis — to confirm</h2>
+            <p>
+              Before publication, map each confirmed information category to a specific
+              purpose and the applicable legal basis. Do not treat the examples below
+              as a description of current WordStack processing.
+            </p>
+            <p>
+              <span class="privacy-placeholder">[FOR EACH CONFIRMED CATEGORY, STATE THE SPECIFIC PURPOSE, WHETHER PROVIDING IT IS REQUIRED, AND THE CONSEQUENCE OF NOT PROVIDING IT]</span>
+            </p>
+            <p>
+              For users and processing in applicable regimes, confirm whether and how
+              the relevant requirements of the
+              <span class="privacy-placeholder">[APPLICABLE PDPA REGIME(S)]</span>,
+              <span class="privacy-placeholder">[JAPAN APPI, IF APPLICABLE]</span>,
+              <span class="privacy-placeholder">[CHINA PIPL, IF APPLICABLE]</span>,
+              and any other privacy laws apply. Identify the legal basis or permitted
+              ground for each purpose, any consent process, and how consent may be
+              withdrawn: <span class="privacy-placeholder">[JURISDICTION-SPECIFIC PURPOSES, LEGAL BASIS, AND CONSENT DETAILS — TO BE REVIEWED]</span>.
+            </p>
+          </section>
+
+          <section class="privacy-section" id="sharing" aria-labelledby="sharing-title">
+            <h2 id="sharing-title">4. Sharing</h2>
+            <p>
+              State whether WordStack discloses personal information, and identify the
+              actual recipients, information involved, purposes, and safeguards. Do
+              not leave examples that do not match the confirmed practices.
+            </p>
+            <p>
+              <span class="privacy-placeholder">[CONFIRM WHETHER INFORMATION IS SHARED; LIST EACH PROCESSOR OR RECIPIENT CATEGORY, ITS ROLE, PURPOSE, AND RELEVANT LOCATION]</span>
+            </p>
+            <p>
+              Also confirm whether disclosures may occur at a user’s direction, in a
+              business transfer, or when required or permitted by law, and explain any
+              applicable limits: <span class="privacy-placeholder">[CONFIRMED CIRCUMSTANCES AND DISCLOSURE DETAILS, OR STATE THAT NONE APPLY]</span>.
+            </p>
+          </section>
+
+          <section class="privacy-section" id="storage" aria-labelledby="storage-title">
+            <h2 id="storage-title">5. Storage and retention</h2>
+            <p>
+              Information is stored in <span class="privacy-placeholder">[CONFIRM STORAGE SYSTEMS, COUNTRIES OR REGIONS, AND WHO CONTROLS THEM]</span>.
+              For each category, specify the retention period or the criteria used to
+              decide when it is deleted or anonymized:
+              <span class="privacy-placeholder">[RETENTION PERIODS OR CRITERIA BY CATEGORY, INCLUDING BACKUPS AND DELETION TIMING]</span>.
+            </p>
+            <p>
+              Describe any legal, operational, or dispute-related reason information
+              may need to be retained longer, and what happens when the retention
+              period ends: <span class="privacy-placeholder">[CONFIRM EXCEPTIONS AND DELETION OR ANONYMIZATION PROCESS]</span>.
+            </p>
+          </section>
+
+          <section class="privacy-section" id="choices" aria-labelledby="choices-title">
+            <h2 id="choices-title">6. Your rights and choices</h2>
+            <p>
+              Depending on the applicable law and circumstances, a person may have
+              rights relating to access, correction, deletion, consent, or other
+              handling of personal information. Confirm which rights apply to each
+              relevant jurisdiction; do not present this general list as a guarantee
+              of eligibility.
+            </p>
+            <p>
+              <span class="privacy-placeholder">[LIST CONFIRMED RIGHTS AND CHOICES BY JURISDICTION, INCLUDING ANY LIMITS OR EXCEPTIONS]</span>
+            </p>
+            <p>
+              To make a request, use <span class="privacy-placeholder">[CONFIRMED REQUEST METHOD AND CONTACT DETAILS]</span>.
+              Explain how identity is verified, the expected response process and
+              timing, and how a person may complain to a relevant authority:
+              <span class="privacy-placeholder">[REQUEST HANDLING, VERIFICATION, RESPONSE, AND COMPLAINT DETAILS]</span>.
+            </p>
+          </section>
+
+          <section class="privacy-section" id="security" aria-labelledby="security-title">
+            <h2 id="security-title">7. Security</h2>
+            <p>
+              Describe the administrative, technical, and organizational safeguards
+              actually used to protect information, at an appropriate level of detail:
+              <span class="privacy-placeholder">[CONFIRM SECURITY MEASURES AND INCIDENT-RESPONSE PRACTICES]</span>.
+              Do not claim that any system or transmission is completely secure.
+            </p>
+          </section>
+
+          <section class="privacy-section" id="children" aria-labelledby="children-title">
+            <h2 id="children-title">8. Children</h2>
+            <p>
+              Confirm whether the service is intended for children, the applicable
+              minimum age or age rules in each jurisdiction, and whether parent or
+              guardian involvement or consent is required:
+              <span class="privacy-placeholder">[AGE RULES, INTENDED AUDIENCE, AND REQUIRED PARENT OR GUARDIAN PROCESS]</span>.
+            </p>
+            <p>
+              Explain what a parent, guardian, or user should do if information was
+              provided in a way that conflicts with those rules:
+              <span class="privacy-placeholder">[CONFIRMED CONTACT AND ACTION PROCESS FOR CHILDREN’S INFORMATION]</span>.
+            </p>
+          </section>
+
+          <section class="privacy-section" id="transfers" aria-labelledby="transfers-title">
+            <h2 id="transfers-title">9. International transfers</h2>
+            <p>
+              Confirm whether personal information is accessed or transferred across
+              borders, including through service providers. Identify the relevant
+              countries or regions, recipients, and transfer safeguards or mechanisms:
+              <span class="privacy-placeholder">[LOCATIONS, CROSS-BORDER TRANSFERS, AND APPLICABLE SAFEGUARDS — TO CONFIRM]</span>.
+            </p>
+            <p>
+              If there are no cross-border transfers, state that only after verifying
+              the locations and access practices of all systems and providers:
+              <span class="privacy-placeholder">[CONFIRMED TRANSFER POSITION AND ANY REQUIRED NOTICE OR CONSENT]</span>.
+            </p>
+          </section>
+
+          <section class="privacy-section" id="changes" aria-labelledby="changes-title">
+            <h2 id="changes-title">10. Policy changes</h2>
+            <p>
+              If this policy changes, explain how the owner will publish the revised
+              version and notify users when required. State when the change takes
+              effect: <span class="privacy-placeholder">[CONFIRM UPDATE AND NOTICE PROCESS]</span>.
+            </p>
+            <p>
+              Effective date: <span class="privacy-placeholder">[EFFECTIVE DATE — SET ONLY AFTER REVIEW AND APPROVAL]</span>.
+            </p>
+          </section>
+
+          <section class="privacy-section" id="contact" aria-labelledby="contact-title">
+            <h2 id="contact-title">11. Contact</h2>
+            <p>
+              For privacy questions, requests, or concerns, contact
+              <span class="privacy-placeholder">[OPERATOR OR PRIVACY CONTACT NAME]</span>
+              at <span class="privacy-placeholder">[PRIVACY CONTACT EMAIL OR FORM URL]</span>,
+              or by post at <span class="privacy-placeholder">[POSTAL ADDRESS, IF APPLICABLE]</span>.
+            </p>
+            <div class="privacy-inline-note">
+              <p>
+                <strong>Before publishing:</strong> Replace every bracketed placeholder,
+                verify every factual statement against actual operations, remove any
+                irrelevant options, and obtain jurisdiction-specific review. This
+                template is not legal advice and does not establish that WordStack
+                follows any particular privacy practice or complies with any law.
+              </p>
+            </div>
+          </section>
+        </article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="section-shell footer-main">
+        <div class="footer-brand">
+          <a class="wordmark" href="../index.html#top" aria-label="WordStack home">
+            <span class="wordmark-icon" aria-hidden="true">W</span>
+            <span>wordstack<span class="wordmark-period">.</span></span>
+          </a>
+          <p>Useful English for the work you do. One small session at a time.</p>
+        </div>
+        <nav class="footer-links" aria-label="Footer">
+          <div>
+            <strong>Explore</strong>
+            <a href="word-packs.html">Word packs</a>
+            <a href="method.html">Our method</a>
+            <a href="word-detail.html">Sample word</a>
+          </div>
+          <div>
+            <strong>WordStack</strong>
+            <a href="./about.html">About</a>
+            <a href="./faq.html">FAQ</a>
+            <a href="./contact.html">Contact</a>
+          </div>
+          <div>
+            <strong>Good to know</strong>
+            <a href="#top" aria-current="page">Privacy</a>
+            <a href="./terms.html">Terms</a>
+            <a href="#top">Back to top ↑</a>
+          </div>
+        </nav>
+      </div>
+      <div class="footer-bottom section-shell">
+        <span>© 2026 WordStack. Made for steady progress.</span>
+        <span>Working name — change freely.</span>
+      </div>
+    </footer>
+  </body>
+</html>

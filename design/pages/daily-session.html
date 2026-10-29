@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Take a calm, focused WordStack review with one useful workplace English word at a time."
+    >
+    <meta name="theme-color" content="#f6f8fb">
+    <title>Daily Session — WordStack</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+      .session-page {
+        min-height: 100vh;
+        background: var(--canvas);
+      }
+
+      .session-header {
+        border-bottom: 1px solid var(--border);
+        background: var(--surface);
+      }
+
+      .session-header-inner {
+        display: flex;
+        width: min(820px, 100% - 40px);
+        min-height: 68px;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        margin-inline: auto;
+      }
+
+      .session-brand {
+        display: inline-flex;
+        min-height: 44px;
+        align-items: center;
+        gap: 9px;
+        color: var(--ink);
+        font-size: 19px;
+        font-weight: 800;
+        letter-spacing: -1px;
+        line-height: 1;
+        text-decoration: none;
+      }
+
+      .session-brand-mark {
+        display: grid;
+        width: 30px;
+        height: 30px;
+        place-items: center;
+        border-radius: 8px;
+        color: #fff;
+        background: var(--blue);
+        font-size: 16px;
+        letter-spacing: -1px;
+      }
+
+      .session-brand-period {
+        color: var(--blue);
+      }
+
+      .session-exit {
+        display: inline-flex;
+        min-height: 44px;
+        align-items: center;
+        gap: 8px;
+        color: var(--body);
+        font-size: 14px;
+        font-weight: 650;
+        text-decoration: none;
+      }
+
+      .session-exit:hover {
+        color: var(--blue);
+      }
+
+      .session-main {
+        width: min(640px, 100% - 40px);
+        margin-inline: auto;
+        padding-block: 34px 56px;
+      }
+
+      .session-intro {
+        margin-bottom: 27px;
+        text-align: center;
+      }
+
+      .session-eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 10px;
+        color: var(--blue);
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: .09em;
+        text-transform: uppercase;
+      }
+
+      .session-eyebrow-mark {
+        color: var(--green);
+        font-size: 16px;
+      }
+
+      .session-title {
+        max-width: none;
+        margin: 0 0 8px;
+        font-size: clamp(1.9rem, 7vw, 2.55rem);
+        letter-spacing: -.045em;
+        line-height: 1.15;
+      }
+
+      .session-subtitle {
+        max-width: 440px;
+        margin: 0 auto;
+        color: var(--muted);
+        font-size: 16px;
+      }
+
+      .session-progress {
+        margin-bottom: 22px;
+        padding: 16px 18px;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        background: var(--surface);
+      }
+
+      .session-progress-heading {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 4px 12px;
+        margin-bottom: 10px;
+        color: var(--body);
+        font-size: 14px;
+      }
+
+      .session-progress-heading strong {
+        color: var(--ink);
+        font-weight: 700;
+      }
+
+      .session-progress-heading span:last-child {
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .session-progress-track {
+        display: block;
+        width: 100%;
+        height: 7px;
+        overflow: hidden;
+        border: 0;
+        border-radius: 99px;
+        background: #e5ebf2;
+        appearance: none;
+      }
+
+      .session-progress-track::-webkit-progress-bar {
+        border-radius: 99px;
+        background: #e5ebf2;
+      }
+
+      .session-progress-track::-webkit-progress-value {
+        border-radius: 99px;
+        background: var(--blue);
+      }
+
+      .session-progress-track::-moz-progress-bar {
+        border-radius: 99px;
+        background: var(--blue);
+      }
+
+      .progress-demo-note {
+        margin: 9px 0 0;
+        color: var(--muted);
+        font-size: 12px;
+        line-height: 1.45;
+      }
+
+      .review-card {
+        overflow: hidden;
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        background: var(--surface);
+        box-shadow: 0 8px 24px rgb(23 43 58 / 6%);
+      }
+
+      .review-card-top {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+        padding: 17px 20px;
+        border-bottom: 1px solid #edf1f5;
+      }
+
+      .review-category,
+      .review-sample-label {
+        margin: 0;
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+      }
+
+      .review-category {
+        color: var(--blue);
+      }
+
+      .review-sample-label {
+        color: var(--muted);
+      }
+
+      .review-card-content {
+        padding: 25px 20px 21px;
+      }
+
+      .review-sample-label {
+        margin-bottom: 8px;
+      }
+
+      .review-word {
+        margin: 0 0 4px;
+        font-size: clamp(2.65rem, 12vw, 3.35rem);
+        letter-spacing: -.06em;
+        line-height: 1.08;
+      }
+
+      .review-pronunciation {
+        margin: 0 0 21px;
+        color: var(--muted);
+        font-size: 15px;
+      }
+
+      .review-part-of-speech {
+        display: inline-block;
+        margin-left: 8px;
+        padding: 2px 8px;
+        border-radius: 5px;
+        color: var(--blue);
+        background: var(--pale-blue);
+        font-size: 12px;
+        font-weight: 700;
+      }
+
+      .recall-prompt {
+        margin: 0;
+        padding: 16px;
+        border-radius: 10px;
+        color: var(--body);
+        background: #f6f8fb;
+        font-size: 16px;
+        line-height: 1.6;
+      }
+
+      .answer-reveal {
+        margin-top: 18px;
+      }
+
+      .answer-reveal summary {
+        display: flex;
+        min-height: 52px;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 12px 18px;
+        border: 1px solid var(--blue);
+        border-radius: 8px;
+        color: #fff;
+        background: var(--blue);
+        cursor: pointer;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 1.3;
+        list-style: none;
+        text-align: center;
+        transition: background-color 150ms ease, border-color 150ms ease;
+      }
+
+      .answer-reveal summary::-webkit-details-marker {
+        display: none;
+      }
+
+      .answer-reveal summary::after {
+        content: "↓";
+        font-size: 18px;
+        line-height: 1;
+      }
+
+      .answer-reveal summary:hover {
+        border-color: var(--blue-hover);
+        background: var(--blue-hover);
+      }
+
+      .answer-reveal[open] summary::after {
+        content: "↑";
+      }
+
+      .answer-reveal summary:focus-visible {
+        outline: 3px solid #93c5fd;
+        outline-offset: 3px;
+      }
+
+      .review-answer {
+        padding: 19px 2px 0;
+      }
+
+      .review-answer h3 {
+        margin: 0 0 7px;
+        font-size: 15px;
+      }
+
+      .review-definition {
+        margin: 0 0 15px;
+        color: var(--body);
+        font-size: 16px;
+        line-height: 1.6;
+      }
+
+      .review-example {
+        margin: 0;
+        padding: 14px 16px;
+        border-left: 3px solid var(--blue);
+        border-radius: 0 8px 8px 0;
+        color: var(--body);
+        background: var(--pale-blue);
+        font-size: 15px;
+        line-height: 1.65;
+      }
+
+      .session-note {
+        display: flex;
+        align-items: flex-start;
+        gap: 11px;
+        margin: 19px 0 0;
+        padding: 15px 16px;
+        border: 1px solid #dcefe8;
+        border-radius: 11px;
+        color: var(--body);
+        background: #f2faf6;
+        font-size: 14px;
+        line-height: 1.55;
+      }
+
+      .session-note-mark {
+        flex: 0 0 auto;
+        color: var(--green);
+        font-size: 18px;
+        line-height: 1.3;
+      }
+
+      .session-note strong {
+        color: var(--ink);
+      }
+
+      @media (min-width: 640px) {
+        .session-main {
+          padding-top: 48px;
+        }
+
+        .session-intro {
+          margin-bottom: 32px;
+        }
+
+        .review-card-top {
+          padding-inline: 24px;
+        }
+
+        .review-card-content {
+          padding: 29px 24px 25px;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .answer-reveal summary {
+          transition: none;
+        }
+      }
+    </style>
+  </head>
+  <body class="session-page">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="session-header">
+      <div class="session-header-inner">
+        <a class="session-brand" href="../index.html" aria-label="WordStack home">
+          <span class="session-brand-mark" aria-hidden="true">W</span>
+          <span>wordstack<span class="session-brand-period">.</span></span>
+        </a>
+        <a class="session-exit" href="blog-library.html">Blog</a>
+        <a class="session-exit" href="pricing.html">Pricing</a>
+        <a class="session-exit" href="../index.html">
+          <span aria-hidden="true">←</span> Exit session
+        </a>
+      </div>
+    </header>
+
+    <main class="session-main" id="main">
+      <section aria-labelledby="session-title">
+        <div class="session-intro">
+          <p class="session-eyebrow"><span class="session-eyebrow-mark" aria-hidden="true">✳</span> Daily session</p>
+          <h1 class="session-title" id="session-title">A little practice, at your pace.</h1>
+          <p class="session-subtitle">Take a moment with one useful word for your workday.</p>
+        </div>
+
+        <div class="session-progress">
+          <div class="session-progress-heading">
+            <strong>Sample session progress</strong>
+            <span>1 of 15 · demo</span>
+          </div>
+          <progress class="session-progress-track" value="1" max="15" aria-label="Sample session progress: 1 of 15"></progress>
+          <p class="progress-demo-note">Illustrative prototype only — this progress is not saved.</p>
+        </div>
+
+        <article class="review-card" aria-labelledby="review-word">
+          <div class="review-card-top">
+            <p class="review-category">Emails &amp; meetings</p>
+            <p class="review-sample-label">Sample word</p>
+          </div>
+          <div class="review-card-content">
+            <p class="review-sample-label">Pause and recall</p>
+            <h2 class="review-word" id="review-word">clarify</h2>
+            <p class="review-pronunciation">/ˈklær.ə.faɪ/ <span class="review-part-of-speech">verb</span></p>
+            <p class="recall-prompt">Can you remember what <strong>clarify</strong> means, and how you might use it at work?</p>
+
+            <details class="answer-reveal">
+              <summary>Reveal meaning and example</summary>
+              <div class="review-answer">
+                <h3>Meaning</h3>
+                <p class="review-definition">To make something easier to understand by explaining it more clearly.</p>
+                <h3>At work</h3>
+                <p class="review-example">Could you <strong>clarify</strong> what you need from me by Thursday?</p>
+              </div>
+            </details>
+          </div>
+        </article>
+
+        <p class="session-note">
+          <span class="session-note-mark" aria-hidden="true">↗</span>
+          <span><strong>No pressure.</strong> Take the time you need. This sample is just for practice; your progress isn’t being tracked.</span>
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

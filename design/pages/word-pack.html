@@ -1,0 +1,691 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Preview Office English Starter: 40 practical words for clearer workplace conversations, with a calm five-minute learning plan."
+    >
+    <meta name="theme-color" content="#f6f8fb">
+    <title>Office English Starter — Word Pack | WordStack</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+      .pack-page {
+        min-height: 60vh;
+        padding-bottom: 72px;
+        background: var(--canvas);
+      }
+
+      .pack-shell {
+        width: min(var(--content-width), 100% - 40px);
+        margin-inline: auto;
+      }
+
+      .pack-breadcrumbs {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 7px;
+        padding-block: 20px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .pack-breadcrumbs a {
+        color: var(--body);
+        text-decoration-thickness: 1px;
+        text-underline-offset: 3px;
+      }
+
+      .pack-breadcrumbs a:hover {
+        color: var(--blue);
+      }
+
+      .pack-breadcrumb-separator {
+        color: #94a3b8;
+      }
+
+      .pack-hero {
+        display: grid;
+        gap: 28px;
+        align-items: center;
+        padding-block: 20px 38px;
+      }
+
+      .pack-hero-copy {
+        max-width: 650px;
+      }
+
+      .pack-eyebrow {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        margin: 0 0 12px;
+        color: var(--blue);
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 1.05px;
+        line-height: 1.4;
+        text-transform: uppercase;
+      }
+
+      .pack-eyebrow-mark {
+        display: grid;
+        width: 27px;
+        height: 27px;
+        place-items: center;
+        border-radius: 8px;
+        color: #1558b0;
+        background: #e6f0ff;
+        font-size: 15px;
+        letter-spacing: 0;
+      }
+
+      .pack-hero h1 {
+        margin-bottom: 15px;
+        font-size: clamp(2.5rem, 7vw, 4.1rem);
+        line-height: 1.07;
+      }
+
+      .pack-intro {
+        max-width: 600px;
+        margin-bottom: 23px;
+        color: var(--body);
+        font-size: 17px;
+        line-height: 1.7;
+      }
+
+      .pack-actions {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 10px 18px;
+      }
+
+      .pack-secondary-action {
+        display: inline-flex;
+        min-height: 48px;
+        align-items: center;
+        gap: 8px;
+        padding-inline: 16px;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        color: var(--body);
+        background: var(--surface);
+        font-size: 14px;
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      .pack-secondary-action:hover {
+        border-color: #b8cdfa;
+        background: #f8faff;
+      }
+
+      .pack-demo-note {
+        max-width: 540px;
+        margin: 11px 0 0;
+        color: var(--muted);
+        font-size: 12px;
+        line-height: 1.55;
+      }
+
+      .pack-progress-card {
+        width: 100%;
+        max-width: 450px;
+        padding: 23px;
+        border: 1px solid var(--border);
+        border-radius: var(--radius-card);
+        background: var(--surface);
+        box-shadow: 0 10px 28px rgb(23 43 58 / 6%);
+      }
+
+      .progress-card-top {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 12px;
+        margin-bottom: 23px;
+      }
+
+      .progress-card-label {
+        margin: 0 0 4px;
+        color: var(--muted);
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+      }
+
+      .progress-card-title {
+        margin: 0;
+        font-size: 18px;
+        letter-spacing: -.02em;
+      }
+
+      .sample-badge {
+        flex: 0 0 auto;
+        padding: 6px 9px;
+        border: 1px solid #f1d996;
+        border-radius: 999px;
+        color: #684a08;
+        background: #fff8e7;
+        font-size: 11px;
+        font-weight: 750;
+        line-height: 1.2;
+      }
+
+      .progress-count {
+        display: flex;
+        align-items: baseline;
+        gap: 6px;
+        margin-bottom: 11px;
+      }
+
+      .progress-count strong {
+        color: var(--ink);
+        font-size: 31px;
+        letter-spacing: -.055em;
+        line-height: 1;
+      }
+
+      .progress-count span {
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .progress-track {
+        overflow: hidden;
+        height: 9px;
+        margin-bottom: 14px;
+        border-radius: 999px;
+        background: #eaf0f5;
+      }
+
+      .progress-track span {
+        display: block;
+        width: 20%;
+        height: 100%;
+        border-radius: inherit;
+        background: var(--green);
+      }
+
+      .progress-card-foot {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      .progress-card-foot strong {
+        color: var(--body);
+        font-weight: 650;
+      }
+
+      .pack-facts {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1px;
+        margin: 0;
+        padding: 1px;
+        overflow: hidden;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        background: var(--border);
+      }
+
+      .pack-fact {
+        display: flex;
+        min-height: 74px;
+        align-items: center;
+        gap: 13px;
+        padding: 13px 16px;
+        background: var(--surface);
+      }
+
+      .fact-icon {
+        display: grid;
+        width: 38px;
+        height: 38px;
+        flex: 0 0 38px;
+        place-items: center;
+        border-radius: 11px;
+        color: #1558b0;
+        background: #edf4ff;
+        font-size: 17px;
+        font-weight: 750;
+      }
+
+      .pack-fact:nth-child(2) .fact-icon {
+        color: #0d755b;
+        background: #e8f7f0;
+      }
+
+      .pack-fact:nth-child(3) .fact-icon {
+        color: #76530b;
+        background: #fff5dc;
+      }
+
+      .pack-fact dt {
+        margin-bottom: 1px;
+        color: var(--muted);
+        font-size: 11px;
+        font-weight: 650;
+        letter-spacing: .04em;
+        text-transform: uppercase;
+      }
+
+      .pack-fact dd {
+        margin: 0;
+        color: var(--ink);
+        font-size: 14px;
+        font-weight: 700;
+      }
+
+      .preview-section {
+        padding-top: 53px;
+      }
+
+      .preview-heading {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: end;
+        justify-content: space-between;
+        gap: 12px 24px;
+        margin-bottom: 20px;
+      }
+
+      .preview-heading .pack-eyebrow {
+        margin-bottom: 8px;
+      }
+
+      .preview-heading h2 {
+        margin: 0;
+        font-size: clamp(1.7rem, 4vw, 2.25rem);
+        letter-spacing: -.04em;
+        line-height: 1.2;
+      }
+
+      .preview-count {
+        display: inline-flex;
+        min-height: 36px;
+        align-items: center;
+        padding: 6px 11px;
+        border: 1px solid #d6e5fb;
+        border-radius: 999px;
+        color: #1747a6;
+        background: #f4f8ff;
+        font-size: 12px;
+        font-weight: 750;
+        white-space: nowrap;
+      }
+
+      .preview-list {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .preview-link {
+        display: flex;
+        min-height: 76px;
+        align-items: center;
+        gap: 13px;
+        padding: 13px 15px;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        color: inherit;
+        background: var(--surface);
+        text-decoration: none;
+        transition: border-color 150ms ease, background-color 150ms ease, transform 150ms ease;
+      }
+
+      .preview-link:hover {
+        transform: translateY(-1px);
+        border-color: #b8cdfa;
+        background: #fbfdff;
+      }
+
+      .preview-number {
+        display: grid;
+        width: 36px;
+        height: 36px;
+        flex: 0 0 36px;
+        place-items: center;
+        border-radius: 10px;
+        color: var(--muted);
+        background: #f1f4f8;
+        font-size: 11px;
+        font-weight: 800;
+      }
+
+      .preview-word-copy {
+        min-width: 0;
+        flex: 1;
+      }
+
+      .preview-word {
+        display: block;
+        margin-bottom: 2px;
+        color: var(--ink);
+        font-size: 16px;
+        font-weight: 750;
+        line-height: 1.35;
+      }
+
+      .preview-hint {
+        display: block;
+        color: var(--muted);
+        font-size: 12px;
+        line-height: 1.4;
+      }
+
+      .preview-arrow {
+        display: grid;
+        width: 34px;
+        height: 34px;
+        flex: 0 0 34px;
+        place-items: center;
+        border-radius: 9px;
+        color: var(--blue);
+        background: var(--pale-blue);
+        font-size: 17px;
+      }
+
+      .preview-footnote {
+        margin: 14px 0 0;
+        color: var(--muted);
+        font-size: 12px;
+        line-height: 1.55;
+      }
+
+      .pack-bottom-cta {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        margin-top: 45px;
+        padding: 23px;
+        border: 1px solid #d5e4fa;
+        border-radius: var(--radius-card);
+        background: #f0f6ff;
+      }
+
+      .pack-bottom-cta h2 {
+        margin: 0 0 4px;
+        font-size: 19px;
+        letter-spacing: -.025em;
+      }
+
+      .pack-bottom-cta p {
+        margin: 0;
+        color: var(--body);
+        font-size: 14px;
+      }
+
+      @media (min-width: 560px) {
+        .pack-facts {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .pack-fact {
+          align-items: flex-start;
+          flex-direction: column;
+          gap: 9px;
+          padding: 16px;
+        }
+
+        .preview-list {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (min-width: 850px) {
+        .pack-shell {
+          width: min(var(--content-width), 100% - 64px);
+        }
+
+        .pack-hero {
+          grid-template-columns: minmax(0, 1.2fr) minmax(310px, .8fr);
+          gap: 48px;
+          padding-block: 26px 42px;
+        }
+
+        .pack-progress-card {
+          justify-self: end;
+          padding: 26px;
+        }
+
+        .preview-section {
+          padding-top: 65px;
+        }
+
+        .preview-list {
+          gap: 12px;
+        }
+
+        .preview-link {
+          min-height: 82px;
+          padding-inline: 17px;
+        }
+
+        .pack-bottom-cta {
+          padding: 26px 30px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" id="top">
+      <div class="header-inner">
+        <a class="wordmark" href="../index.html" aria-label="WordStack home">
+          <span class="wordmark-icon" aria-hidden="true">W</span>
+          <span>wordstack<span class="wordmark-period">.</span></span>
+        </a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="word-packs.html" aria-current="page">Learn</a>
+          <a href="blog-library.html">Blog</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="method.html">Method</a>
+          <a href="faq.html">FAQ</a>
+        </nav>
+
+        <div class="header-actions">
+          <a class="login-link" href="../index.html#start">Log in</a>
+          <a class="button button-small" href="start-here.html">Start free <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="pack-page">
+      <div class="pack-shell">
+        <nav class="pack-breadcrumbs" aria-label="Breadcrumb">
+          <a href="../index.html">Home</a>
+          <span class="pack-breadcrumb-separator" aria-hidden="true">/</span>
+          <a href="word-packs.html">Word packs</a>
+          <span class="pack-breadcrumb-separator" aria-hidden="true">/</span>
+          <span aria-current="page">Office English Starter</span>
+        </nav>
+
+        <section class="pack-hero" aria-labelledby="pack-title">
+          <div class="pack-hero-copy">
+            <p class="pack-eyebrow"><span class="pack-eyebrow-mark" aria-hidden="true">✳</span> Everyday work, clearer words</p>
+            <h1 id="pack-title">Office English <span>Starter</span></h1>
+            <p class="pack-intro">
+              Find the words for everyday work moments: sharing updates, asking clear questions,
+              and following through with confidence.
+            </p>
+            <div class="pack-actions">
+              <a class="button" href="daily-session.html">Start this pack <span aria-hidden="true">→</span></a>
+              <a class="pack-secondary-action" href="daily-session.html">Try a daily session <span aria-hidden="true">↗</span></a>
+            </div>
+            <p class="pack-demo-note">Demo only — starting or logging in won’t save pack progress on this prototype.</p>
+          </div>
+
+          <aside class="pack-progress-card" aria-label="Illustrative sample pack progress">
+            <div class="progress-card-top">
+              <div>
+                <p class="progress-card-label">A steady start</p>
+                <h2 class="progress-card-title">Your pack progress</h2>
+              </div>
+              <span class="sample-badge">Sample view</span>
+            </div>
+            <div class="progress-count">
+              <strong>8</strong>
+              <span>of 40 words explored</span>
+            </div>
+            <div class="progress-track" role="progressbar" aria-label="Illustrative sample progress through the pack" aria-valuemin="0" aria-valuemax="40" aria-valuenow="8">
+              <span></span>
+            </div>
+            <div class="progress-card-foot">
+              <span>Illustrative progress only</span>
+              <strong>20% sample</strong>
+            </div>
+          </aside>
+        </section>
+
+        <dl class="pack-facts" aria-label="Pack details">
+          <div class="pack-fact">
+            <span class="fact-icon" aria-hidden="true">↗</span>
+            <div><dt>What you’ll practise</dt><dd>Clear everyday communication</dd></div>
+          </div>
+          <div class="pack-fact">
+            <span class="fact-icon" aria-hidden="true">◎</span>
+            <div><dt>Suggested level</dt><dd>Elementary to intermediate · A2–B1</dd></div>
+          </div>
+          <div class="pack-fact">
+            <span class="fact-icon" aria-hidden="true">◷</span>
+            <div><dt>Learning rhythm</dt><dd>About 5 minutes a day</dd></div>
+          </div>
+        </dl>
+
+        <section class="preview-section" aria-labelledby="preview-title">
+          <div class="preview-heading">
+            <div>
+              <p class="pack-eyebrow">A quick look inside</p>
+              <h2 id="preview-title">Words for your workday</h2>
+            </div>
+            <span class="preview-count">Preview: 8 of 40</span>
+          </div>
+
+          <ol class="preview-list" aria-label="Eight example words from the Office English Starter pack">
+            <li>
+              <a class="preview-link" href="word-detail.html" aria-label="Clarify — open the sample word detail">
+                <span class="preview-number" aria-hidden="true">01</span>
+                <span class="preview-word-copy"><span class="preview-word">clarify</span><span class="preview-hint">Make a request or idea easier to understand</span></span>
+                <span class="preview-arrow" aria-hidden="true">↗</span>
+              </a>
+            </li>
+            <li>
+              <a class="preview-link" href="word-detail.html" aria-label="Follow up — open the sample word detail">
+                <span class="preview-number" aria-hidden="true">02</span>
+                <span class="preview-word-copy"><span class="preview-word">follow up</span><span class="preview-hint">Continue a conversation or check on next steps</span></span>
+                <span class="preview-arrow" aria-hidden="true">↗</span>
+              </a>
+            </li>
+            <li>
+              <a class="preview-link" href="word-detail.html" aria-label="Schedule — open the sample word detail">
+                <span class="preview-number" aria-hidden="true">03</span>
+                <span class="preview-word-copy"><span class="preview-word">schedule</span><span class="preview-hint">Plan a time for a meeting or task</span></span>
+                <span class="preview-arrow" aria-hidden="true">↗</span>
+              </a>
+            </li>
+            <li>
+              <a class="preview-link" href="word-detail.html" aria-label="Deadline — open the sample word detail">
+                <span class="preview-number" aria-hidden="true">04</span>
+                <span class="preview-word-copy"><span class="preview-word">deadline</span><span class="preview-hint">The time by which a task should be finished</span></span>
+                <span class="preview-arrow" aria-hidden="true">↗</span>
+              </a>
+            </li>
+            <li>
+              <a class="preview-link" href="word-detail.html" aria-label="Align — open the sample word detail">
+                <span class="preview-number" aria-hidden="true">05</span>
+                <span class="preview-word-copy"><span class="preview-word">align</span><span class="preview-hint">Agree on a plan or shared next step</span></span>
+                <span class="preview-arrow" aria-hidden="true">↗</span>
+              </a>
+            </li>
+            <li>
+              <a class="preview-link" href="word-detail.html" aria-label="Update — open the sample word detail">
+                <span class="preview-number" aria-hidden="true">06</span>
+                <span class="preview-word-copy"><span class="preview-word">update</span><span class="preview-hint">Share the latest information about your work</span></span>
+                <span class="preview-arrow" aria-hidden="true">↗</span>
+              </a>
+            </li>
+            <li>
+              <a class="preview-link" href="word-detail.html" aria-label="Confirm — open the sample word detail">
+                <span class="preview-number" aria-hidden="true">07</span>
+                <span class="preview-word-copy"><span class="preview-word">confirm</span><span class="preview-hint">Make sure an arrangement or detail is correct</span></span>
+                <span class="preview-arrow" aria-hidden="true">↗</span>
+              </a>
+            </li>
+            <li>
+              <a class="preview-link" href="word-detail.html" aria-label="Priority — open the sample word detail">
+                <span class="preview-number" aria-hidden="true">08</span>
+                <span class="preview-word-copy"><span class="preview-word">priority</span><span class="preview-hint">A task or goal that needs attention first</span></span>
+                <span class="preview-arrow" aria-hidden="true">↗</span>
+              </a>
+            </li>
+          </ol>
+          <p class="preview-footnote">
+            Each word opens the shared word-detail prototype. The current sample record is “align”;
+            pack-specific word pages are a demo placeholder.
+          </p>
+        </section>
+
+        <section class="pack-bottom-cta" aria-labelledby="next-step-title">
+          <div>
+            <h2 id="next-step-title">A useful next step, whenever you’re ready.</h2>
+            <p>Start small with one five-minute session. Your progress here is an illustrative sample.</p>
+          </div>
+          <a class="button" href="daily-session.html">Start this pack <span aria-hidden="true">→</span></a>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="section-shell footer-main">
+        <div class="footer-brand">
+          <a class="wordmark" href="../index.html" aria-label="WordStack home">
+            <span class="wordmark-icon" aria-hidden="true">W</span>
+            <span>wordstack<span class="wordmark-period">.</span></span>
+          </a>
+          <p>Useful English for the work you do. One small session at a time.</p>
+        </div>
+        <div class="footer-links">
+          <div>
+            <strong>Explore</strong>
+            <a href="word-packs.html">Word packs</a>
+            <a href="method.html">Our method</a>
+            <a href="word-detail.html">Sample word</a>
+          </div>
+          <div>
+            <strong>WordStack</strong>
+            <a href="about.html">About</a>
+            <a href="faq.html">FAQ</a>
+            <a href="contact.html">Contact</a>
+          </div>
+          <div>
+            <strong>Good to know</strong>
+            <a href="privacy.html">Privacy</a>
+            <a href="terms.html">Terms</a>
+            <a href="#top">Back to top ↑</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom section-shell">
+        <span>© 2026 WordStack. Made for steady progress.</span>
+        <span>Working name — change freely.</span>
+      </div>
+    </footer>
+  </body>
+</html>

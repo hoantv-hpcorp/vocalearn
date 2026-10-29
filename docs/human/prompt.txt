@@ -1,0 +1,69 @@
+1. Build a Complete Website Plan
+
+“Act as a senior website strategist.
+Plan a website for a [business type], targeting [audience] in [location].
+Define the essential pages, navigation system, page hierarchy, and user journey that drive [sales/leads/bookings].
+Keep the structure strategic, simple, and easy for beginners to follow.”
+
+2. Design a Conversion-Focused Homepage
+
+“Act as a conversion-focused website designer.
+Build the homepage structure for a [business type], including a bold and engaging hero section, benefits, services, testimonials, FAQs, trust elements, and a clear call to action.
+Explain the purpose of each section and how it guides visitors toward [goal].
+Use a clean, modern layout.”
+
+3. Write Persuasive Homepage Copy
+
+“Act as a direct-response copywriter.
+Write homepage copy for a [business type], targeting [audience].
+Include a powerful headline, a supporting subheadline, three customer-focused benefits, persuasive call-to-action buttons, and a closing section that builds trust.
+Use a [tone] tone and cut out unnecessary wordiness.”
+
+4. Create a Premium Website Design System
+
+“Act as a UI/UX designer.
+Create a polished visual identity for a [business type] website, including a cohesive color palette with HEX codes, heading and body fonts, button styles, spacing rules, and design guidelines.
+Reflect a [modern/luxury/minimal] aesthetic, and make sure beginners can implement it easily.”
+
+5. Generate Responsive Website Code
+
+“Act as a front-end web developer.
+Build a landing page for a [business type] using HTML and CSS that adapts to different screen sizes.
+Include a hero section, services, benefits, testimonials, and a call to action.
+Use semantic HTML, clean CSS, accessible components, and a mobile-first design approach.
+Provide complete, editable code along with brief setup instructions.”
+
+6. Create a Service Page That Drives Sales
+
+“Act as a website content strategist.
+Write a services page for a [business type] offering [service 1], [service 2], and [service 3].
+For each service, provide a clear headline, a short description, the ideal customer, key results, and a call to action.
+Emphasize the results customers receive, readability, and trustworthiness.”
+
+7. Write an Authentic About Page
+
+“Act as a brand storyteller.
+Write an About page for [business/person/brand] that builds trust.
+Include the origin story, mission, core values, unique strengths, and the reasons customers should choose this business, person, or brand.
+Use a [friendly/professional/warm] tone, creating a feeling that is human, trustworthy, and relatable.”
+
+8. Optimize Website Content for SEO
+
+“Act as an SEO expert.
+Create content optimized for a [page type], targeting [keyword/topic] and [audience].
+Include an engaging title, a structured heading hierarchy, related search phrases, easy-to-read paragraphs, and a compelling meta description.
+Satisfy search intent naturally, without keyword stuffing.”
+
+9. Evaluate and Improve Website User Experience
+
+“Act as a UX expert.
+Evaluate my website at [URL] or analyze the following website idea: [description].
+Identify issues with navigation, layout, visual hierarchy, readability, calls to action, accessibility, and mobile usability.
+Rank the recommendations by impact and provide a practical fix for each issue.”
+
+10. Debug and Optimize Website Code
+
+“Act as a senior front-end developer.
+Review the following code: [paste code].
+Identify and fix bugs, and improve responsiveness across screen sizes, accessibility, performance, and code structure.
+Preserve the existing functionality, briefly explain the key changes, and return the complete revised code.”

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Word packs — WordStack</title>
+  <meta name="description" content="Browse workplace English word packs by situation and industry. Meetings, emails, interviews, finance, tech, and more — each a small, finishable set.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/base.css">
+  <link rel="stylesheet" href="assets/marketing.css">
+  <link rel="stylesheet" href="assets/app.css">
+  <script src="assets/icons.js" defer></script>
+  <script src="assets/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="WordStack home">
+        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+        WordStack
+      </a>
+      <nav class="main-nav" aria-label="Primary">
+        <a class="nav-link" href="packs.html" aria-current="page">Learn</a>
+        <a class="nav-link" href="index.html#method">Method</a>
+        <a class="nav-link" href="word.html">Word of the day</a>
+        <a class="nav-link" href="index.html#faq">FAQ</a>
+      </nav>
+      <div class="header-actions">
+        <a class="header-login" href="dashboard.html">Log in</a>
+        <a class="btn btn--primary btn--sm" href="placement.html">
+          Start free
+          <svg class="icon icon--nudge" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-panel" aria-label="Open menu">
+          <svg class="icon" aria-hidden="true"><use href="#i-menu"></use></svg>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-panel" id="mobile-panel">
+      <a href="packs.html" aria-current="page">Learn <svg class="icon icon-sm" aria-hidden="true"><use href="#i-chevron-right"></use></svg></a>
+      <a href="index.html#method">Method <svg class="icon icon-sm" aria-hidden="true"><use href="#i-chevron-right"></use></svg></a>
+      <a href="word.html">Word of the day <svg class="icon icon-sm" aria-hidden="true"><use href="#i-chevron-right"></use></svg></a>
+      <a href="index.html#faq">FAQ <svg class="icon icon-sm" aria-hidden="true"><use href="#i-chevron-right"></use></svg></a>
+      <a href="dashboard.html">Log in <svg class="icon icon-sm" aria-hidden="true"><use href="#i-chevron-right"></use></svg></a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="wrap">
+        <p class="eyebrow">Learn · Word packs</p>
+        <h1>Words for the moments that matter at work.</h1>
+        <p class="lede">Browse by the situation you’re walking into — a Monday standup, a difficult email, an interview — or by the industry you work in. Every pack is small enough to finish.</p>
+
+        <div class="pack-toolbar">
+          <div class="search-field">
+            <svg class="icon" aria-hidden="true"><use href="#i-search"></use></svg>
+            <label class="sr-only" for="pack-search">Search packs</label>
+            <input id="pack-search" type="search" placeholder="Search by situation, industry, or word…" autocomplete="off">
+          </div>
+          <div class="filter-row" role="group" aria-label="Filter packs">
+            <button class="filter-chip" type="button" data-filter="all" aria-pressed="true">All packs</button>
+            <button class="filter-chip" type="button" data-filter="situation" aria-pressed="false">Situations</button>
+            <button class="filter-chip" type="button" data-filter="industry" aria-pressed="false">Industry</button>
+            <button class="filter-chip" type="button" data-filter="beginner" aria-pressed="false">Beginner</button>
+            <button class="filter-chip" type="button" data-filter="intermediate" aria-pressed="false">Intermediate</button>
+            <button class="filter-chip" type="button" data-filter="advanced" aria-pressed="false">Advanced</button>
+          </div>
+        </div>
+
+        <div class="pack-results-meta">
+          <span id="pack-count" aria-live="polite">9 packs</span>
+          <span>Grouped by situation, never A–Z.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section--tight" style="padding-top:0">
+      <div class="wrap">
+        <div class="pack-grid" id="pack-grid">
+          <a class="tcard tcard--forest pack-card pack-card--featured" data-tab="Start here · 4-week plan" data-categories="situation beginner" href="pack.html">
+            <div class="pack-featured-body">
+              <div>
+                <h2>Office English Starter</h2>
+                <p class="pack-outcome">Your first four weeks of useful work English. One small pack for the meetings, messages, and deadlines you meet every week.</p>
+                <div class="pack-meta">
+                  <span><svg class="icon" aria-hidden="true"><use href="#i-book"></use></svg>40 words</span>
+                  <span><svg class="icon" aria-hidden="true"><use href="#i-chart"></use></svg>Beginner</span>
+                  <span><svg class="icon" aria-hidden="true"><use href="#i-clock"></use></svg>5 min a day</span>
+                </div>
+              </div>
+              <div class="pack-featured-side">
+                <span class="mono">Starts with</span>
+                <div class="pack-words">
+                  <span class="tag">agenda</span>
+                  <span class="tag">follow up</span>
+                  <span class="tag">deadline</span>
+                  <span class="tag">heads-up</span>
+                </div>
+                <div class="pack-foot">Preview the pack <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></div>
+              </div>
+            </div>
+          </a>
+
+          <a class="tcard pack-card" data-tab="Situation · Popular" data-categories="situation intermediate" href="pack.html">
+            <h3>Meetings &amp; Pushback</h3>
+            <p class="pack-outcome">Say it without sounding rude. The words for disagreeing, buying time, and moving a decision forward.</p>
+            <div class="pack-meta">
+              <span><svg class="icon" aria-hidden="true"><use href="#i-book"></use></svg>55 words</span>
+              <span><svg class="icon" aria-hidden="true"><use href="#i-chart"></use></svg>Intermediate</span>
+              <span><svg class="icon" aria-hidden="true"><use href="#i-clock"></use></svg>5 min</span>
+            </div>
+            <div class="pack-words">
+              <span class="tag">pushback</span>
+              <span class="tag">align</span>
+              <span class="tag">circle back</span>
+            </div>
+            <div class="pack-foot">Preview pack <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></div>
+          </a>
+
+          <a class="tcard pack-card" data-tab="Situation · Email" data-categories="situation intermediate" href="pack.html">
+            <h3>Emails That Get Replies</h3>
+            <p class="pack-outcome">Clear, polite, confident. Write the message once — without second-guessing your tone.</p>
+            <div class="pack-meta">
+              <span><svg class="icon" aria-hidden="true"><use href="#i-book"></use></svg>45 words</span>
+              <span><svg class="icon" aria-hidden="true"><use href="#i-chart"></use></svg>Intermediate</span>
+              <span><svg class="icon" aria-hidden="true"><use href="#i-clock"></use></svg>5 min</span>
+            </div>
+            <div class="pack-words">
+              <span class="tag">touch base</span>
+              <span class="tag">accordingly</span>
+              <span class="tag">at your convenience</span>
+            </div>
+            <div class="pack-foot">Preview pack <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></div>
+          </a>
+
+          <a class="tcard pack-card" data-tab="Situation · Interview" data-categories="situation advanced" href="pack.html">
+            <h3>Interview English</h3>
+            <p class="pack-outcome">Walk in ready to talk about your work, your impact, and what you want next.</p>
+            <div class="pack-meta">
+              <span><svg class="icon" aria-hidden="true"><use href="#i-book"></use></svg>60 words</span>
+              <span><svg class="icon" aria-hidden="true"><use href="#i-chart"></use></svg>Advanced</span>
+              <span><svg class="icon" aria-hidden="true"><use href="#i-clock"></use></svg>6 min</span>
+            </div>
+            <div class="pack-words">
+              <span class="tag">stakeholder</span>
+              <span class="tag">ownership</span>
+              <span class="tag">impact</span>
+            </div>
+            <div class="pack-foot">Preview pack <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></div>
+          </a>
+
+          <a class="tcard pack-card" data-tab="Situation · Small talk" data-categories="situation beginner" href="pack.html">
+            <h3>Small Talk That Works</h3>
+            <p class="pack-outcome">The two minutes before the meeting starts. Warm, short, and never awkward.</p>
+            <div class="pack-meta">
+              <span><svg class="icon" aria-hidden="true"><use href="#i-book"></use></svg>30 words</span>
+              <span><svg class="icon" aria-hidden="true"><use href="#i-chart"></use></svg>Beginner</span>
+              <span><svg class="icon" aria-hidden="true"><use href="#i-clock"></use></svg>4 min</span>
+            </div>
+            <div class="pack-words">
+              <span class="tag">catch up</span>
+              <span class="tag">how’s things</span>
+              <span class="tag">wrap up</span>
+            </div>
+            <div class="pack-foot">Preview pack <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></div>
+          </a>
+
+          <a class="tcard pack-card" data-tab="Situation · Presenting" data-categories="situation intermediate" href="pack.html">
+            <h3>Presentations</h3>
+            <p class="pack-outcome">Open with a point, land the evidence, close with a clear ask.</p>
+            <div class="pack-meta">
+              <span><svg class="icon" aria-hidden="true"><use href="#i-book"></use></svg>42 words</span>
+              <span><svg class="icon" aria-hidden="true"><use href="#i-chart"></use></svg>Intermediate</span>
+              <span><svg class="icon" aria-hidden="true"><use href="#i-clock"></use></svg>5 min</span>
+            </div>
+            <div class="pack-words">
+              <span class="tag">takeaway</span>
+              <span class="tag">walk through</span>
+              <span class="tag">next steps</span>
+            </div>
+            <div class="pack-foot">Preview pack <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></div>
+          </a>
+
+          <a class="tcard pack-card" data-tab="Industry · Finance" data-categories="industry advanced" href="pack.html">
+            <h3>Finance English</h3>
+            <p class="pack-outcome">Talk about numbers, forecasts, and risk without hiding behind jargon.</p>
+            <div class="pack-meta">
+              <span><svg class="icon" aria-hidden="true"><use href="#i-book"></use></svg>50 words</span>
+              <span><svg class="icon" aria-hidden="true"><use href="#i-chart"></use></svg>Advanced</span>
+              <span><svg class="icon" aria-hidden="true"><use href="#i-clock"></use></svg>5 min</span>
+            </div>
+            <div class="pack-words">
+              <span class="tag">buffer</span>
+              <span class="tag">headwind</span>
+              <span class="tag">run rate</span>
+            </div>
+            <div class="pack-foot">Preview pack <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></div>
+          </a>
+
+          <a class="tcard pack-card" data-tab="Industry · Tech" data-categories="industry intermediate" href="pack.html">
+            <h3>Tech Team English</h3>
+            <p class="pack-outcome">Standups, specs, launches. The shorthand your product team actually uses.</p>
+            <div class="pack-meta">
+              <span><svg class="icon" aria-hidden="true"><use href="#i-book"></use></svg>48 words</span>
+              <span><svg class="icon" aria-hidden="true"><use href="#i-chart"></use></svg>Intermediate</span>
+              <span><svg class="icon" aria-hidden="true"><use href="#i-clock"></use></svg>5 min</span>
+            </div>
+            <div class="pack-words">
+              <span class="tag">rollout</span>
+              <span class="tag">blocker</span>
+              <span class="tag">deprecate</span>
+            </div>
+            <div class="pack-foot">Preview pack <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></div>
+          </a>
+
+          <a class="tcard pack-card" data-tab="Industry · Consulting" data-categories="industry advanced" href="pack.html">
+            <h3>Consulting English</h3>
+            <p class="pack-outcome">Frameworks, findings, and client conversations — without sounding rehearsed.</p>
+            <div class="pack-meta">
+              <span><svg class="icon" aria-hidden="true"><use href="#i-book"></use></svg>52 words</span>
+              <span><svg class="icon" aria-hidden="true"><use href="#i-chart"></use></svg>Advanced</span>
+              <span><svg class="icon" aria-hidden="true"><use href="#i-clock"></use></svg>6 min</span>
+            </div>
+            <div class="pack-words">
+              <span class="tag">workstream</span>
+              <span class="tag">take stock</span>
+              <span class="tag">key driver</span>
+            </div>
+            <div class="pack-foot">Preview pack <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></div>
+          </a>
+        </div>
+
+        <div class="pack-empty" id="pack-empty" hidden>
+          <h2>No packs match that search.</h2>
+          <p>Try a broader word like “meetings”, “finance”, or “beginner”.</p>
+        </div>
+
+        <div class="pack-footer-note">
+          <p>Not sure where to start? The two-minute check picks one for you.</p>
+          <a class="btn btn--primary" href="placement.html">
+            Take the level check
+            <svg class="icon icon--nudge" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html" aria-label="WordStack home">
+            <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+            WordStack
+          </a>
+          <p class="footer-note">Workplace English for busy professionals. Five minutes a day, reviewed at the right time so it stays.</p>
+        </div>
+        <div class="footer-col">
+          <h3>Learn</h3>
+          <a href="packs.html">Word packs</a>
+          <a href="pack.html">Meetings &amp; Pushback</a>
+          <a href="word.html">Word of the day</a>
+          <a href="session.html">Daily review</a>
+        </div>
+        <div class="footer-col">
+          <h3>Product</h3>
+          <a href="placement.html">Level check</a>
+          <a href="index.html#method">Our method</a>
+          <a href="progress.html">Progress</a>
+          <a href="dashboard.html">Dashboard</a>
+        </div>
+        <div class="footer-col">
+          <h3>Company</h3>
+          <a href="index.html#faq">FAQ</a>
+          <a href="mailto:hello@wordstack.example">Contact</a>
+          <a href="legal.html">Privacy</a>
+          <a href="legal.html#terms">Terms</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> WordStack</span>
+        <span class="footer-fine">Design exploration v2. Prices, testimonials, and integrations are intentionally absent from this prototype.</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

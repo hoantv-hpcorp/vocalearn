@@ -1,0 +1,610 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Explore practical WordStack English packs for meetings, emails, interviews, presentations, and small talk at work."
+    >
+    <meta name="theme-color" content="#f6f8fb">
+    <title>Word Packs for Work — WordStack</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+      .packs-page {
+        background: var(--canvas);
+      }
+
+      .packs-hero {
+        padding-block: 48px 38px;
+        background:
+          radial-gradient(ellipse at 88% 18%, rgb(219 234 254 / 65%), transparent 32%),
+          var(--canvas);
+      }
+
+      .packs-hero-inner {
+        max-width: 1120px;
+        margin-inline: auto;
+      }
+
+      .packs-hero .eyebrow {
+        margin-bottom: 12px;
+      }
+
+      .packs-hero h1 {
+        max-width: 760px;
+        margin-bottom: 15px;
+        font-size: clamp(2.35rem, 7vw, 3.8rem);
+      }
+
+      .packs-hero h1 span {
+        color: var(--blue);
+      }
+
+      .packs-hero-copy {
+        max-width: 630px;
+        margin-bottom: 22px;
+        color: var(--body);
+        font-size: 17px;
+      }
+
+      .packs-hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 8px 20px;
+      }
+
+      .packs-content {
+        padding-block: 18px 64px;
+      }
+
+      .packs-section {
+        padding-block: 38px;
+        scroll-margin-top: 96px;
+      }
+
+      .packs-section + .packs-section {
+        border-top: 1px solid var(--border);
+      }
+
+      .packs-heading {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: end;
+        justify-content: space-between;
+        gap: 12px 24px;
+        margin-bottom: 22px;
+      }
+
+      .packs-heading > div {
+        max-width: 660px;
+      }
+
+      .packs-heading .eyebrow {
+        margin-bottom: 9px;
+      }
+
+      .packs-heading h2 {
+        margin-bottom: 7px;
+        font-size: clamp(1.65rem, 4vw, 2.25rem);
+        letter-spacing: -.04em;
+        line-height: 1.2;
+      }
+
+      .packs-heading p:last-child {
+        margin-bottom: 0;
+        color: var(--muted);
+      }
+
+      .pack-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 14px;
+      }
+
+      .situation-card {
+        display: flex;
+        min-width: 0;
+        flex-direction: column;
+        padding: 20px;
+        border: 1px solid var(--border);
+        border-radius: var(--radius-card);
+        background: var(--surface);
+        box-shadow: 0 5px 18px rgb(23 43 58 / 3%);
+      }
+
+      .situation-card-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        margin-bottom: 16px;
+      }
+
+      .situation-icon {
+        display: grid;
+        width: 40px;
+        height: 40px;
+        flex: 0 0 40px;
+        place-items: center;
+        border-radius: 11px;
+        color: var(--blue);
+        background: var(--pale-blue);
+        font-size: 18px;
+        font-weight: 750;
+      }
+
+      .pack-count,
+      .pack-level {
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 650;
+      }
+
+      .situation-card h3 {
+        margin-bottom: 7px;
+        font-size: 20px;
+        letter-spacing: -.025em;
+      }
+
+      .situation-description {
+        margin-bottom: 16px;
+        color: var(--body);
+        font-size: 14px;
+      }
+
+      .outcome {
+        margin: 0 0 17px;
+        padding: 12px 14px;
+        border-left: 3px solid var(--green);
+        border-radius: 0 8px 8px 0;
+        color: var(--body);
+        background: #f4faf7;
+        font-size: 13px;
+        line-height: 1.55;
+      }
+
+      .outcome strong {
+        color: var(--ink);
+      }
+
+      .sample-words {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 0 0 18px;
+        padding: 0;
+        list-style: none;
+      }
+
+      .sample-words a {
+        display: inline-flex;
+        min-height: 36px;
+        align-items: center;
+        padding: 5px 10px;
+        border: 1px solid #e1e9f2;
+        border-radius: 7px;
+        color: var(--blue);
+        background: #f8faff;
+        font-size: 13px;
+        font-weight: 650;
+        text-decoration: none;
+      }
+
+      .sample-words a:hover {
+        border-color: #bfdbfe;
+        background: var(--pale-blue);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .situation-card .button {
+        width: 100%;
+        min-height: 48px;
+        margin-top: auto;
+        font-size: 14px;
+      }
+
+      .browse-panel {
+        padding: 24px;
+        border: 1px solid var(--border);
+        border-radius: var(--radius-card);
+        background: #fff;
+      }
+
+      .browse-panel h3 {
+        margin-bottom: 5px;
+        font-size: 18px;
+      }
+
+      .browse-panel > p {
+        margin-bottom: 17px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .browse-panel + .browse-panel {
+        margin-top: 14px;
+      }
+
+      .label-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 9px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .label-list li {
+        display: inline-flex;
+        min-height: 40px;
+        align-items: center;
+        padding: 7px 12px;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        color: var(--body);
+        background: #fff;
+        font-size: 14px;
+        font-weight: 600;
+      }
+
+      .level-list {
+        display: grid;
+        gap: 12px;
+      }
+
+      .level-item {
+        display: grid;
+        gap: 2px;
+        padding: 13px 15px;
+        border: 1px solid #e8edf3;
+        border-radius: 9px;
+        background: #fbfcfe;
+      }
+
+      .level-item strong {
+        color: var(--ink);
+        font-size: 14px;
+      }
+
+      .level-item span {
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .packs-note {
+        max-width: 800px;
+        margin: 19px 0 0;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .packs-cta {
+        padding-block: 48px;
+        color: #fff;
+        background: var(--ink);
+      }
+
+      .packs-cta-inner {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px 30px;
+      }
+
+      .packs-cta h2 {
+        max-width: 590px;
+        margin-bottom: 6px;
+        color: #fff;
+        font-size: clamp(1.65rem, 4vw, 2.2rem);
+        letter-spacing: -.035em;
+        line-height: 1.2;
+      }
+
+      .packs-cta p {
+        max-width: 550px;
+        margin-bottom: 0;
+        color: #c2cfdb;
+      }
+
+      .packs-cta .button {
+        flex: 0 0 auto;
+      }
+
+      @media (min-width: 620px) {
+        .packs-hero {
+          padding-block: 65px 48px;
+        }
+
+        .packs-content {
+          padding-block: 24px 80px;
+        }
+
+        .packs-section {
+          padding-block: 48px;
+        }
+
+        .pack-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 16px;
+        }
+
+        .situation-card {
+          padding: 22px;
+        }
+
+        .level-list {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .packs-cta-inner {
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+        }
+      }
+
+      @media (min-width: 900px) {
+        .packs-hero {
+          padding-block: 72px 54px;
+        }
+
+        .packs-content {
+          padding-block: 28px 92px;
+        }
+
+        .pack-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 18px;
+        }
+
+        .situation-card {
+          min-height: 365px;
+          padding: 24px;
+        }
+
+        .browse-layout {
+          display: grid;
+          grid-template-columns: 1.1fr .9fr;
+          align-items: start;
+          gap: 18px;
+        }
+
+        .browse-panel + .browse-panel {
+          margin-top: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" id="top">
+      <div class="header-inner">
+        <a class="wordmark" href="../index.html" aria-label="WordStack home">
+          <span class="wordmark-icon" aria-hidden="true">W</span>
+          <span>wordstack<span class="wordmark-period">.</span></span>
+        </a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="word-packs.html" aria-current="page">Learn</a>
+          <a href="blog-library.html">Blog</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="method.html">Method</a>
+          <a href="faq.html">FAQ</a>
+        </nav>
+
+        <div class="header-actions">
+          <a class="login-link" href="start-here.html">Log in</a>
+          <a class="button button-small" href="word-pack.html">Start free <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="packs-page">
+      <section class="packs-hero" aria-labelledby="page-title">
+        <div class="section-shell packs-hero-inner">
+          <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span> English for real work moments</p>
+          <h1 id="page-title">Find the words for <span>your next workday.</span></h1>
+          <p class="packs-hero-copy">
+            Choose a situation you want to feel more ready for. Each short pack brings useful words,
+            clear examples, and practice you can fit into a busy day.
+          </p>
+          <div class="packs-hero-actions">
+            <a class="button" href="#situations">Explore the packs <span aria-hidden="true">↓</span></a>
+            <a class="text-link" href="word-pack.html">Start with a sample pack <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </section>
+
+      <div class="packs-content section-shell">
+        <section class="packs-section" id="situations" aria-labelledby="situations-title">
+          <div class="packs-heading">
+            <div>
+              <p class="eyebrow">Start with the moment</p>
+              <h2 id="situations-title">What are you getting ready to do?</h2>
+              <p>Explore work situations first, then choose the words that match your day.</p>
+            </div>
+          </div>
+
+          <div class="pack-grid">
+            <article class="situation-card">
+              <div class="situation-card-top">
+                <span class="situation-icon" aria-hidden="true">↔</span>
+                <span class="pack-count">12 useful words</span>
+              </div>
+              <h3>Meetings &amp; clear decisions</h3>
+              <p class="situation-description">Share an idea, check understanding, and agree on what happens next.</p>
+              <p class="outcome"><strong>You’ll practise:</strong> adding a point, clarifying a decision, and assigning next steps.</p>
+              <ul class="sample-words" aria-label="Sample meeting words">
+                <li><a href="word-detail.html">align</a></li>
+                <li><a href="word-detail.html">clarify</a></li>
+                <li><a href="word-detail.html">follow up</a></li>
+              </ul>
+              <a class="button" href="word-pack.html">Explore this pack <span aria-hidden="true">→</span></a>
+            </article>
+
+            <article class="situation-card">
+              <div class="situation-card-top">
+                <span class="situation-icon" aria-hidden="true">✉</span>
+                <span class="pack-count">12 useful words</span>
+              </div>
+              <h3>Emails that get to the point</h3>
+              <p class="situation-description">Write concise updates, make polite requests, and close the loop.</p>
+              <p class="outcome"><strong>You’ll practise:</strong> setting context, making a request, and confirming an action.</p>
+              <ul class="sample-words" aria-label="Sample email words">
+                <li><a href="word-detail.html">regarding</a></li>
+                <li><a href="word-detail.html">attached</a></li>
+                <li><a href="word-detail.html">appreciate</a></li>
+              </ul>
+              <a class="button" href="word-pack.html">Explore this pack <span aria-hidden="true">→</span></a>
+            </article>
+
+            <article class="situation-card">
+              <div class="situation-card-top">
+                <span class="situation-icon" aria-hidden="true">◇</span>
+                <span class="pack-count">12 useful words</span>
+              </div>
+              <h3>Interviews &amp; introductions</h3>
+              <p class="situation-description">Talk about your experience, strengths, and the work you want to do.</p>
+              <p class="outcome"><strong>You’ll practise:</strong> describing your role, giving examples, and asking thoughtful questions.</p>
+              <ul class="sample-words" aria-label="Sample interview words">
+                <li><a href="word-detail.html">experience</a></li>
+                <li><a href="word-detail.html">contribute</a></li>
+                <li><a href="word-detail.html">strength</a></li>
+              </ul>
+              <a class="button" href="word-pack.html">Explore this pack <span aria-hidden="true">→</span></a>
+            </article>
+
+            <article class="situation-card">
+              <div class="situation-card-top">
+                <span class="situation-icon" aria-hidden="true">▤</span>
+                <span class="pack-count">12 useful words</span>
+              </div>
+              <h3>Presentations &amp; project updates</h3>
+              <p class="situation-description">Guide listeners through key points, progress, and recommendations.</p>
+              <p class="outcome"><strong>You’ll practise:</strong> signposting an idea, explaining a result, and landing your next step.</p>
+              <ul class="sample-words" aria-label="Sample presentation words">
+                <li><a href="word-detail.html">overview</a></li>
+                <li><a href="word-detail.html">highlight</a></li>
+                <li><a href="word-detail.html">recommend</a></li>
+              </ul>
+              <a class="button" href="word-pack.html">Explore this pack <span aria-hidden="true">→</span></a>
+            </article>
+
+            <article class="situation-card">
+              <div class="situation-card-top">
+                <span class="situation-icon" aria-hidden="true">☕</span>
+                <span class="pack-count">12 useful words</span>
+              </div>
+              <h3>Small talk &amp; everyday connection</h3>
+              <p class="situation-description">Start a friendly conversation and keep it comfortable and natural.</p>
+              <p class="outcome"><strong>You’ll practise:</strong> opening a chat, showing interest, and responding with ease.</p>
+              <ul class="sample-words" aria-label="Sample small talk words">
+                <li><a href="word-detail.html">weekend</a></li>
+                <li><a href="word-detail.html">interested</a></li>
+                <li><a href="word-detail.html">by the way</a></li>
+              </ul>
+              <a class="button" href="word-pack.html">Explore this pack <span aria-hidden="true">→</span></a>
+            </article>
+          </div>
+        </section>
+
+        <section class="packs-section" aria-labelledby="browse-title">
+          <div class="packs-heading">
+            <div>
+              <p class="eyebrow">Make it relevant to you</p>
+              <h2 id="browse-title">Browse by industry or level</h2>
+              <p>Use these collections as a guide to the examples and language you’ll find in each pack.</p>
+            </div>
+          </div>
+
+          <div class="browse-layout">
+            <section class="browse-panel" aria-labelledby="industry-title">
+              <h3 id="industry-title">Industry collections</h3>
+              <p>Workplace examples grounded in familiar teams and tasks.</p>
+              <ul class="label-list">
+                <li>Technology &amp; product</li>
+                <li>Customer service</li>
+                <li>Sales &amp; marketing</li>
+                <li>Operations &amp; logistics</li>
+                <li>Finance &amp; administration</li>
+                <li>Healthcare</li>
+                <li>Education</li>
+              </ul>
+            </section>
+
+            <section class="browse-panel" aria-labelledby="level-title">
+              <h3 id="level-title">Choose a comfortable level</h3>
+              <p>Start where the examples feel useful, not overwhelming.</p>
+              <div class="level-list">
+                <div class="level-item">
+                  <strong>Starter</strong>
+                  <span>Everyday words and short, clear examples.</span>
+                </div>
+                <div class="level-item">
+                  <strong>Growing</strong>
+                  <span>More precise language for common work tasks.</span>
+                </div>
+                <div class="level-item">
+                  <strong>Confident</strong>
+                  <span>Nuance for complex ideas and professional tone.</span>
+                </div>
+              </div>
+            </section>
+          </div>
+          <p class="packs-note">Industry and level collections help you find a useful starting point; they are shown here as categories, not interactive filters.</p>
+        </section>
+      </div>
+
+      <section class="packs-cta" aria-labelledby="packs-cta-title">
+        <div class="section-shell packs-cta-inner">
+          <div>
+            <p class="eyebrow">A small step that fits your day</p>
+            <h2 id="packs-cta-title">Pick one situation. Practise one useful word at a time.</h2>
+            <p>Start with a short sample and see how work-ready English can feel more manageable.</p>
+          </div>
+          <a class="button button-light" href="word-pack.html">Open a sample pack <span aria-hidden="true">→</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="section-shell footer-main">
+        <div class="footer-brand">
+          <a class="wordmark" href="../index.html" aria-label="WordStack home">
+            <span class="wordmark-icon" aria-hidden="true">W</span>
+            <span>wordstack<span class="wordmark-period">.</span></span>
+          </a>
+          <p>Useful English for the work you do. One small session at a time.</p>
+        </div>
+        <div class="footer-links">
+          <div>
+            <strong>Explore</strong>
+            <a href="word-packs.html">Word packs</a>
+            <a href="method.html">Our method</a>
+            <a href="word-detail.html">Sample word</a>
+          </div>
+          <div>
+            <strong>WordStack</strong>
+            <a href="about.html">About</a>
+            <a href="faq.html">FAQ</a>
+            <a href="contact.html">Contact</a>
+          </div>
+          <div>
+            <strong>Good to know</strong>
+            <a href="privacy.html">Privacy</a>
+            <a href="terms.html">Terms</a>
+            <a href="#top">Back to top ↑</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom section-shell">
+        <span>© 2026 WordStack. Made for steady progress.</span>
+        <span>Working name — change freely.</span>
+      </div>
+    </footer>
+  </body>
+</html>
