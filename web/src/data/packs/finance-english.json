@@ -1,0 +1,219 @@
+{
+  "slug": "finance-english",
+  "name": "Finance English",
+  "tab": "Industry · Finance",
+  "kind": "Industry pack",
+  "categories": ["industry", "advanced"],
+  "level": "Advanced",
+  "cefr": "B2–C1",
+  "minutes": 5,
+  "lede": "Talk about numbers, forecasts, and risk without hiding behind jargon. Learn the finance words that keep a meeting honest — and make you sound like you actually own the numbers.",
+  "outcome": "Speak plainly about forecasts, margins, and risk — and ask the questions that expose a weak number.",
+  "outcomes": [
+    "Read a P&L or forecast and ask the two or three questions that actually matter.",
+    "Push back on a number that sounds too good — without sounding like you don’t trust the room.",
+    "Explain a variance, a shortfall, or a bad quarter in plain language the whole business understands."
+  ],
+  "aside": {
+    "title": "For the meeting where the numbers get questioned.",
+    "body": "Every term here is one you’ll hear in a forecast review, a budget call, or a board pack — explained the way a colleague would, not a textbook."
+  },
+  "words": [
+    {
+      "word": "revenue",
+      "pos": "noun",
+      "definition": "The money a business brings in from selling its products or services.",
+      "example": "Revenue grew nine per cent, but most of that came from one client.",
+      "collocations": ["revenue growth", "recurring revenue", "revenue target"]
+    },
+    {
+      "word": "gross margin",
+      "pos": "noun",
+      "definition": "The money left from sales after paying the direct cost of delivering them.",
+      "example": "Gross margin fell because our hosting costs doubled last quarter.",
+      "collocations": ["gross margin pressure", "improve gross margin", "gross margin percentage"]
+    },
+    {
+      "word": "profit",
+      "pos": "noun",
+      "definition": "What remains after all the costs of running the business are paid.",
+      "example": "We made a profit, but far less than the plan promised.",
+      "collocations": ["operating profit", "profit margin", "turn a profit"]
+    },
+    {
+      "word": "cash flow",
+      "pos": "noun",
+      "definition": "The movement of money in and out of a business over time.",
+      "example": "Cash flow is tight, even though the order book looks strong.",
+      "collocations": ["positive cash flow", "cash flow forecast", "manage cash flow"]
+    },
+    {
+      "word": "burn rate",
+      "pos": "noun",
+      "definition": "How quickly a company spends its cash before earning enough to cover costs.",
+      "example": "At the current burn rate, we have eleven months of runway.",
+      "collocations": ["monthly burn rate", "reduce burn rate", "high burn rate"]
+    },
+    {
+      "word": "budget",
+      "pos": "noun",
+      "definition": "The amount of money a team plans to spend over a period.",
+      "example": "That project is over budget and only half finished.",
+      "collocations": ["stay within budget", "budget approval", "cut the budget"]
+    },
+    {
+      "word": "variance",
+      "pos": "noun",
+      "definition": "The gap between what you planned to spend or earn and what actually happened.",
+      "example": "The biggest variance is in marketing spend, not headcount.",
+      "collocations": ["explain the variance", "budget variance", "variance analysis"]
+    },
+    {
+      "word": "cost base",
+      "pos": "noun",
+      "definition": "The total ongoing cost of running a business, taken as one figure.",
+      "example": "We need to take ten per cent out of our cost base.",
+      "collocations": ["reduce the cost base", "fixed cost base", "lean cost base"]
+    },
+    {
+      "word": "overheads",
+      "pos": "noun",
+      "definition": "Regular costs of running a business that don’t depend on how much you sell.",
+      "example": "Moving to a smaller office cut our overheads by a fifth.",
+      "collocations": ["keep overheads low", "cut overheads", "fixed overheads"]
+    },
+    {
+      "word": "capex",
+      "pos": "noun",
+      "definition": "Money spent on long-term assets like equipment, buildings, or software.",
+      "example": "The board approved the capex, but wants it phased over two years.",
+      "collocations": ["approve capex", "capex budget", "cut capex"]
+    },
+    {
+      "word": "opex",
+      "pos": "noun",
+      "definition": "The day-to-day running costs of a business, as opposed to long-term investment.",
+      "example": "Opex is flat, which is a good result given the hiring.",
+      "collocations": ["opex budget", "reduce opex", "opex line"]
+    },
+    {
+      "word": "roi",
+      "pos": "noun",
+      "definition": "The gain you get from an investment, measured against what it cost.",
+      "example": "The ROI on that campaign was weaker than we expected.",
+      "collocations": ["strong roi", "roi calculation", "prove the roi"]
+    },
+    {
+      "word": "payback",
+      "pos": "noun",
+      "definition": "The time it takes for an investment to earn back what it cost.",
+      "example": "The payback is under two years, which makes it easy to approve.",
+      "collocations": ["payback period", "quick payback", "two-year payback"]
+    },
+    {
+      "word": "write-off",
+      "pos": "noun",
+      "definition": "Removing an asset or debt from the books because it has lost its value.",
+      "example": "We took a small write-off on the old equipment.",
+      "collocations": ["take a write-off", "bad debt write-off", "inventory write-off"]
+    },
+    {
+      "word": "impairment",
+      "pos": "noun",
+      "definition": "A reduction in an asset’s recorded value because it is worth less now.",
+      "example": "The auditor flagged an impairment on the software we bought.",
+      "collocations": ["impairment charge", "goodwill impairment", "recognise an impairment"]
+    },
+    {
+      "word": "provision",
+      "pos": "noun",
+      "definition": "Money set aside in the accounts for a cost you expect to face.",
+      "example": "We’ve made a provision for the legal costs.",
+      "collocations": ["make a provision", "provision for bad debts", "release a provision"]
+    },
+    {
+      "word": "liquidity",
+      "pos": "noun",
+      "definition": "How easily a business can pay its bills with the cash it has.",
+      "example": "Liquidity is fine for now, but not if the client pays late.",
+      "collocations": ["tight liquidity", "liquidity position", "improve liquidity"]
+    },
+    {
+      "word": "balance sheet",
+      "pos": "noun",
+      "definition": "A snapshot of what a company owns, owes, and is worth on a date.",
+      "example": "The balance sheet looks healthy, but most of it is one building.",
+      "collocations": ["strengthen the balance sheet", "off balance sheet", "balance sheet date"]
+    },
+    {
+      "word": "p&l",
+      "pos": "noun",
+      "definition": "A report showing sales, costs, and profit over a period of time.",
+      "example": "Send me the P&L before the review on Thursday.",
+      "collocations": ["own the p&l", "p&l review", "read the p&l"]
+    },
+    {
+      "word": "year-on-year",
+      "pos": "adjective",
+      "definition": "Measured against the same period in the previous year.",
+      "example": "Year-on-year growth is eight per cent, but the quarter was flat.",
+      "collocations": ["year-on-year growth", "year-on-year comparison", "up year-on-year"]
+    },
+    {
+      "word": "break even",
+      "pos": "phrase",
+      "definition": "To reach the point where income exactly covers all your costs.",
+      "example": "We should break even by the third quarter next year.",
+      "collocations": ["break-even point", "reach break even", "break even next year"]
+    },
+    {
+      "word": "top line",
+      "pos": "noun",
+      "definition": "A company’s total sales, before any costs are taken out.",
+      "example": "Top line growth is strong, but the profit is not there.",
+      "collocations": ["top line growth", "grow the top line", "top line revenue"]
+    },
+    {
+      "word": "bottom line",
+      "pos": "noun",
+      "definition": "The final profit figure, after every cost has been taken out.",
+      "example": "The bottom line is that we missed the plan by six per cent.",
+      "collocations": ["improve the bottom line", "hit the bottom line", "bottom line impact"]
+    },
+    {
+      "word": "forecast",
+      "pos": "verb",
+      "definition": "To predict future sales, costs, or cash from what you know now.",
+      "example": "We forecast a slow first half, then a steady recovery.",
+      "collocations": ["forecast growth", "forecast cash flow", "forecast accurately"]
+    },
+    {
+      "word": "run rate",
+      "pos": "noun",
+      "definition": "The pace a business is growing at, based on its recent results.",
+      "example": "At this run rate, we’ll finish the year ahead of plan.",
+      "collocations": ["current run rate", "annual run rate", "exit run rate"]
+    },
+    {
+      "word": "headwind",
+      "pos": "noun",
+      "definition": "A condition that makes growth harder, such as weak demand or higher costs.",
+      "example": "Currency moves are a real headwind for the next two quarters.",
+      "collocations": ["strong headwind", "face headwinds", "macro headwinds"]
+    },
+    {
+      "word": "tailwind",
+      "pos": "noun",
+      "definition": "A condition that helps growth, such as rising demand or falling costs.",
+      "example": "Cheaper shipping has been a tailwind for margins this year.",
+      "collocations": ["strong tailwind", "enjoy a tailwind", "macro tailwind"]
+    },
+    {
+      "word": "guidance",
+      "pos": "noun",
+      "definition": "The forecast a company gives the market about its expected results.",
+      "example": "We held guidance, despite the weaker start to the quarter.",
+      "collocations": ["issue guidance", "raise guidance", "full-year guidance"]
+    }
+  ]
+}

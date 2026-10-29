@@ -1,0 +1,247 @@
+{
+  "slug": "meetings-and-pushback",
+  "name": "Meetings & Pushback",
+  "tab": "Situation · Popular",
+  "kind": "Situation pack",
+  "categories": ["situation", "intermediate"],
+  "level": "Intermediate",
+  "cefr": "B1–B2",
+  "minutes": 5,
+  "lede": "Say it without sounding rude. Learn the phrases for disagreeing, buying time, and moving a decision forward in a meeting where everyone is busy.",
+  "outcome": "Say it without sounding rude. The words for disagreeing, buying time, and moving a decision forward.",
+  "outcomes": [
+    "Disagree with an idea without making it personal — and keep the room on your side.",
+    "Buy time when you need to think, instead of filling the silence with “um”.",
+    "Move a stalled conversation toward a clear owner, decision, and next step."
+  ],
+  "aside": {
+    "title": "Built for the meeting you’re dreading.",
+    "body": "Every phrase is one you can say out loud without sounding stiff — or starting a fight."
+  },
+  "words": [
+    {
+      "word": "leverage",
+      "pos": "verb",
+      "definition": "To use something you already have to get a better result.",
+      "example": "We can leverage the data from last quarter.",
+      "collocations": ["leverage data", "leverage experience", "leverage a network"]
+    },
+    {
+      "word": "pushback",
+      "pos": "noun",
+      "definition": "Disagreement or resistance to a plan or idea.",
+      "example": "We got some pushback on the new timeline.",
+      "collocations": ["receive pushback", "expect pushback", "handle pushback"]
+    },
+    {
+      "word": "align",
+      "pos": "verb",
+      "definition": "To reach agreement on a plan, priority, or next step.",
+      "example": "Let’s align on the scope before we start.",
+      "collocations": ["align on scope", "align priorities", "fully aligned"]
+    },
+    {
+      "word": "circle back",
+      "pos": "phrase",
+      "definition": "To return to a topic later, usually after getting more information.",
+      "example": "Let’s circle back on pricing after the client call.",
+      "collocations": ["circle back on", "circle back later", "circle back to"]
+    },
+    {
+      "word": "bandwidth",
+      "pos": "noun",
+      "definition": "The time and energy someone has available for work.",
+      "example": "I don’t have the bandwidth for a new project this month.",
+      "collocations": ["spare bandwidth", "limited bandwidth", "free up bandwidth"]
+    },
+    {
+      "word": "stakeholder",
+      "pos": "noun",
+      "definition": "Anyone affected by or interested in a project or decision.",
+      "example": "We need sign-off from every stakeholder before the launch.",
+      "collocations": ["key stakeholder", "stakeholder feedback", "stakeholder buy-in"]
+    },
+    {
+      "word": "deliverable",
+      "pos": "noun",
+      "definition": "A concrete result you promise to produce for a project.",
+      "example": "The first deliverable is a one-page summary for the board.",
+      "collocations": ["project deliverable", "final deliverable", "deliver on time"]
+    },
+    {
+      "word": "buy-in",
+      "pos": "noun",
+      "definition": "Agreement and support from the people who will be affected.",
+      "example": "The plan works, but we still need buy-in from finance.",
+      "collocations": ["get buy-in", "secure buy-in", "team buy-in"]
+    },
+    {
+      "word": "scope",
+      "pos": "noun",
+      "definition": "The work included in a project, or the limits of what it covers.",
+      "example": "That request is outside the scope of this sprint.",
+      "collocations": ["in scope", "out of scope", "scope a project"]
+    },
+    {
+      "word": "cadence",
+      "pos": "noun",
+      "definition": "The rhythm or frequency at which something happens.",
+      "example": "Let’s agree on a weekly cadence for updates.",
+      "collocations": ["meeting cadence", "weekly cadence", "set the cadence"]
+    },
+    {
+      "word": "agenda",
+      "pos": "noun",
+      "definition": "The list of topics to discuss in a meeting.",
+      "example": "Can you add that to the agenda for Thursday?",
+      "collocations": ["set the agenda", "on the agenda", "agenda item"]
+    },
+    {
+      "word": "takeaway",
+      "pos": "noun",
+      "definition": "The main point to remember from a meeting or talk.",
+      "example": "My main takeaway is that we need more budget.",
+      "collocations": ["key takeaway", "main takeaway", "clear takeaway"]
+    },
+    {
+      "word": "park",
+      "pos": "verb",
+      "definition": "To delay a topic until a later meeting.",
+      "example": "Let’s park that idea until we have the numbers.",
+      "collocations": ["park the discussion", "park it for now", "park the question"]
+    },
+    {
+      "word": "revisit",
+      "pos": "verb",
+      "definition": "To discuss something again later.",
+      "example": "Let’s revisit the timeline next quarter.",
+      "collocations": ["revisit the decision", "revisit later", "revisit the topic"]
+    },
+    {
+      "word": "flag",
+      "pos": "verb",
+      "definition": "To point out a problem or risk so others notice it.",
+      "example": "I want to flag a risk with the current plan.",
+      "collocations": ["flag an issue", "flag a risk", "flag it early"]
+    },
+    {
+      "word": "raise",
+      "pos": "verb",
+      "definition": "To bring a topic up for discussion.",
+      "example": "I’d like to raise one concern about the deadline.",
+      "collocations": ["raise a concern", "raise a question", "raise an issue"]
+    },
+    {
+      "word": "concern",
+      "pos": "noun",
+      "definition": "A worry about something that might go wrong.",
+      "example": "My main concern is the cost.",
+      "collocations": ["main concern", "raise a concern", "valid concern"]
+    },
+    {
+      "word": "trade-off",
+      "pos": "noun",
+      "definition": "A compromise where you accept one disadvantage to get an advantage.",
+      "example": "The trade-off is speed versus quality.",
+      "collocations": ["make a trade-off", "accept a trade-off", "clear trade-off"]
+    },
+    {
+      "word": "push back",
+      "pos": "phrase",
+      "definition": "To disagree with or resist a plan.",
+      "example": "Several people pushed back on the proposal.",
+      "collocations": ["push back on", "push back politely", "push back hard"]
+    },
+    {
+      "word": "caveat",
+      "pos": "noun",
+      "definition": "A warning or limit that you should know about.",
+      "example": "There’s one caveat: the data is still incomplete.",
+      "collocations": ["important caveat", "add a caveat", "with one caveat"]
+    },
+    {
+      "word": "common ground",
+      "pos": "phrase",
+      "definition": "Something that two people or sides can agree on.",
+      "example": "We found common ground on the launch date.",
+      "collocations": ["find common ground", "on common ground", "reach common ground"]
+    },
+    {
+      "word": "compromise",
+      "pos": "noun",
+      "definition": "An agreement where each side gives up a little.",
+      "example": "We reached a compromise on the budget.",
+      "collocations": ["reach a compromise", "work out a compromise", "fair compromise"]
+    },
+    {
+      "word": "deadlock",
+      "pos": "noun",
+      "definition": "A situation where no progress is possible because neither side will move.",
+      "example": "The discussion ended in deadlock.",
+      "collocations": ["break the deadlock", "reach deadlock", "avoid deadlock"]
+    },
+    {
+      "word": "wrap up",
+      "pos": "phrase",
+      "definition": "To finish a meeting or discussion.",
+      "example": "Let’s wrap up five minutes early.",
+      "collocations": ["wrap up", "wrap things up", "wrap up by"]
+    },
+    {
+      "word": "follow-up",
+      "pos": "noun",
+      "definition": "An action taken after a meeting to continue the work.",
+      "example": "I’ll send a follow-up with the next steps.",
+      "collocations": ["follow-up email", "send a follow-up", "follow-up question"]
+    },
+    {
+      "word": "action item",
+      "pos": "noun",
+      "definition": "A specific task that someone agrees to do.",
+      "example": "Let’s list the action items before we finish.",
+      "collocations": ["assign action items", "clear action items", "action item owner"]
+    },
+    {
+      "word": "owner",
+      "pos": "noun",
+      "definition": "The person responsible for a task or decision.",
+      "example": "Every open question needs a clear owner.",
+      "collocations": ["task owner", "decision owner", "assign an owner"]
+    },
+    {
+      "word": "loop in",
+      "pos": "phrase",
+      "definition": "To include someone in a conversation or update.",
+      "example": "Let’s loop in legal before we send this.",
+      "collocations": ["loop in", "keep in the loop", "loop someone in"]
+    },
+    {
+      "word": "touch base",
+      "pos": "phrase",
+      "definition": "To talk briefly to share updates.",
+      "example": "Let’s touch base on Friday about progress.",
+      "collocations": ["touch base with", "touch base later", "quick touch base"]
+    },
+    {
+      "word": "hold off",
+      "pos": "phrase",
+      "definition": "To wait before doing something.",
+      "example": "Let’s hold off on hiring until Q2.",
+      "collocations": ["hold off on", "hold off until", "hold off for now"]
+    },
+    {
+      "word": "float",
+      "pos": "verb",
+      "definition": "To suggest an idea to see how people react.",
+      "example": "I’ll float the idea in Monday’s meeting.",
+      "collocations": ["float an idea", "float a proposal", "float it past"]
+    },
+    {
+      "word": "hard stop",
+      "pos": "noun",
+      "definition": "A time when a meeting must end.",
+      "example": "I have a hard stop at 3:15.",
+      "collocations": ["hard stop", "hit a hard stop", "before the hard stop"]
+    }
+  ]
+}

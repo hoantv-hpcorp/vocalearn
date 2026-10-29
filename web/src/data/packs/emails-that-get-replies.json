@@ -1,0 +1,219 @@
+{
+  "slug": "emails-that-get-replies",
+  "name": "Emails That Get Replies",
+  "tab": "Situation · Email",
+  "kind": "Situation pack",
+  "categories": ["situation", "intermediate"],
+  "level": "Intermediate",
+  "cefr": "B1–B2",
+  "minutes": 5,
+  "lede": "You know what you want to say — now say it clearly, politely, and once. These are the phrases that make a request easy to answer, so you stop rewriting the same email five times.",
+  "outcome": "Clear, polite, and confident — the email you send once, and the reply you actually get.",
+  "outcomes": [
+    "Open with the ask so the reader knows what you need before the second line.",
+    "Sound polite without padding every sentence, and firm without sounding cold.",
+    "Follow up once or twice in a way that moves things forward, not nagging."
+  ],
+  "aside": {
+    "title": "Written for the email you keep drafting.",
+    "body": "Short, natural lines for asking, chasing, and closing a thread — without reading it over ten times."
+  },
+  "words": [
+    {
+      "word": "following up",
+      "pos": "phrase",
+      "definition": "Sending a second message about something you asked about before.",
+      "example": "I’m following up on my email from last Tuesday.",
+      "collocations": ["following up on", "following up about", "just following up"]
+    },
+    {
+      "word": "at your convenience",
+      "pos": "phrase",
+      "definition": "At a time that is suitable for you.",
+      "example": "Please review the draft at your convenience this week.",
+      "collocations": ["at your convenience", "reply at your convenience", "call at your convenience"]
+    },
+    {
+      "word": "accordingly",
+      "pos": "adverb",
+      "definition": "In a way that matches what has just been said.",
+      "example": "The budget changed, so please update the plan accordingly.",
+      "collocations": ["adjust accordingly", "plan accordingly", "respond accordingly"]
+    },
+    {
+      "word": "per our conversation",
+      "pos": "phrase",
+      "definition": "Referring back to something agreed in an earlier talk.",
+      "example": "Per our conversation, I’ve attached the revised quote.",
+      "collocations": ["per our conversation", "as per our conversation", "per our call"]
+    },
+    {
+      "word": "just checking in",
+      "pos": "phrase",
+      "definition": "A gentle way to ask for an update without pressure.",
+      "example": "Just checking in to see if you saw my note.",
+      "collocations": ["just checking in", "checking in on", "checking in with you"]
+    },
+    {
+      "word": "cc",
+      "pos": "verb",
+      "definition": "To copy someone into an email so they can see it.",
+      "example": "Please cc me on the reply to the client.",
+      "collocations": ["cc a colleague", "cc me in", "cc the team"]
+    },
+    {
+      "word": "bcc",
+      "pos": "verb",
+      "definition": "To send a hidden copy of an email to someone.",
+      "example": "I’ll bcc my manager so she has the context.",
+      "collocations": ["bcc a colleague", "bcc someone in", "use bcc sparingly"]
+    },
+    {
+      "word": "reply all",
+      "pos": "phrase",
+      "definition": "To answer everyone who was copied on the original email.",
+      "example": "Please don’t reply all — just send it to me.",
+      "collocations": ["hit reply all", "avoid reply all", "reply all by mistake"]
+    },
+    {
+      "word": "forward",
+      "pos": "verb",
+      "definition": "To send an email you received on to someone else.",
+      "example": "I’ll forward the client’s email to the design team.",
+      "collocations": ["forward an email", "forward it to", "forward the thread"]
+    },
+    {
+      "word": "attachment",
+      "pos": "noun",
+      "definition": "A file that is sent together with an email.",
+      "example": "The attachment is too large to send by email.",
+      "collocations": ["open the attachment", "check the attachment", "attachment size limit"]
+    },
+    {
+      "word": "thread",
+      "pos": "noun",
+      "definition": "A chain of emails on the same topic.",
+      "example": "Scroll down the thread to see my earlier reply.",
+      "collocations": ["email thread", "in the thread", "start a new thread"]
+    },
+    {
+      "word": "subject line",
+      "pos": "noun",
+      "definition": "The short title at the top of an email.",
+      "example": "Put the project name in the subject line.",
+      "collocations": ["clear subject line", "change the subject line", "write a subject line"]
+    },
+    {
+      "word": "short notice",
+      "pos": "noun",
+      "definition": "A situation where something is arranged only a little before it happens.",
+      "example": "Sorry for the short notice, but the meeting moved to noon.",
+      "collocations": ["at short notice", "very short notice", "a short notice change"]
+    },
+    {
+      "word": "heads-up",
+      "pos": "noun",
+      "definition": "A quick warning or early information about something.",
+      "example": "Thanks for the heads-up about the deadline change.",
+      "collocations": ["give a heads-up", "quick heads-up", "heads-up about"]
+    },
+    {
+      "word": "clarify",
+      "pos": "verb",
+      "definition": "To make something clearer by explaining it in more detail.",
+      "example": "Could you clarify the deadline for the second draft?",
+      "collocations": ["clarify a point", "clarify the scope", "just to clarify"]
+    },
+    {
+      "word": "confirm",
+      "pos": "verb",
+      "definition": "To say officially that something is true or will happen.",
+      "example": "Please confirm the new meeting time by Thursday.",
+      "collocations": ["confirm a booking", "confirm the details", "please confirm"]
+    },
+    {
+      "word": "request",
+      "pos": "noun",
+      "definition": "A polite ask for something you need from someone.",
+      "example": "I’ve sent a request for the updated figures.",
+      "collocations": ["send a request", "polite request", "approve a request"]
+    },
+    {
+      "word": "appreciate",
+      "pos": "verb",
+      "definition": "To be grateful for something someone has done.",
+      "example": "I really appreciate you turning this around so quickly.",
+      "collocations": ["really appreciate it", "appreciate your help", "greatly appreciate"]
+    },
+    {
+      "word": "prompt reply",
+      "pos": "noun",
+      "definition": "A quick answer that comes without much delay.",
+      "example": "Thank you for your prompt reply to my question.",
+      "collocations": ["prompt reply", "receive a prompt reply", "get a prompt reply"]
+    },
+    {
+      "word": "no rush",
+      "pos": "phrase",
+      "definition": "Used to say there is no need to hurry.",
+      "example": "No rush, but could you send it by Friday?",
+      "collocations": ["no rush at all", "there’s no rush", "no rush on this"]
+    },
+    {
+      "word": "next steps",
+      "pos": "noun",
+      "definition": "The actions that need to happen after this point.",
+      "example": "I’ve listed the next steps at the bottom.",
+      "collocations": ["agree next steps", "outline next steps", "clear next steps"]
+    },
+    {
+      "word": "look forward to",
+      "pos": "phrase",
+      "definition": "To feel pleased about something that will happen soon.",
+      "example": "I look forward to hearing your thoughts on Monday.",
+      "collocations": ["look forward to hearing", "look forward to meeting", "look forward to it"]
+    },
+    {
+      "word": "reach out",
+      "pos": "phrase",
+      "definition": "To contact someone, usually to ask or offer something.",
+      "example": "I’m reaching out about the invoice from March.",
+      "collocations": ["reach out to", "reach out directly", "reach out early"]
+    },
+    {
+      "word": "in advance",
+      "pos": "phrase",
+      "definition": "Before something happens, rather than at the time.",
+      "example": "Please send the slides in advance of the meeting.",
+      "collocations": ["thanks in advance", "in advance of", "book in advance"]
+    },
+    {
+      "word": "keep you posted",
+      "pos": "phrase",
+      "definition": "To give someone regular updates as things develop.",
+      "example": "I’ll keep you posted once the client replies.",
+      "collocations": ["keep you posted", "keep me posted", "keep everyone posted"]
+    },
+    {
+      "word": "get back to",
+      "pos": "phrase",
+      "definition": "To reply to someone after checking or thinking.",
+      "example": "I’ll get back to you by end of day.",
+      "collocations": ["get back to you", "get back to me", "get back soon"]
+    },
+    {
+      "word": "apologise",
+      "pos": "verb",
+      "definition": "To say sorry for a mistake or a delay.",
+      "example": "I apologise for the delay in sending the file.",
+      "collocations": ["apologise for the delay", "apologise sincerely", "apologise in advance"]
+    },
+    {
+      "word": "concise",
+      "pos": "adjective",
+      "definition": "Short and clear, with no unnecessary words added.",
+      "example": "Keep the email concise so people actually read it.",
+      "collocations": ["clear and concise", "concise summary", "keep it concise"]
+    }
+  ]
+}

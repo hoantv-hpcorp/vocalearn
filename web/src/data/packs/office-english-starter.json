@@ -1,0 +1,192 @@
+{
+  "slug": "office-english-starter",
+  "name": "Office English Starter",
+  "tab": "Start here · 4-week plan",
+  "kind": "Starter pack",
+  "categories": ["situation", "beginner"],
+  "level": "Beginner",
+  "cefr": "A2–B1",
+  "minutes": 5,
+  "featured": true,
+  "lede": "Your first four weeks of useful work English, made simple. Learn the words you’ll actually use in meetings, messages, and deadlines — and start using them on Monday.",
+  "outcome": "The everyday words for meetings, messages, and deadlines — enough to get through your first month at work.",
+  "outcomes": [
+    "Join a meeting, ask a simple question, and understand what happens next.",
+    "Write a short update or email that people can read and reply to.",
+    "Talk about dates and deadlines without checking your notes twice."
+  ],
+  "aside": {
+    "title": "A gentle start, not a grammar lesson.",
+    "body": "These are the words you’ll hear on your first day and use every week after. Learn a few, say them out loud, and don’t worry about getting them perfect."
+  },
+  "words": [
+    {
+      "word": "agenda",
+      "pos": "noun",
+      "definition": "A short list of topics to talk about in a meeting.",
+      "example": "I added your question to the agenda for Monday.",
+      "collocations": ["send the agenda", "agenda item", "add to the agenda"]
+    },
+    {
+      "word": "follow up",
+      "pos": "phrase",
+      "definition": "To check back with someone after a meeting or message.",
+      "example": "I’ll follow up with the client tomorrow morning.",
+      "collocations": ["follow up with", "follow up by email", "follow up later"]
+    },
+    {
+      "word": "deadline",
+      "pos": "noun",
+      "definition": "The latest time or day when work must be finished.",
+      "example": "The deadline for the report is Friday at noon.",
+      "collocations": ["meet a deadline", "miss a deadline", "tight deadline"]
+    },
+    {
+      "word": "heads-up",
+      "pos": "noun",
+      "definition": "A short warning about something that is going to happen.",
+      "example": "Thanks for the heads-up about the early meeting.",
+      "collocations": ["give a heads-up", "quick heads-up", "send a heads-up"]
+    },
+    {
+      "word": "standup",
+      "pos": "noun",
+      "definition": "A short daily meeting where everyone shares a quick update.",
+      "example": "We have a standup every morning at nine.",
+      "collocations": ["daily standup", "join the standup", "run a standup"]
+    },
+    {
+      "word": "schedule",
+      "pos": "noun",
+      "definition": "A plan that shows when meetings and tasks will happen.",
+      "example": "My schedule is quite full on Wednesday afternoon.",
+      "collocations": ["busy schedule", "check the schedule", "fit my schedule"]
+    },
+    {
+      "word": "reschedule",
+      "pos": "verb",
+      "definition": "To move a meeting or task to a different time.",
+      "example": "Can we reschedule the call to Thursday afternoon?",
+      "collocations": ["reschedule a meeting", "reschedule the call", "reschedule for tomorrow"]
+    },
+    {
+      "word": "attachment",
+      "pos": "noun",
+      "definition": "A file you add to an email for someone to open.",
+      "example": "Please check the attachment for the full report.",
+      "collocations": ["open the attachment", "email attachment", "send an attachment"]
+    },
+    {
+      "word": "cc",
+      "pos": "verb",
+      "definition": "To add someone to an email so they can see it.",
+      "example": "Please cc me on the reply to the client.",
+      "collocations": ["cc me in", "cc the team", "cc on the email"]
+    },
+    {
+      "word": "reply all",
+      "pos": "phrase",
+      "definition": "To answer everyone who received the same email.",
+      "example": "Don’t reply all unless everyone really needs to know.",
+      "collocations": ["hit reply all", "avoid reply all", "reply all by mistake"]
+    },
+    {
+      "word": "out of office",
+      "pos": "phrase",
+      "definition": "A message that says you are away and cannot reply.",
+      "example": "I’ll be out of office until Monday morning.",
+      "collocations": ["set out of office", "out of office reply", "out of office message"]
+    },
+    {
+      "word": "take notes",
+      "pos": "phrase",
+      "definition": "To write down the important points during a meeting.",
+      "example": "Can you take notes while I lead the call?",
+      "collocations": ["take notes", "take detailed notes", "take notes during"]
+    },
+    {
+      "word": "minutes",
+      "pos": "noun",
+      "definition": "The written record of what was said in a meeting.",
+      "example": "I’ll send the minutes after the meeting ends.",
+      "collocations": ["take the minutes", "meeting minutes", "share the minutes"]
+    },
+    {
+      "word": "update",
+      "pos": "noun",
+      "definition": "New information about how a task or project is going.",
+      "example": "Can you give me a quick update on the project?",
+      "collocations": ["quick update", "weekly update", "send an update"]
+    },
+    {
+      "word": "task",
+      "pos": "noun",
+      "definition": "A piece of work you need to finish.",
+      "example": "I have three tasks to finish before lunch today.",
+      "collocations": ["finish a task", "assign a task", "small task"]
+    },
+    {
+      "word": "teammate",
+      "pos": "noun",
+      "definition": "Someone who works with you on the same team.",
+      "example": "My teammate will cover the meeting for me.",
+      "collocations": ["help a teammate", "new teammate", "support a teammate"]
+    },
+    {
+      "word": "manager",
+      "pos": "noun",
+      "definition": "The person in charge of your team and your work.",
+      "example": "My manager approved my leave request this morning.",
+      "collocations": ["line manager", "ask my manager", "manager approval"]
+    },
+    {
+      "word": "client",
+      "pos": "noun",
+      "definition": "A customer or company that pays for your work.",
+      "example": "The client wants a simpler version of the design.",
+      "collocations": ["key client", "client meeting", "new client"]
+    },
+    {
+      "word": "due date",
+      "pos": "noun",
+      "definition": "The day by which a piece of work must be done.",
+      "example": "The due date for the draft is next Tuesday.",
+      "collocations": ["set a due date", "extend the due date", "due date for"]
+    },
+    {
+      "word": "check in",
+      "pos": "phrase",
+      "definition": "To ask someone how their work is going.",
+      "example": "I’ll check in with you after lunch today.",
+      "collocations": ["check in with", "check in weekly", "quick check-in"]
+    },
+    {
+      "word": "sign off",
+      "pos": "phrase",
+      "definition": "To give official approval to a plan or document.",
+      "example": "My manager needs to sign off on the budget.",
+      "collocations": ["sign off on", "sign off this week", "sign off the plan"]
+    },
+    {
+      "word": "hand in",
+      "pos": "phrase",
+      "definition": "To give finished work to the person who asked for it.",
+      "example": "Please hand in your timesheet by Friday afternoon.",
+      "collocations": ["hand in a report", "hand in on time", "hand in your work"]
+    },
+    {
+      "word": "confirm",
+      "pos": "verb",
+      "definition": "To say that something is definitely happening or correct.",
+      "example": "Please confirm the meeting time by email today.",
+      "collocations": ["confirm a meeting", "confirm the details", "confirm by email"]
+    },
+    {
+      "word": "available",
+      "pos": "adjective",
+      "definition": "Free to meet or talk at a certain time.",
+      "example": "Are you available for a quick call at three?",
+      "collocations": ["available for a call", "available tomorrow", "fully available"]
+    }
+  ]
+}

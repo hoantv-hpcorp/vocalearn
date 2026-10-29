@@ -1,0 +1,219 @@
+{
+  "slug": "consulting-english",
+  "name": "Consulting English",
+  "tab": "Industry · Consulting",
+  "kind": "Industry pack",
+  "categories": ["industry", "advanced"],
+  "level": "Advanced",
+  "cefr": "B2–C1",
+  "minutes": 6,
+  "lede": "Learn the language you need to turn messy client problems into clear findings, honest recommendations, and decisions the client actually owns — without sounding like a slide deck.",
+  "outcome": "The words for framing a problem, defending a finding, and keeping a client conversation honest when the answer is unwelcome.",
+  "outcomes": [
+    "Frame a messy client problem as a question you can actually answer with evidence.",
+    "Present a finding so the client hears the implication, not just the analysis.",
+    "Push back on a weak assumption without losing the room or the relationship."
+  ],
+  "aside": {
+    "title": "For the deck you have to defend on Monday.",
+    "body": "These are the words that keep analysis honest and clients in the room. Use them to explain your thinking, not to hide it."
+  },
+  "words": [
+    {
+      "word": "workstream",
+      "pos": "noun",
+      "definition": "A single stream of related work inside a larger project.",
+      "example": "The pricing workstream reports into the steering committee on Thursday.",
+      "collocations": ["lead a workstream", "workstream lead", "parallel workstreams"]
+    },
+    {
+      "word": "take stock",
+      "pos": "phrase",
+      "definition": "To pause and review where things stand before deciding.",
+      "example": "Let’s take stock before we commit to the next phase.",
+      "collocations": ["take stock of", "pause and take stock", "regularly take stock"]
+    },
+    {
+      "word": "key driver",
+      "pos": "noun",
+      "definition": "The factor that most strongly causes a result or trend.",
+      "example": "Cost pressure is the key driver behind the client’s reorganisation.",
+      "collocations": ["key driver of", "identify key drivers", "main growth driver"]
+    },
+    {
+      "word": "finding",
+      "pos": "noun",
+      "definition": "A conclusion you reach after analysing data or interviews.",
+      "example": "Our main finding is that churn starts in the first month.",
+      "collocations": ["key finding", "preliminary findings", "present a finding"]
+    },
+    {
+      "word": "recommendation",
+      "pos": "noun",
+      "definition": "A specific action you advise the client to take.",
+      "example": "My recommendation is to pilot the change in one region.",
+      "collocations": ["make a recommendation", "clear recommendation", "final recommendation"]
+    },
+    {
+      "word": "engagement",
+      "pos": "noun",
+      "definition": "A paid consulting project with a defined client and goal.",
+      "example": "This engagement runs for twelve weeks, with two partners involved.",
+      "collocations": ["client engagement", "scope an engagement", "engagement partner"]
+    },
+    {
+      "word": "baseline",
+      "pos": "noun",
+      "definition": "The current level of performance, used for later comparison.",
+      "example": "We need a baseline before we can claim any improvement.",
+      "collocations": ["establish a baseline", "baseline data", "baseline metrics"]
+    },
+    {
+      "word": "benchmark",
+      "pos": "noun",
+      "definition": "A standard or peer result you compare performance against.",
+      "example": "Their delivery cost is well above the industry benchmark.",
+      "collocations": ["industry benchmark", "set a benchmark", "against the benchmark"]
+    },
+    {
+      "word": "hypothesis",
+      "pos": "noun",
+      "definition": "A testable guess about what is causing a problem.",
+      "example": "Our working hypothesis is that pricing, not service, drives churn.",
+      "collocations": ["working hypothesis", "test a hypothesis", "form a hypothesis"]
+    },
+    {
+      "word": "root cause",
+      "pos": "noun",
+      "definition": "The underlying reason a problem keeps happening, not just a symptom.",
+      "example": "We traced the delays to a root cause: approvals nobody owned.",
+      "collocations": ["root cause analysis", "identify the root cause", "address the root cause"]
+    },
+    {
+      "word": "quick win",
+      "pos": "noun",
+      "definition": "A small change that delivers visible results fast.",
+      "example": "Cancelling the weekly status deck is a quick win everyone supports.",
+      "collocations": ["deliver a quick win", "early quick win", "identify quick wins"]
+    },
+    {
+      "word": "value chain",
+      "pos": "noun",
+      "definition": "The full set of steps that create and deliver a product.",
+      "example": "We mapped the value chain to find where margin leaks.",
+      "collocations": ["map the value chain", "value chain analysis", "across the value chain"]
+    },
+    {
+      "word": "deep dive",
+      "pos": "noun",
+      "definition": "A detailed examination of one topic or area.",
+      "example": "Let’s do a deep dive on supply costs next week.",
+      "collocations": ["deep dive into", "technical deep dive", "run a deep dive"]
+    },
+    {
+      "word": "synthesis",
+      "pos": "noun",
+      "definition": "A combined view built from several separate sources.",
+      "example": "The synthesis of interviews and data points to one theme.",
+      "collocations": ["synthesis of findings", "clear synthesis", "produce a synthesis"]
+    },
+    {
+      "word": "implication",
+      "pos": "noun",
+      "definition": "The practical consequence of a finding for the client.",
+      "example": "The implication is that the current model cannot scale.",
+      "collocations": ["key implication", "practical implications", "consider the implications"]
+    },
+    {
+      "word": "roadmap",
+      "pos": "noun",
+      "definition": "A sequenced plan showing what happens, and in what order.",
+      "example": "The roadmap puts the operating model change in year two.",
+      "collocations": ["draft a roadmap", "implementation roadmap", "three-year roadmap"]
+    },
+    {
+      "word": "initiative",
+      "pos": "noun",
+      "definition": "A defined piece of work launched to achieve a goal.",
+      "example": "The cost initiative saved more than the client expected.",
+      "collocations": ["launch an initiative", "cost initiative", "strategic initiative"]
+    },
+    {
+      "word": "operating model",
+      "pos": "noun",
+      "definition": "How a company organises people, process, and technology to deliver.",
+      "example": "Their operating model has three approval layers for every purchase.",
+      "collocations": ["design an operating model", "target operating model", "operating model change"]
+    },
+    {
+      "word": "touchpoint",
+      "pos": "noun",
+      "definition": "Any point where a customer or colleague interacts with the business.",
+      "example": "Every touchpoint from booking to billing feels inconsistent.",
+      "collocations": ["customer touchpoint", "key touchpoint", "digital touchpoint"]
+    },
+    {
+      "word": "steerco",
+      "pos": "noun",
+      "definition": "The senior group that meets to oversee a project.",
+      "example": "Take the decision to steerco; the team cannot approve it.",
+      "collocations": ["steerco meeting", "take it to steerco", "monthly steerco"]
+    },
+    {
+      "word": "escalation",
+      "pos": "noun",
+      "definition": "The act of raising an issue to someone more senior.",
+      "example": "Without escalation, this decision will sit for another month.",
+      "collocations": ["trigger an escalation", "escalation path", "formal escalation"]
+    },
+    {
+      "word": "risk register",
+      "pos": "noun",
+      "definition": "A running list of project risks, owners, and mitigations.",
+      "example": "The risk register now has twelve open items, four of them serious.",
+      "collocations": ["update the risk register", "risk register owner", "live risk register"]
+    },
+    {
+      "word": "assumption",
+      "pos": "noun",
+      "definition": "Something you treat as true without proving it yet.",
+      "example": "That forecast rests on one assumption we haven’t tested.",
+      "collocations": ["test an assumption", "key assumption", "challenge the assumption"]
+    },
+    {
+      "word": "sensitivity",
+      "pos": "noun",
+      "definition": "How much a result moves when one input changes.",
+      "example": "A quick sensitivity shows the plan breaks at ten per cent.",
+      "collocations": ["sensitivity analysis", "run a sensitivity", "sensitivity test"]
+    },
+    {
+      "word": "triangulate",
+      "pos": "verb",
+      "definition": "To check a conclusion against several independent sources.",
+      "example": "We triangulated the survey results with the sales data.",
+      "collocations": ["triangulate the data", "triangulate findings", "triangulate between sources"]
+    },
+    {
+      "word": "bottom-up",
+      "pos": "adjective",
+      "definition": "Built from detailed parts upward rather than set from the top.",
+      "example": "The bottom-up forecast is far lower than the board’s plan.",
+      "collocations": ["bottom-up approach", "bottom-up forecast", "bottom-up analysis"]
+    },
+    {
+      "word": "top-down",
+      "pos": "adjective",
+      "definition": "Set from an overall target and then broken into parts.",
+      "example": "A top-down target only works if the teams believe it.",
+      "collocations": ["top-down approach", "top-down target", "top-down view"]
+    },
+    {
+      "word": "day-one",
+      "pos": "adjective",
+      "definition": "Available or visible from the very start of an engagement.",
+      "example": "The client wants a day-one answer on the cost question.",
+      "collocations": ["day-one answer", "day-one priority", "day-one view"]
+    }
+  ]
+}

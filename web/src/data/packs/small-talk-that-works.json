@@ -1,0 +1,191 @@
+{
+  "slug": "small-talk-that-works",
+  "name": "Small Talk That Works",
+  "tab": "Situation · Small talk",
+  "kind": "Situation pack",
+  "categories": ["situation", "beginner"],
+  "level": "Beginner",
+  "cefr": "A2–B1",
+  "minutes": 4,
+  "lede": "The two minutes before a meeting starts can feel like a test. Learn the small, warm phrases that fill them — and make people glad you’re there.",
+  "outcome": "Warm, short, and never awkward — the phrases that make the two minutes before a meeting feel easy.",
+  "outcomes": [
+    "Open a conversation with a colleague without waiting for the perfect moment.",
+    "Keep a chat going for a minute or two, then step away without it feeling odd.",
+    "Use the same phrases every week until they sound like something you’d really say."
+  ],
+  "aside": {
+    "title": "No scripts. Just things people actually say.",
+    "body": "Start with one line you feel comfortable with. The rest usually takes care of itself."
+  },
+  "words": [
+    {
+      "word": "catch up",
+      "pos": "phrase",
+      "definition": "To talk with someone about what has happened since you last spoke.",
+      "example": "Let’s catch up for five minutes before the meeting starts.",
+      "collocations": ["catch up later", "quick catch up", "catch up over coffee"]
+    },
+    {
+      "word": "how’s things",
+      "pos": "phrase",
+      "definition": "A friendly way to ask someone how they are doing.",
+      "example": "Hey, how’s things with the new project so far?",
+      "collocations": ["how’s things today", "how’s things at work", "ask how’s things"]
+    },
+    {
+      "word": "what’s new",
+      "pos": "phrase",
+      "definition": "A casual question about what has changed in someone’s life.",
+      "example": "Morning! So what’s new with you this week?",
+      "collocations": ["what’s new with you", "so what’s new", "ask what’s new"]
+    },
+    {
+      "word": "slammed",
+      "pos": "adjective",
+      "definition": "Very busy, with too many things to do at once.",
+      "example": "I’m slammed this morning — can we talk at lunch?",
+      "collocations": ["totally slammed", "slammed at work", "slammed this week"]
+    },
+    {
+      "word": "weekend",
+      "pos": "noun",
+      "definition": "Saturday and Sunday, when most people do not work.",
+      "example": "Any plans for the weekend, or a quiet one?",
+      "collocations": ["this weekend", "weekend plans", "long weekend"]
+    },
+    {
+      "word": "day off",
+      "pos": "noun",
+      "definition": "A day when you do not go to work.",
+      "example": "I’m taking a day off on Friday to see family.",
+      "collocations": ["take a day off", "day off tomorrow", "deserve a day off"]
+    },
+    {
+      "word": "holiday",
+      "pos": "noun",
+      "definition": "Time away from work, often spent travelling or resting.",
+      "example": "Are you going anywhere nice for your holiday?",
+      "collocations": ["summer holiday", "go on holiday", "holiday plans"]
+    },
+    {
+      "word": "commute",
+      "pos": "noun",
+      "definition": "The journey you make to and from work each day.",
+      "example": "How long is your commute in the morning?",
+      "collocations": ["long commute", "morning commute", "commute to work"]
+    },
+    {
+      "word": "traffic",
+      "pos": "noun",
+      "definition": "The cars and other vehicles moving along a road.",
+      "example": "The traffic was terrible, so I’m a bit late.",
+      "collocations": ["heavy traffic", "traffic jam", "stuck in traffic"]
+    },
+    {
+      "word": "weather",
+      "pos": "noun",
+      "definition": "The conditions outside, such as sun, rain, or wind.",
+      "example": "Lovely weather this morning — did you walk in?",
+      "collocations": ["nice weather", "cold weather", "weather forecast"]
+    },
+    {
+      "word": "lunch",
+      "pos": "noun",
+      "definition": "The meal you eat in the middle of the working day.",
+      "example": "Do you want to grab some lunch after this?",
+      "collocations": ["grab lunch", "lunch break", "out for lunch"]
+    },
+    {
+      "word": "coffee",
+      "pos": "noun",
+      "definition": "A hot drink many people have in the morning or at breaks.",
+      "example": "I’m getting a coffee — can I get you one?",
+      "collocations": ["grab a coffee", "quick coffee", "coffee break"]
+    },
+    {
+      "word": "break",
+      "pos": "noun",
+      "definition": "A short pause from work to rest or get a drink.",
+      "example": "Shall we take a quick break before the next call?",
+      "collocations": ["take a break", "quick break", "short break"]
+    },
+    {
+      "word": "busy",
+      "pos": "adjective",
+      "definition": "Having a lot to do and not much free time.",
+      "example": "You seem busy today — is the launch soon?",
+      "collocations": ["really busy", "busy day", "busy week"]
+    },
+    {
+      "word": "wrap up",
+      "pos": "phrase",
+      "definition": "To finish something, such as a meeting or a task.",
+      "example": "We should wrap up soon so everyone can go.",
+      "collocations": ["wrap up a meeting", "wrap things up", "wrap up early"]
+    },
+    {
+      "word": "kick off",
+      "pos": "phrase",
+      "definition": "To start something, especially a meeting or an event.",
+      "example": "Shall we kick off once the whole team is here?",
+      "collocations": ["kick off a meeting", "kick off at nine", "kick things off"]
+    },
+    {
+      "word": "join",
+      "pos": "verb",
+      "definition": "To come into a meeting, group, or conversation.",
+      "example": "Do you want to join us for coffee?",
+      "collocations": ["join us for lunch", "join the call", "join a meeting"]
+    },
+    {
+      "word": "introduce",
+      "pos": "verb",
+      "definition": "To tell people someone’s name when they meet for the first time.",
+      "example": "Let me introduce you to Priya from design.",
+      "collocations": ["introduce a colleague", "introduce yourself", "introduce someone to"]
+    },
+    {
+      "word": "meet",
+      "pos": "verb",
+      "definition": "To see and talk to someone for the first time.",
+      "example": "Good to meet you — I’ve heard a lot about you.",
+      "collocations": ["nice to meet you", "meet a colleague", "meet for coffee"]
+    },
+    {
+      "word": "nice to meet you",
+      "pos": "phrase",
+      "definition": "A polite thing to say when you meet someone for the first time.",
+      "example": "Nice to meet you — I’m on the product team.",
+      "collocations": ["nice to meet you", "good to meet you", "lovely to meet you"]
+    },
+    {
+      "word": "how about you",
+      "pos": "phrase",
+      "definition": "A short way to ask the other person the same question.",
+      "example": "I’m ready for the weekend — how about you?",
+      "collocations": ["how about you", "and how about you", "so how about you"]
+    },
+    {
+      "word": "sounds good",
+      "pos": "phrase",
+      "definition": "A friendly way to agree to a plan or suggestion.",
+      "example": "Coffee at eleven? Sounds good — see you there.",
+      "collocations": ["sounds good to me", "that sounds good", "sounds good then"]
+    },
+    {
+      "word": "let me know",
+      "pos": "phrase",
+      "definition": "To ask someone to tell you something later.",
+      "example": "Let me know if you’re free for lunch.",
+      "collocations": ["let me know", "let me know later", "just let me know"]
+    },
+    {
+      "word": "see you around",
+      "pos": "phrase",
+      "definition": "A casual way to say goodbye, with no fixed next meeting.",
+      "example": "I’m off to a call — see you around.",
+      "collocations": ["see you around", "see you around soon", "say see you around"]
+    }
+  ]
+}

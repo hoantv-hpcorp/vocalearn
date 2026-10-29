@@ -1,0 +1,366 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
+import { Icon } from "./Icon";
+import { SpeakButton } from "./SpeakButton";
+
+const defaultCards: SessionCard[] = [
+  {
+    word: "leverage",
+    phonetic: "/ˈlev.ər.ɪdʒ/",
+    pos: "verb",
+    definition: "To use something you already have to get a better result.",
+    example: "We can leverage the data from last quarter.",
+    collocations: ["leverage data", "leverage experience", "leverage a network"],
+  },
+  {
+    word: "bandwidth",
+    phonetic: "/ˈbænd.wɪdθ/",
+    pos: "noun",
+    definition: "The time and energy someone has available for work.",
+    example: "I don’t have the bandwidth for a new project this month.",
+    collocations: ["spare bandwidth", "limited bandwidth", "free up bandwidth"],
+  },
+  {
+    word: "circle back",
+    phonetic: "/ˌsɜː.kəl ˈbæk/",
+    pos: "phrase",
+    definition:
+      "To return to a topic later, usually after getting more information.",
+    example: "Let’s circle back on pricing after the client call.",
+    collocations: ["circle back on", "circle back later", "circle back to"],
+  },
+  {
+    word: "stakeholder",
+    phonetic: "/ˈsteɪk.həʊl.dər/",
+    pos: "noun",
+    definition: "Anyone affected by or interested in a project or decision.",
+    example: "We need sign-off from every stakeholder before the launch.",
+    collocations: ["key stakeholder", "stakeholder feedback", "stakeholder buy-in"],
+  },
+  {
+    word: "deliverable",
+    phonetic: "/dɪˈlɪv.ər.ə.bəl/",
+    pos: "noun",
+    definition: "A concrete result you promise to produce for a project.",
+    example: "The first deliverable is a one-page summary for the board.",
+    collocations: ["project deliverable", "final deliverable", "deliver on time"],
+  },
+  {
+    word: "buy-in",
+    phonetic: "/ˈbaɪ.ɪn/",
+    pos: "noun",
+    definition: "Agreement and support from the people who will be affected.",
+    example: "The plan works, but we still need buy-in from finance.",
+    collocations: ["get buy-in", "secure buy-in", "team buy-in"],
+  },
+  {
+    word: "scope",
+    phonetic: "/skəʊp/",
+    pos: "noun",
+    definition:
+      "The work included in a project, or the limits of what it covers.",
+    example: "That request is outside the scope of this sprint.",
+    collocations: ["in scope", "out of scope", "scope a project"],
+  },
+  {
+    word: "cadence",
+    phonetic: "/ˈkeɪ.dəns/",
+    pos: "noun",
+    definition: "The rhythm or frequency at which something happens.",
+    example: "Let’s agree on a weekly cadence for updates.",
+    collocations: ["meeting cadence", "weekly cadence", "set the cadence"],
+  },
+  {
+    word: "pushback",
+    phonetic: "/ˈpʊʃ.bæk/",
+    pos: "noun",
+    definition: "Disagreement or resistance to a plan or idea.",
+    example: "We got some pushback on the new timeline.",
+    collocations: ["receive pushback", "expect pushback", "handle pushback"],
+  },
+];
+
+export type SessionCard = {
+  word: string;
+  phonetic?: string;
+  pos: string;
+  definition: string;
+  example: string;
+  collocations: string[];
+};
+
+type Props = {
+  title?: string;
+  cards?: SessionCard[];
+  variant?: "sample" | "pack";
+};
+
+export function ReviewSession({ title, cards: sampleCards, variant }: Props) {
+  const cards = sampleCards ?? defaultCards;
+  const isSample = variant === "sample";
+  const [index, setIndex] = useState(0);
+  const [revealed, setRevealed] = useState(false);
+  const [done, setDone] = useState(false);
+  const firstRender = useRef(true);
+  const wordRef = useRef<HTMLHeadingElement>(null);
+  const summaryRef = useRef<HTMLHeadingElement>(null);
+
+  const card = cards[index];
+  const progress = ((index + 1) / cards.length) * 100;
+  const live = done
+    ? `Session complete. ${cards.length} cards reviewed.`
+    : revealed
+      ? "Answer shown. Choose how well you knew it."
+      : `Card ${index + 1} of ${cards.length}`;
+
+  useEffect(() => {
+    if (done) {
+      summaryRef.current?.focus({ preventScroll: true });
+      return;
+    }
+    if (firstRender.current) {
+      firstRender.current = false;
+      return;
+    }
+    wordRef.current?.focus({ preventScroll: true });
+  }, [index, done]);
+
+  function reveal() {
+    if (revealed) return;
+    setRevealed(true);
+  }
+
+  function grade() {
+    if (!revealed) return;
+    if (index + 1 >= cards.length) {
+      setDone(true);
+      return;
+    }
+    setIndex((value) => value + 1);
+    setRevealed(false);
+  }
+
+  useEffect(() => {
+    function onKeyDown(event: KeyboardEvent) {
+      if (done) return;
+      if (event.key === " " && !revealed) {
+        const target = event.target as HTMLElement | null;
+        if (target?.closest("button, a, input, select, textarea")) return;
+        event.preventDefault();
+        reveal();
+      } else if (revealed && ["1", "2", "3", "4"].includes(event.key)) {
+        event.preventDefault();
+        grade();
+      }
+    }
+    document.addEventListener("keydown", onKeyDown);
+    return () => document.removeEventListener("keydown", onKeyDown);
+  });
+
+  return (
+    <main className="session-shell" id="session-app">
+      <div className="session-top">
+        <Link
+          className="session-exit"
+          href="/dashboard"
+          aria-label="End session and return to today"
+        >
+          <Icon name="close" />
+        </Link>
+        <div className="session-title">
+          <span className="mono">Daily review</span>
+          <strong>{title ?? "Meetings & Pushback"}</strong>
+        </div>
+        <span className="session-count" id="session-counter">
+          {index + 1} / {cards.length}
+        </span>
+      </div>
+
+      <div
+        className="meter meter--thin session-meter"
+        id="session-meter"
+        role="progressbar"
+        aria-label="Session progress"
+        aria-valuemin={0}
+        aria-valuemax={cards.length}
+        aria-valuenow={index + 1}
+      >
+        <span id="session-progress" style={{ width: `${progress}%` }} />
+      </div>
+
+      <div className="session-stage" id="session-stage" hidden={done}>
+        <article
+          className="flashcard"
+          id="session-card"
+          aria-labelledby="session-word"
+        >
+          <div className="flash-top">
+            <span className="tag tag--forest" id="session-pos">
+              {card.pos}
+            </span>
+            <SpeakButton
+              text={card.word}
+              label={`Play pronunciation of ${card.word}`}
+            />
+          </div>
+
+          <h1 className="flash-word" id="session-word" tabIndex={-1} ref={wordRef}>
+            {card.word}
+          </h1>
+          <div className="flash-meta">
+            {card.phonetic ? (
+              <>
+                <span id="session-phonetic">{card.phonetic}</span>
+                <span className="dot" aria-hidden="true">
+                  ·
+                </span>
+              </>
+            ) : null}
+            {isSample ? (
+              <span>Sample session</span>
+            ) : variant === "pack" ? (
+              <span>
+                Word {index + 1} of {cards.length}
+              </span>
+            ) : (
+              <>
+                <span>Word 4 of 32</span>
+                <span className="dot" aria-hidden="true">
+                  ·
+                </span>
+                <span>Seen 4 times</span>
+              </>
+            )}
+          </div>
+
+          <p className="flash-prompt" id="session-prompt" hidden={revealed}>
+            Say the meaning in your own words, then reveal the answer.
+          </p>
+
+          <div className="flash-answer" id="session-answer" hidden={!revealed}>
+            <div className="answer-block">
+              <span className="mono-note">Plain English</span>
+              <p className="answer-def" id="session-definition">
+                {card.definition}
+              </p>
+            </div>
+            <div className="answer-block">
+              <span className="mono-note">At work</span>
+              <p className="answer-example" id="session-example">
+                “{card.example}”
+              </p>
+              <div className="answer-collocations" id="session-collocations">
+                {card.collocations.map((item) => (
+                  <span key={item} className="tag tag--outline">
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <button
+            className="btn btn--primary btn--block flash-reveal"
+            type="button"
+            id="session-reveal"
+            hidden={revealed}
+            onClick={reveal}
+          >
+            Show answer
+            <Icon name="arrow-right" />
+          </button>
+
+          <div
+            className="grade-row"
+            id="session-grades"
+            hidden={!revealed}
+            aria-label="How well did you know this word?"
+          >
+            {[
+              ["again", "Again", "1"],
+              ["hard", "Hard", "2"],
+              ["good", "Good", "3"],
+              ["easy", "Easy", "4"],
+            ].map(([key, label, kbd]) => (
+              <button
+                key={key}
+                className={`grade-btn grade-btn--${key}`}
+                type="button"
+                data-grade={key}
+                onClick={grade}
+              >
+                {label}
+                <span className="grade-kbd" aria-hidden="true">
+                  {kbd}
+                </span>
+              </button>
+            ))}
+          </div>
+        </article>
+      </div>
+
+      <section className="session-summary" id="session-summary" hidden={!done}>
+        <div className="summary-card">
+          <span className="summary-stamp" aria-hidden="true">
+            <Icon name="check" />
+          </span>
+          <h1 id="summary-title" tabIndex={-1} ref={summaryRef}>
+            Nice work, Minh.
+          </h1>
+          <p>
+            {cards.length} words in under five minutes.{" "}
+            {isSample
+              ? "A sample from this pack — start the full pack to keep going."
+              : "Three will come back tomorrow; the rest are scheduled further out."}
+          </p>
+          <div className="summary-stats">
+            <div>
+              <strong>{cards.length}</strong>
+              <span>cards reviewed</span>
+            </div>
+            <div>
+              <strong>4:12</strong>
+              <span>minutes</span>
+            </div>
+            <div>
+              <strong>13</strong>
+              <span>day streak</span>
+            </div>
+          </div>
+          <div className="summary-actions">
+            <Link className="btn btn--primary" href="/dashboard">
+              Back to today
+              <Icon name="arrow-right" className="icon icon--nudge" />
+            </Link>
+            <Link className="btn btn--secondary" href="/progress">
+              See progress
+            </Link>
+          </div>
+          {!isSample && (
+            <p className="summary-micro">
+              Tomorrow’s review: 6 cards · about 3 minutes
+            </p>
+          )}
+        </div>
+      </section>
+
+      <p className="session-hint" id="session-hint" hidden={done}>
+        {revealed ? (
+          <>
+            <kbd>1</kbd> Again · <kbd>2</kbd> Hard · <kbd>3</kbd> Good ·{" "}
+            <kbd>4</kbd> Easy
+          </>
+        ) : (
+          <>
+            <kbd>Space</kbd> to reveal · <kbd>1</kbd>–<kbd>4</kbd> to grade
+          </>
+        )}
+      </p>
+      <p className="sr-only" id="session-live" aria-live="polite">
+        {live}
+      </p>
+    </main>
+  );
+}

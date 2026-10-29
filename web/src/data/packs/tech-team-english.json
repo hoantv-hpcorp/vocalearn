@@ -1,0 +1,219 @@
+{
+  "slug": "tech-team-english",
+  "name": "Tech Team English",
+  "tab": "Industry · Tech",
+  "kind": "Industry pack",
+  "categories": ["industry", "intermediate"],
+  "level": "Intermediate",
+  "cefr": "B1–B2",
+  "minutes": 5,
+  "lede": "You already sit in standups, review specs, and ship features. This pack gives you the words to keep up in English, not just in code.",
+  "outcome": "The shorthand your product team uses in standups, specs, and launches — so you can join in without translating.",
+  "outcomes": [
+    "Follow a standup without translating every ticket, blocker, and deploy in your head.",
+    "Ask sharper questions about specs, acceptance criteria, and edge cases before work starts.",
+    "Talk about releases, rollbacks, and tech debt with the confidence of a teammate, not a visitor."
+  ],
+  "aside": {
+    "title": "Written for the standup, not the textbook.",
+    "body": "Every term is one you’ll hear in planning or see in a ticket. Definitions stay short, so you can use them the same day."
+  },
+  "words": [
+    {
+      "word": "rollout",
+      "pos": "noun",
+      "definition": "The staged release of a feature to users, group by group.",
+      "example": "The rollout starts with internal users, then moves to everyone.",
+      "collocations": ["staged rollout", "rollout plan", "gradual rollout"]
+    },
+    {
+      "word": "blocker",
+      "pos": "noun",
+      "definition": "A problem that stops work from moving forward.",
+      "example": "The API key is still my only blocker this morning.",
+      "collocations": ["main blocker", "remove a blocker", "blocker for launch"]
+    },
+    {
+      "word": "deprecate",
+      "pos": "verb",
+      "definition": "To mark an old feature or endpoint as no longer supported.",
+      "example": "We’ll deprecate the old endpoint at the end of March.",
+      "collocations": ["deprecate an endpoint", "deprecate a feature", "deprecated API"]
+    },
+    {
+      "word": "ship",
+      "pos": "verb",
+      "definition": "To release finished work to customers, even if it’s not perfect.",
+      "example": "If tests pass tonight, we can ship tomorrow morning.",
+      "collocations": ["ship on time", "ship a feature", "ready to ship"]
+    },
+    {
+      "word": "release",
+      "pos": "noun",
+      "definition": "A version of a product made available to users.",
+      "example": "The release goes out on Thursday after the final check.",
+      "collocations": ["release notes", "release date", "major release"]
+    },
+    {
+      "word": "deploy",
+      "pos": "verb",
+      "definition": "To put new code onto a server where it runs.",
+      "example": "I’ll deploy the fix once staging looks clean.",
+      "collocations": ["deploy to production", "deploy a fix", "deploy safely"]
+    },
+    {
+      "word": "regression",
+      "pos": "noun",
+      "definition": "A bug that breaks something which used to work.",
+      "example": "The login change caused a regression in the checkout flow.",
+      "collocations": ["cause a regression", "regression test", "catch a regression"]
+    },
+    {
+      "word": "bug",
+      "pos": "noun",
+      "definition": "A flaw in the code that makes it behave wrongly.",
+      "example": "There’s a bug in the export when the file is empty.",
+      "collocations": ["fix a bug", "report a bug", "open bug"]
+    },
+    {
+      "word": "ticket",
+      "pos": "noun",
+      "definition": "A tracked task or issue in the team’s work system.",
+      "example": "I’ll open a ticket for the broken filter and tag you.",
+      "collocations": ["open a ticket", "ticket number", "close a ticket"]
+    },
+    {
+      "word": "sprint",
+      "pos": "noun",
+      "definition": "A short, fixed period in which the team completes planned work.",
+      "example": "That item is too big for this sprint, so let’s split it.",
+      "collocations": ["sprint planning", "next sprint", "sprint goal"]
+    },
+    {
+      "word": "backlog",
+      "pos": "noun",
+      "definition": "The list of work waiting to be picked up later.",
+      "example": "Let’s move the redesign to the backlog until Q3.",
+      "collocations": ["product backlog", "backlog grooming", "clear the backlog"]
+    },
+    {
+      "word": "standup",
+      "pos": "noun",
+      "definition": "A short daily meeting where the team shares progress and blockers.",
+      "example": "I’ll be late to standup, so start without me.",
+      "collocations": ["daily standup", "run the standup", "standup notes"]
+    },
+    {
+      "word": "retro",
+      "pos": "noun",
+      "definition": "A team meeting to review how the last sprint went.",
+      "example": "We agreed in retro to stop starting work without a ticket.",
+      "collocations": ["run a retro", "retro notes", "sprint retro"]
+    },
+    {
+      "word": "scope creep",
+      "pos": "noun",
+      "definition": "Small extra requests that slowly expand a project beyond its plan.",
+      "example": "The new dashboard requests are scope creep, so let’s park them.",
+      "collocations": ["avoid scope creep", "prevent scope creep", "classic scope creep"]
+    },
+    {
+      "word": "spec",
+      "pos": "noun",
+      "definition": "A written description of what a feature should do.",
+      "example": "The spec is still missing the error states for payments.",
+      "collocations": ["write a spec", "product spec", "spec review"]
+    },
+    {
+      "word": "requirement",
+      "pos": "noun",
+      "definition": "Something the product must do to meet a user or business need.",
+      "example": "That requirement came from legal, so we can’t drop it.",
+      "collocations": ["meet a requirement", "clear requirement", "requirement change"]
+    },
+    {
+      "word": "user story",
+      "pos": "noun",
+      "definition": "A short description of a feature written from the user’s view.",
+      "example": "The user story is clear, but the acceptance criteria are not.",
+      "collocations": ["write a user story", "user story map", "split a user story"]
+    },
+    {
+      "word": "acceptance criteria",
+      "pos": "noun",
+      "definition": "The conditions a feature must meet to be accepted as done.",
+      "example": "Let’s add acceptance criteria before we estimate this story.",
+      "collocations": ["clear acceptance criteria", "define acceptance criteria", "meet acceptance criteria"]
+    },
+    {
+      "word": "edge case",
+      "pos": "noun",
+      "definition": "An unusual situation that the main logic might not handle.",
+      "example": "What happens on an empty cart is the edge case we missed.",
+      "collocations": ["handle an edge case", "edge case testing", "rare edge case"]
+    },
+    {
+      "word": "workaround",
+      "pos": "noun",
+      "definition": "A temporary fix that lets work continue until the real fix lands.",
+      "example": "I have a workaround, but the proper fix needs a migration.",
+      "collocations": ["find a workaround", "temporary workaround", "quick workaround"]
+    },
+    {
+      "word": "root cause",
+      "pos": "noun",
+      "definition": "The underlying reason a bug or failure actually happened.",
+      "example": "We still don’t know the root cause of the timeouts.",
+      "collocations": ["find the root cause", "root cause analysis", "address the root cause"]
+    },
+    {
+      "word": "reproduce",
+      "pos": "verb",
+      "definition": "To make a bug happen again so you can investigate it.",
+      "example": "I can’t reproduce it locally, but it happens in production.",
+      "collocations": ["reproduce a bug", "hard to reproduce", "reproduce locally"]
+    },
+    {
+      "word": "staging",
+      "pos": "noun",
+      "definition": "A test environment that mimics production before the real release.",
+      "example": "The build is on staging now, so please take a look.",
+      "collocations": ["deploy to staging", "staging environment", "test on staging"]
+    },
+    {
+      "word": "production",
+      "pos": "noun",
+      "definition": "The live environment where real users use the product.",
+      "example": "We found the issue in production before any customer reported it.",
+      "collocations": ["in production", "production outage", "production data"]
+    },
+    {
+      "word": "hotfix",
+      "pos": "noun",
+      "definition": "An urgent fix shipped straight to production to stop an outage.",
+      "example": "We need a hotfix tonight for the broken password reset.",
+      "collocations": ["ship a hotfix", "urgent hotfix", "hotfix branch"]
+    },
+    {
+      "word": "rollback",
+      "pos": "noun",
+      "definition": "The act of returning to the previous version after a bad release.",
+      "example": "The rollback took four minutes and restored the old checkout.",
+      "collocations": ["trigger a rollback", "rollback plan", "full rollback"]
+    },
+    {
+      "word": "feature flag",
+      "pos": "noun",
+      "definition": "A switch that turns a feature on or off without new code.",
+      "example": "Put it behind a feature flag so we can test it safely.",
+      "collocations": ["behind a feature flag", "toggle a feature flag", "feature flag rollout"]
+    },
+    {
+      "word": "tech debt",
+      "pos": "noun",
+      "definition": "Shortcuts in the code that make future work slower and riskier.",
+      "example": "We’re spending this sprint paying down tech debt in billing.",
+      "collocations": ["pay down tech debt", "accumulate tech debt", "tech debt backlog"]
+    }
+  ]
+}

@@ -1,0 +1,233 @@
+{
+  "slug": "interview-english",
+  "name": "Interview English",
+  "tab": "Situation · Interview",
+  "kind": "Situation pack",
+  "categories": ["situation", "advanced"],
+  "level": "Advanced",
+  "cefr": "B2–C1",
+  "minutes": 6,
+  "lede": "Walk in ready to talk about your work — the impact you’ve had, the decisions you owned, and what you want next. These words make a career story sound clear, specific, and true.",
+  "outcome": "Tell a clear career story: the impact you made, the ownership you took, and the role you want next.",
+  "outcomes": [
+    "Describe your impact with numbers, not adjectives, and keep the story under two minutes.",
+    "Answer behavioural questions with a clear situation, the action you took, and the result.",
+    "Ask questions back that show you understand the role, the team, and the risk."
+  ],
+  "aside": {
+    "title": "You already have the stories.",
+    "body": "This pack gives you the words to tell them clearly, without sounding rehearsed or over-polished."
+  },
+  "words": [
+    {
+      "word": "impact",
+      "pos": "noun",
+      "definition": "The clear difference your work made for a team or business.",
+      "example": "The biggest impact was cutting onboarding time from six weeks to two.",
+      "collocations": ["measurable impact", "business impact", "make an impact"]
+    },
+    {
+      "word": "ownership",
+      "pos": "noun",
+      "definition": "Taking full responsibility for a problem and seeing it through.",
+      "example": "I took ownership of the backlog and cleared it in a quarter.",
+      "collocations": ["take ownership", "clear ownership", "sense of ownership"]
+    },
+    {
+      "word": "track record",
+      "pos": "noun",
+      "definition": "Your history of achieving results over a period of time.",
+      "example": "I’ve got a track record of turning around struggling teams.",
+      "collocations": ["strong track record", "proven track record", "track record of delivery"]
+    },
+    {
+      "word": "end-to-end",
+      "pos": "adjective",
+      "definition": "Covering a whole process from its first step to the last.",
+      "example": "I owned the end-to-end launch, from research through to support.",
+      "collocations": ["end-to-end ownership", "end-to-end delivery", "end-to-end process"]
+    },
+    {
+      "word": "cross-functional",
+      "pos": "adjective",
+      "definition": "Involving people from several teams with different skills and goals.",
+      "example": "I led a cross-functional group of product, sales, and support staff.",
+      "collocations": ["cross-functional team", "cross-functional project", "cross-functional collaboration"]
+    },
+    {
+      "word": "drive",
+      "pos": "verb",
+      "definition": "To push a project or result forward with energy and focus.",
+      "example": "I drove the migration and kept every team on schedule.",
+      "collocations": ["drive results", "drive growth", "drive change"]
+    },
+    {
+      "word": "hands-on",
+      "pos": "adjective",
+      "definition": "Directly involved in the work rather than only managing it.",
+      "example": "I stayed hands-on with the code during the first release.",
+      "collocations": ["hands-on experience", "hands-on approach", "stay hands-on"]
+    },
+    {
+      "word": "strategic",
+      "pos": "adjective",
+      "definition": "Focused on long-term goals rather than daily tasks.",
+      "example": "I set the strategic direction, then let the team own delivery.",
+      "collocations": ["strategic thinking", "strategic direction", "strategic decision"]
+    },
+    {
+      "word": "initiative",
+      "pos": "noun",
+      "definition": "A new project or plan you start yourself.",
+      "example": "I started a mentoring initiative that cut new-hire turnover by half.",
+      "collocations": ["lead an initiative", "launch an initiative", "take the initiative"]
+    },
+    {
+      "word": "take the lead",
+      "pos": "phrase",
+      "definition": "To be the person who guides a piece of work.",
+      "example": "I took the lead on the pricing review when it stalled.",
+      "collocations": ["take the lead", "take the lead on", "lead the project"]
+    },
+    {
+      "word": "outcome",
+      "pos": "noun",
+      "definition": "The result that came from your work or decision.",
+      "example": "The outcome was a 20% rise in renewals within six months.",
+      "collocations": ["positive outcome", "measure outcomes", "clear outcome"]
+    },
+    {
+      "word": "metrics",
+      "pos": "noun",
+      "definition": "The numbers you use to judge whether something worked.",
+      "example": "We agreed on three metrics before the pilot started.",
+      "collocations": ["track metrics", "key metrics", "define metrics"]
+    },
+    {
+      "word": "measurable",
+      "pos": "adjective",
+      "definition": "Able to be counted or proved with clear evidence.",
+      "example": "Every goal I set has a measurable target attached.",
+      "collocations": ["measurable results", "measurable goals", "measurable targets"]
+    },
+    {
+      "word": "turnaround",
+      "pos": "noun",
+      "definition": "A major improvement in a business or team that was failing.",
+      "example": "The turnaround took eighteen months and began with clearer priorities.",
+      "collocations": ["business turnaround", "lead a turnaround", "remarkable turnaround"]
+    },
+    {
+      "word": "scale",
+      "pos": "verb",
+      "definition": "To grow a team, process, or product without losing quality.",
+      "example": "I scaled the support team from four people to thirty.",
+      "collocations": ["scale a team", "scale operations", "scale quickly"]
+    },
+    {
+      "word": "launch",
+      "pos": "verb",
+      "definition": "To introduce a new product or service to the market.",
+      "example": "We launched the app in three markets on the same day.",
+      "collocations": ["launch a product", "launch a feature", "launch on time"]
+    },
+    {
+      "word": "ship",
+      "pos": "verb",
+      "definition": "To release finished work to customers, often after testing.",
+      "example": "We shipped the new checkout flow two weeks ahead of plan.",
+      "collocations": ["ship on time", "ship a feature", "ready to ship"]
+    },
+    {
+      "word": "roadmap",
+      "pos": "noun",
+      "definition": "A plan showing what you will build and in what order.",
+      "example": "I rebuilt the roadmap around three customer problems, not features.",
+      "collocations": ["product roadmap", "set the roadmap", "roadmap item"]
+    },
+    {
+      "word": "prioritise",
+      "pos": "verb",
+      "definition": "To decide which tasks matter most and do them first.",
+      "example": "I prioritise work by revenue risk, not by who shouts loudest.",
+      "collocations": ["prioritise work", "prioritise tasks", "ruthlessly prioritise"]
+    },
+    {
+      "word": "ambiguity",
+      "pos": "noun",
+      "definition": "A situation where the next step is not yet clear.",
+      "example": "I’m comfortable with ambiguity, but I still set a direction.",
+      "collocations": ["handle ambiguity", "work through ambiguity", "comfortable with ambiguity"]
+    },
+    {
+      "word": "autonomy",
+      "pos": "noun",
+      "definition": "The freedom to decide how you do your work.",
+      "example": "I was given autonomy to rebuild the process my own way.",
+      "collocations": ["full autonomy", "work with autonomy", "grant autonomy"]
+    },
+    {
+      "word": "mentoring",
+      "pos": "noun",
+      "definition": "Regularly helping someone with less experience to develop.",
+      "example": "Mentoring two juniors into team leads was my proudest result.",
+      "collocations": ["mentoring programme", "informal mentoring", "mentoring relationship"]
+    },
+    {
+      "word": "promotion",
+      "pos": "noun",
+      "definition": "A move to a more senior role in the same organisation.",
+      "example": "I earned a promotion after leading the platform rebuild.",
+      "collocations": ["earn a promotion", "apply for promotion", "internal promotion"]
+    },
+    {
+      "word": "notice period",
+      "pos": "noun",
+      "definition": "The time you must keep working after resigning from a job.",
+      "example": "My notice period is four weeks, and I can start in May.",
+      "collocations": ["notice period", "serve notice", "short notice period"]
+    },
+    {
+      "word": "compensation",
+      "pos": "noun",
+      "definition": "The salary and benefits you receive for doing a job.",
+      "example": "I’m looking at the whole package, not just base compensation.",
+      "collocations": ["total compensation", "compensation package", "discuss compensation"]
+    },
+    {
+      "word": "probation",
+      "pos": "noun",
+      "definition": "A trial period at the start of a new job.",
+      "example": "The role starts with a three-month probation, which suits me.",
+      "collocations": ["probation period", "pass probation", "six-month probation"]
+    },
+    {
+      "word": "strength",
+      "pos": "noun",
+      "definition": "Something you do particularly well in your work.",
+      "example": "My strength is turning vague briefs into clear, shippable plans.",
+      "collocations": ["key strength", "personal strength", "play to your strengths"]
+    },
+    {
+      "word": "weakness",
+      "pos": "noun",
+      "definition": "Something you find difficult and are still working to improve.",
+      "example": "My weakness is saying yes to too many small requests.",
+      "collocations": ["real weakness", "admit a weakness", "address a weakness"]
+    },
+    {
+      "word": "career path",
+      "pos": "noun",
+      "definition": "The sequence of roles you want to move through over time.",
+      "example": "My career path has moved from analysis into product leadership.",
+      "collocations": ["clear career path", "career path", "choose a career path"]
+    },
+    {
+      "word": "remit",
+      "pos": "noun",
+      "definition": "The area of work and decisions you are responsible for.",
+      "example": "My remit grew to include pricing, packaging, and partnerships.",
+      "collocations": ["broad remit", "within my remit", "expand the remit"]
+    }
+  ]
+}

@@ -1,0 +1,219 @@
+{
+  "slug": "presentations",
+  "name": "Presentations",
+  "tab": "Situation · Presenting",
+  "kind": "Situation pack",
+  "categories": ["situation", "intermediate"],
+  "level": "Intermediate",
+  "cefr": "B1–B2",
+  "minutes": 5,
+  "lede": "Open with the point, not the preamble. This pack gives you the phrases to land your evidence, guide the room, and close with an ask people can act on.",
+  "outcome": "Lead with the point, make the data land, and end with an ask the room can act on.",
+  "outcomes": [
+    "Open with your conclusion, so the room knows why the next ten minutes matter.",
+    "Explain a chart or number in plain English, without hiding behind jargon or caveats.",
+    "Close with a clear ask, so people leave knowing exactly what happens next."
+  ],
+  "aside": {
+    "title": "Built for the room, not the slide deck.",
+    "body": "Every line here is designed to be said out loud, at a normal pace, without notes."
+  },
+  "words": [
+    {
+      "word": "walk through",
+      "pos": "phrase",
+      "definition": "To explain something step by step so people can follow.",
+      "example": "I’ll walk you through the three options on this slide.",
+      "collocations": ["walk through the plan", "walk you through", "walk through an example"]
+    },
+    {
+      "word": "next steps",
+      "pos": "noun",
+      "definition": "The actions that need to happen after this point.",
+      "example": "Let’s finish with the next steps and who owns each.",
+      "collocations": ["clear next steps", "agree next steps", "outline next steps"]
+    },
+    {
+      "word": "headline",
+      "pos": "noun",
+      "definition": "The short, bold statement that sums up your main message.",
+      "example": "Make the headline a full sentence, not a label.",
+      "collocations": ["clear headline", "slide headline", "write a headline"]
+    },
+    {
+      "word": "key message",
+      "pos": "noun",
+      "definition": "The one idea you most want the audience to remember.",
+      "example": "Every slide should support the same key message.",
+      "collocations": ["single key message", "land the key message", "repeat the key message"]
+    },
+    {
+      "word": "highlight",
+      "pos": "verb",
+      "definition": "To draw attention to the most important part of something.",
+      "example": "I’ll highlight the two numbers that changed the forecast.",
+      "collocations": ["highlight a trend", "highlight the risk", "highlight key figures"]
+    },
+    {
+      "word": "dive into",
+      "pos": "phrase",
+      "definition": "To start examining a topic in detail, often after a summary.",
+      "example": "Let’s dive into the numbers behind that drop.",
+      "collocations": ["dive into the data", "dive into details", "dive straight in"]
+    },
+    {
+      "word": "drill down",
+      "pos": "phrase",
+      "definition": "To look at a small part of the data more closely.",
+      "example": "If we drill down, one region explains the whole gap.",
+      "collocations": ["drill down into", "drill down further", "drill down by region"]
+    },
+    {
+      "word": "zoom out",
+      "pos": "phrase",
+      "definition": "To step back and look at the bigger picture.",
+      "example": "Let’s zoom out and look at the full year.",
+      "collocations": ["zoom out for context", "zoom out one level", "zoom out again"]
+    },
+    {
+      "word": "chart",
+      "pos": "noun",
+      "definition": "A picture of numbers that makes a pattern easier to see.",
+      "example": "This chart shows growth slowing in the second half.",
+      "collocations": ["bar chart", "line chart", "read a chart"]
+    },
+    {
+      "word": "trend",
+      "pos": "noun",
+      "definition": "The general direction something is moving over time.",
+      "example": "The trend is clear: customers want fewer options.",
+      "collocations": ["clear trend", "upward trend", "follow the trend"]
+    },
+    {
+      "word": "data point",
+      "pos": "noun",
+      "definition": "A single fact or number used as evidence.",
+      "example": "One data point isn’t enough to call it a trend.",
+      "collocations": ["single data point", "key data point", "add a data point"]
+    },
+    {
+      "word": "evidence",
+      "pos": "noun",
+      "definition": "Facts or examples that show why your point is true.",
+      "example": "The evidence points one way, so I’ll be direct.",
+      "collocations": ["strong evidence", "supporting evidence", "present evidence"]
+    },
+    {
+      "word": "example",
+      "pos": "noun",
+      "definition": "A specific case that makes an idea easier to understand.",
+      "example": "Let me give you one example from a recent launch.",
+      "collocations": ["quick example", "concrete example", "give an example"]
+    },
+    {
+      "word": "in summary",
+      "pos": "phrase",
+      "definition": "Used to introduce a short restatement of the main points.",
+      "example": "In summary, we solved the cost problem, not the speed.",
+      "collocations": ["in summary", "in summary then", "summary slide"]
+    },
+    {
+      "word": "to sum up",
+      "pos": "phrase",
+      "definition": "Used to give a short version of everything you just said.",
+      "example": "To sum up, we need three more weeks and one hire.",
+      "collocations": ["to sum up", "to sum up briefly", "sum up the case"]
+    },
+    {
+      "word": "on the slide",
+      "pos": "phrase",
+      "definition": "Shown on the screen for the audience to read.",
+      "example": "On the slide you can see the full breakdown by region.",
+      "collocations": ["shown on the slide", "on the slide below", "see on the slide"]
+    },
+    {
+      "word": "as you can see",
+      "pos": "phrase",
+      "definition": "Used to point the audience to something visible.",
+      "example": "As you can see, the gap closes after April.",
+      "collocations": ["as you can see", "as you’ll see", "see on the chart"]
+    },
+    {
+      "word": "move on",
+      "pos": "phrase",
+      "definition": "To go on to the next topic or slide.",
+      "example": "Let’s move on to the part everyone came for.",
+      "collocations": ["move on to", "move on quickly", "move on to results"]
+    },
+    {
+      "word": "in other words",
+      "pos": "phrase",
+      "definition": "Used to explain the same idea in simpler language.",
+      "example": "In other words, we grew, but we grew badly.",
+      "collocations": ["in other words", "or in other words", "in other words then"]
+    },
+    {
+      "word": "point",
+      "pos": "noun",
+      "definition": "The single idea you want the audience to take away.",
+      "example": "Make one point per slide and say it clearly.",
+      "collocations": ["main point", "make a point", "get to the point"]
+    },
+    {
+      "word": "claim",
+      "pos": "noun",
+      "definition": "A statement you say is true but still need to prove.",
+      "example": "That’s a strong claim, so let’s show the evidence.",
+      "collocations": ["bold claim", "support a claim", "make a claim"]
+    },
+    {
+      "word": "back up",
+      "pos": "phrase",
+      "definition": "To support a statement with facts or examples.",
+      "example": "Back up the headline with one clear number.",
+      "collocations": ["back up a claim", "back it up", "back up with data"]
+    },
+    {
+      "word": "illustrate",
+      "pos": "verb",
+      "definition": "To make an idea clearer by giving an example or picture.",
+      "example": "This case illustrates why the old process failed.",
+      "collocations": ["illustrate a point", "illustrate with examples", "clearly illustrate"]
+    },
+    {
+      "word": "come back to",
+      "pos": "phrase",
+      "definition": "To return to a topic later in the presentation.",
+      "example": "I’ll come back to that question at the end.",
+      "collocations": ["come back to", "come back to this", "come back to later"]
+    },
+    {
+      "word": "hold questions",
+      "pos": "phrase",
+      "definition": "To ask the audience to save questions for the end.",
+      "example": "I’ll hold questions until we reach the final slide.",
+      "collocations": ["hold questions", "hold all questions", "hold questions until"]
+    },
+    {
+      "word": "thank you",
+      "pos": "phrase",
+      "definition": "A polite way to close a talk and invite a response.",
+      "example": "Thank you — that brings me to the end.",
+      "collocations": ["thank you", "thank you all", "a quick thank you"]
+    },
+    {
+      "word": "any questions",
+      "pos": "phrase",
+      "definition": "An invitation for the audience to ask what they need.",
+      "example": "That’s the plan — any questions before we vote?",
+      "collocations": ["any questions", "any questions so far", "take any questions"]
+    },
+    {
+      "word": "open the floor",
+      "pos": "phrase",
+      "definition": "To invite everyone in the room to speak.",
+      "example": "I’ll open the floor for ten minutes of debate.",
+      "collocations": ["open the floor", "open the floor to", "open the floor now"]
+    }
+  ]
+}
