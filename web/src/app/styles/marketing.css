@@ -2411,7 +2411,7 @@
   display: grid;
   gap: 38px;
   align-items: start;
-  padding: clamp(30px, 5vw, 64px) 0 80px;
+  padding-block: clamp(30px, 5vw, 64px) 80px;
 }
 
 @media (min-width: 980px) {
@@ -2665,10 +2665,12 @@
 }
 
 .result-plan li span {
+  flex: none;
   color: var(--forest);
   font-family: var(--font-mono);
   font-size: 9.5px;
   letter-spacing: 0.08em;
+  white-space: nowrap;
 }
 
 .result-actions {
