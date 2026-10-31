@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Icon } from "./Icon";
@@ -12,7 +12,13 @@ const links = [
   { label: "FAQ", href: "/#faq" },
 ];
 
-export function SiteHeader() {
+export function SiteHeader({
+  account,
+  mobileAccount,
+}: {
+  account?: ReactNode;
+  mobileAccount?: ReactNode;
+}) {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
@@ -53,9 +59,7 @@ export function SiteHeader() {
           })}
         </nav>
         <div className="header-actions">
-          <Link className="header-login" href="/dashboard">
-            Log in
-          </Link>
+          {account}
           <Link className="btn btn--primary btn--sm" href="/placement">
             Start free
             <Icon name="arrow-right" className="icon icon--nudge" />
@@ -82,9 +86,7 @@ export function SiteHeader() {
             {link.label} <Icon name="chevron-right" className="icon icon-sm" />
           </Link>
         ))}
-        <Link href="/dashboard" onClick={() => setOpen(false)}>
-          Log in <Icon name="chevron-right" className="icon icon-sm" />
-        </Link>
+        {mobileAccount}
       </div>
     </header>
   );

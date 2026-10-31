@@ -1075,6 +1075,44 @@ em,
   text-decoration: none;
 }
 
+.app-account {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.app-account-name {
+  max-width: 150px;
+  overflow: hidden;
+  color: var(--ink-2);
+  font-size: 13px;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.app-signout {
+  color: var(--ink-3);
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.app-signout:hover {
+  color: var(--ink);
+}
+
+.app-user--loading {
+  border-color: transparent;
+  background: var(--forest-soft);
+}
+
+@media (max-width: 899px) {
+  .app-account-name {
+    display: none;
+  }
+}
+
 @media (min-width: 900px) {
   .app-nav {
     display: flex;

@@ -1,8 +1,9 @@
-import type { CSSProperties } from "react";
+import { Suspense, type CSSProperties } from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Icon } from "@/components/Icon";
 import { SpeakButton } from "@/components/SpeakButton";
+import { getCurrentUser, getUserFirstName } from "@/lib/auth";
 
 export const metadata: Metadata = {
   title: "Today",
@@ -10,13 +11,24 @@ export const metadata: Metadata = {
     "Your daily WordStack review: nine cards due, a five-minute session, and the words you are keeping.",
 };
 
+async function GreetingName() {
+  const user = await getCurrentUser();
+  return <>{user ? getUserFirstName(user) : "there"}</>;
+}
+
 export default function DashboardPage() {
   return (
     <main id="main" className="wrap app-main">
       <div className="dash-head">
         <div>
           <span className="dash-date">Wednesday · 28 October</span>
-          <h1>Good morning, Minh.</h1>
+          <h1>
+            Good morning,{" "}
+            <Suspense fallback="there">
+              <GreetingName />
+            </Suspense>
+            .
+          </h1>
           <p className="dash-sub">
             One short session today. Nine words are ready to come back — about
             four minutes.

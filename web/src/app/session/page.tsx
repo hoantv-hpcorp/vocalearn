@@ -2,6 +2,7 @@ import { Suspense } from "react";
 import type { Metadata } from "next";
 import { connection } from "next/server";
 import { ReviewSession, type SessionCard } from "@/components/ReviewSession";
+import { getCurrentUser, getUserFirstName } from "@/lib/auth";
 import { getPack } from "@/lib/packs";
 
 const SAMPLE_SIZE = 5;
@@ -42,6 +43,8 @@ async function SessionCards({ searchParams }: Props) {
     example: word.example,
     collocations: word.collocations,
   }));
+  const user = await getCurrentUser();
+  const userName = user ? getUserFirstName(user) : undefined;
 
   return (
     <ReviewSession
@@ -49,6 +52,7 @@ async function SessionCards({ searchParams }: Props) {
       title={pack?.name}
       cards={cards}
       variant={pack ? (isFullPack ? "pack" : "sample") : undefined}
+      userName={userName}
     />
   );
 }

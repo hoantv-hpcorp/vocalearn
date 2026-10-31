@@ -1,11 +1,11 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Icon } from "./Icon";
 
-export function AppHeader() {
+export function AppHeader({ account }: { account?: ReactNode }) {
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
 
@@ -51,13 +51,7 @@ export function AppHeader() {
             <Icon name="flame" />
             12-day
           </Link>
-          <Link
-            className="app-user"
-            href="/progress"
-            aria-label="Minh Tran — open progress"
-          >
-            MT
-          </Link>
+          {account}
         </div>
       </div>
     </header>

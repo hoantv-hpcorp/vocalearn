@@ -95,9 +95,15 @@ type Props = {
   title?: string;
   cards?: SessionCard[];
   variant?: "sample" | "pack";
+  userName?: string;
 };
 
-export function ReviewSession({ title, cards: sampleCards, variant }: Props) {
+export function ReviewSession({
+  title,
+  cards: sampleCards,
+  variant,
+  userName,
+}: Props) {
   const cards = sampleCards ?? defaultCards;
   const isSample = variant === "sample";
   const [index, setIndex] = useState(0);
@@ -307,7 +313,7 @@ export function ReviewSession({ title, cards: sampleCards, variant }: Props) {
             <Icon name="check" />
           </span>
           <h1 id="summary-title" tabIndex={-1} ref={summaryRef}>
-            Nice work, Minh.
+            Nice work, {userName ?? "Visitor"}.
           </h1>
           <p>
             {cards.length} words in under five minutes.{" "}
