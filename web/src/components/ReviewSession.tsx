@@ -325,6 +325,9 @@ export function ReviewSession({
                 <p className="answer-example" id="session-example">
                   “{card.example}”
                 </p>
+              </div>
+              <div className="answer-block">
+                <span className="mono-note">Collocations</span>
                 <div className="answer-collocations" id="session-collocations">
                   {card.collocations.map((item) => (
                     <span key={item} className="tag tag--outline tag--phrase">

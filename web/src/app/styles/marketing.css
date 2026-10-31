@@ -1922,6 +1922,61 @@
   gap: 2px;
 }
 
+.word-list-more {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.34s var(--ease);
+}
+
+.word-list-more[data-open="true"] {
+  grid-template-rows: 1fr;
+}
+
+.word-list-more-inner {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.word-list-toggle {
+  display: flex;
+  width: 100%;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  margin-top: 14px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.18s var(--ease), border-color 0.18s var(--ease);
+}
+
+.word-list-toggle:not(:disabled):hover {
+  background: var(--paper-warm);
+  border-color: var(--ink-3);
+}
+
+.word-list-toggle:disabled {
+  color: var(--ink-3);
+  pointer-events: none;
+}
+
+.word-list-toggle .icon {
+  width: 17px;
+  height: 17px;
+  color: var(--ink-3);
+  transition: transform 0.3s var(--ease), color 0.18s var(--ease);
+}
+
+.word-list-toggle[aria-expanded="true"] .icon {
+  color: var(--forest);
+  transform: rotate(180deg);
+}
+
 .word-list-foot {
   display: flex;
   flex-wrap: wrap;

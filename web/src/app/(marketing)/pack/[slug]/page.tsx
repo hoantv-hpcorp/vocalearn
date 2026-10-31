@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Icon } from "@/components/Icon";
-import { SaveButton } from "@/components/SaveButton";
-import { SpeakButton } from "@/components/SpeakButton";
+import { PackWordList } from "@/components/PackWordList";
 import { getPack, getRelatedPacks, packs } from "@/lib/packs";
 
 type Props = {
@@ -129,40 +128,12 @@ export default async function PackPage({ params }: Props) {
                   All {pack.wordCount} words, with a plain-English meaning and
                   audio. Save the ones you want to review first.
                 </p>
-                <div className="word-list">
-                  {pack.words.map((item) => (
-                    <div className="word-row" key={item.word}>
-                      <div className="word-row-main">
-                        <div className="word-row-title">
-                          <h3>{item.word}</h3>
-                          <span className="pos">{item.pos}</span>
-                        </div>
-                        <p>{item.definition}</p>
-                      </div>
-                      <div className="word-row-actions">
-                        <SpeakButton
-                          text={item.word}
-                          label={`Play pronunciation of ${item.word}`}
-                          className="audio-btn audio-btn--sm"
-                          iconClassName="icon icon-sm"
-                        />
-                        <SaveButton
-                          word={item.word}
-                          guest
-                          ariaLabel={`Save ${item.word} to My Words`}
-                        />
-                      </div>
-                    </div>
-                  ))}
-                </div>
-                <div className="word-list-foot">
-                  <span>
-                    {pack.wordCount} words · {pack.sessionCount} sessions
-                  </span>
-                  <Link className="link" href={`/session?pack=${pack.slug}`}>
-                    Study the pack
-                  </Link>
-                </div>
+                <PackWordList
+                  words={pack.words}
+                  wordCount={pack.wordCount}
+                  sessionCount={pack.sessionCount}
+                  slug={pack.slug}
+                />
               </section>
 
               <section>
