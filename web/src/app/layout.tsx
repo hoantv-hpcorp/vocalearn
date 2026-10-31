@@ -6,6 +6,7 @@ import "./styles/app.css";
 import { IconSprite } from "@/components/IconSprite";
 import { ToastProvider } from "@/components/ToastProvider";
 import { SaveProvider } from "@/components/SaveProvider";
+import { StreakProvider } from "@/components/StreakProvider";
 import { Analytics } from "@vercel/analytics/next"
 
 const inter = Inter({
@@ -42,7 +43,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <Analytics />
         <IconSprite />
         <ToastProvider>
-          <SaveProvider>{children}</SaveProvider>
+          <StreakProvider>
+            <SaveProvider>{children}</SaveProvider>
+          </StreakProvider>
         </ToastProvider>
       </body>
     </html>

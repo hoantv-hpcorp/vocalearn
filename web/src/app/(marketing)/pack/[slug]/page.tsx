@@ -66,13 +66,13 @@ export default async function PackPage({ params }: Props) {
                 <span className="tag">{pack.sessionCount} sessions</span>
               </div>
               <div className="pack-hero-actions">
-                <Link className="btn btn--primary btn--lg" href={`/session?pack=${pack.slug}&full=1`}>
+                <Link className="btn btn--primary btn--lg" href={`/session?pack=${pack.slug}`}>
                   Study
                   <Icon name="arrow-right" className="icon icon--nudge" />
                 </Link>
                 <Link
                   className="btn btn--secondary"
-                  href={`/session?pack=${pack.slug}`}
+                  href={`/session?pack=${pack.slug}&sample=true`}
                 >
                   <Icon name="play" />
                   Try a free sample
@@ -159,7 +159,7 @@ export default async function PackPage({ params }: Props) {
                   <span>
                     {pack.wordCount} words · {pack.sessionCount} sessions
                   </span>
-                  <Link className="link" href={`/session?pack=${pack.slug}&full=1`}>
+                  <Link className="link" href={`/session?pack=${pack.slug}`}>
                     Study the pack
                   </Link>
                 </div>

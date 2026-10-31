@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useUser } from "@auth0/nextjs-auth0/client";
 import { Icon } from "./Icon";
+import { useStreak } from "./StreakProvider";
 import { guestNavLinks, userNavLinks, type NavLink } from "./nav";
 
 function isActive(link: NavLink, pathname: string) {
@@ -18,6 +19,7 @@ export function SiteHeader({ account }: { account?: ReactNode }) {
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
   const { user } = useUser();
+  const { ready, current } = useStreak();
   const signedIn = Boolean(user);
   const links = signedIn ? userNavLinks : guestNavLinks;
 
@@ -61,9 +63,13 @@ export function SiteHeader({ account }: { account?: ReactNode }) {
         <div className="header-actions">
           {signedIn ? (
             <>
-              <Link className="streak-pill" href="/progress">
+              <Link
+                className="streak-pill"
+                href="/progress"
+                aria-label={ready ? `${current} day streak` : "Day streak"}
+              >
                 <Icon name="flame" />
-                12-day
+                {ready ? `${current}-day` : "—"}
               </Link>
               {account}
             </>

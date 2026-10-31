@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ActivityHeatmap } from "@/components/ActivityHeatmap";
 import { Icon } from "@/components/Icon";
+import { StreakBigStat } from "@/components/StreakWidgets";
 
 export const metadata: Metadata = {
   title: "Progress",
@@ -62,11 +63,7 @@ export default function ProgressPage() {
           <strong>214</strong>
           <small>18 new this week</small>
         </div>
-        <div className="big-stat">
-          <span className="stat-label">Current streak</span>
-          <strong>12 days</strong>
-          <small>Personal best: 12</small>
-        </div>
+        <StreakBigStat />
         <div className="big-stat">
           <span className="stat-label">Recall accuracy</span>
           <strong>87%</strong>

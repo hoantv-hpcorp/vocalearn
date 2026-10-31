@@ -1144,7 +1144,11 @@
   width: 44px;
   height: 44px;
   place-items: center;
+  border: 0;
+  padding: 0;
   border-radius: 999px;
+  background: transparent;
+  cursor: pointer;
   color: var(--ink-3);
   text-decoration: none;
 }

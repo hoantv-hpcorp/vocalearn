@@ -7,9 +7,10 @@ import { getPack } from "@/lib/packs";
 import { getUserFirstName } from "@/lib/user-name";
 
 const SAMPLE_SIZE = 5;
+const SESSION_SIZE = 9;
 
 type Props = {
-  searchParams: Promise<{ pack?: string; full?: string }>;
+  searchParams: Promise<{ pack?: string; sample?: string }>;
 };
 
 export const metadata: Metadata = {
@@ -29,13 +30,11 @@ function pickRandom<T>(items: readonly T[], count: number): T[] {
 
 async function SessionCards({ searchParams }: Props) {
   await connection();
-  const { pack: slug, full } = await searchParams;
+  const { pack: slug, sample } = await searchParams;
   const pack = slug ? getPack(slug) : undefined;
-  const isFullPack = Boolean(pack && full);
+  const isSample = Boolean(pack && sample === "true");
   const source = pack
-    ? isFullPack
-      ? pack.words
-      : pickRandom(pack.words, SAMPLE_SIZE)
+    ? pickRandom(pack.words, isSample ? SAMPLE_SIZE : SESSION_SIZE)
     : undefined;
   const cards: SessionCard[] | undefined = source?.map((word) => ({
     word: word.word,
@@ -52,8 +51,9 @@ async function SessionCards({ searchParams }: Props) {
       key={crypto.randomUUID()}
       title={pack?.name}
       cards={cards}
-      variant={pack ? (isFullPack ? "pack" : "sample") : undefined}
+      variant={pack ? (isSample ? "sample" : "pack") : undefined}
       userName={userName}
+      signedIn={Boolean(user)}
     />
   );
 }

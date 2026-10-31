@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Icon } from "@/components/Icon";
 import { SpeakButton } from "@/components/SpeakButton";
+import { StreakPanelNote, StreakStatTile } from "@/components/StreakWidgets";
 import { getCurrentUser } from "@/lib/auth";
 import { getUserFirstName } from "@/lib/user-name";
 
@@ -69,13 +70,7 @@ export default function DashboardPage() {
           </section>
 
           <div className="stat-row">
-            <div className="stat-tile">
-              <span className="stat-icon stat-icon--marigold">
-                <Icon name="flame" />
-              </span>
-              <strong>12</strong>
-              <span>day streak</span>
-            </div>
+            <StreakStatTile />
             <div className="stat-tile">
               <span className="stat-icon">
                 <Icon name="book" />
@@ -232,7 +227,7 @@ export default function DashboardPage() {
           <section className="panel">
             <div className="panel-head">
               <h2>Streak</h2>
-              <span className="mono-note">12 days</span>
+              <StreakPanelNote />
             </div>
             <div className="week-dots" role="list">
               <span

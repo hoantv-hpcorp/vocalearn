@@ -2,8 +2,10 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { Icon } from "./Icon";
 import { SpeakButton } from "./SpeakButton";
+import { useStreak } from "./StreakProvider";
 
 const defaultCards: SessionCard[] = [
   {
@@ -96,19 +98,32 @@ type Props = {
   cards?: SessionCard[];
   variant?: "sample" | "pack";
   userName?: string;
+  signedIn?: boolean;
 };
+
+function formatDuration(totalSeconds: number) {
+  const minutes = Math.floor(totalSeconds / 60);
+  const seconds = totalSeconds % 60;
+  return `${minutes}:${String(seconds).padStart(2, "0")}`;
+}
 
 export function ReviewSession({
   title,
   cards: sampleCards,
   variant,
   userName,
+  signedIn = false,
 }: Props) {
   const cards = sampleCards ?? defaultCards;
   const isSample = variant === "sample";
+  const router = useRouter();
+  const { ready, current, recordSession } = useStreak();
   const [index, setIndex] = useState(0);
   const [revealed, setRevealed] = useState(false);
   const [done, setDone] = useState(false);
+  const [durationSeconds, setDurationSeconds] = useState(0);
+  const [sessionStreak, setSessionStreak] = useState<number | null>(null);
+  const startedAt = useRef<number | null>(null);
   const firstRender = useRef(true);
   const wordRef = useRef<HTMLHeadingElement>(null);
   const summaryRef = useRef<HTMLHeadingElement>(null);
@@ -122,6 +137,10 @@ export function ReviewSession({
       : `Card ${index + 1} of ${cards.length}`;
 
   useEffect(() => {
+    startedAt.current = Date.now();
+  }, []);
+
+  useEffect(() => {
     if (done) {
       summaryRef.current?.focus({ preventScroll: true });
       return;
@@ -133,6 +152,14 @@ export function ReviewSession({
     wordRef.current?.focus({ preventScroll: true });
   }, [index, done]);
 
+  function exitSession() {
+    if (window.history.length > 1) {
+      router.back();
+    } else {
+      router.push("/dashboard");
+    }
+  }
+
   function reveal() {
     if (revealed) return;
     setRevealed(true);
@@ -141,6 +168,20 @@ export function ReviewSession({
   function grade() {
     if (!revealed) return;
     if (index + 1 >= cards.length) {
+      const start = startedAt.current;
+      if (start !== null) {
+        const endedAt = Date.now();
+        setDurationSeconds(Math.round((endedAt - start) / 1000));
+        if (!isSample) {
+          setSessionStreak(
+            recordSession({
+              reviews: cards.length,
+              startedAt: start,
+              endedAt,
+            }),
+          );
+        }
+      }
       setDone(true);
       return;
     }
@@ -168,13 +209,14 @@ export function ReviewSession({
   return (
     <main className="session-shell" id="session-app">
       <div className="session-top">
-        <Link
+        <button
           className="session-exit"
-          href="/dashboard"
-          aria-label="End session and return to today"
+          type="button"
+          onClick={exitSession}
+          aria-label="End session and return to the previous page"
         >
           <Icon name="close" />
-        </Link>
+        </button>
         <div className="session-title">
           <span className="mono">Daily review</span>
           <strong>{title ?? "Meetings & Pushback"}</strong>
@@ -327,26 +369,52 @@ export function ReviewSession({
               <span>cards reviewed</span>
             </div>
             <div>
-              <strong>4:12</strong>
-              <span>minutes</span>
+              <strong>{formatDuration(durationSeconds)}</strong>
+              <span>time</span>
             </div>
             <div>
-              <strong>13</strong>
+              <strong>{sessionStreak ?? (ready ? current : "—")}</strong>
               <span>day streak</span>
             </div>
           </div>
           <div className="summary-actions">
-            <Link className="btn btn--primary" href="/dashboard">
-              Back to today
-              <Icon name="arrow-right" className="icon icon--nudge" />
-            </Link>
-            <Link className="btn btn--secondary" href="/progress">
-              See progress
-            </Link>
+            {signedIn ? (
+              <>
+                <Link className="btn btn--primary" href="/dashboard">
+                  Back to today
+                  <Icon name="arrow-right" className="icon icon--nudge" />
+                </Link>
+                <Link className="btn btn--secondary" href="/progress">
+                  See progress
+                </Link>
+              </>
+            ) : (
+              <>
+                <a
+                  className="btn btn--primary"
+                  href="/auth/login?screen_hint=signup&returnTo=/dashboard"
+                >
+                  Sign up
+                  <Icon name="arrow-right" className="icon icon--nudge" />
+                </a>
+                <a
+                  className="btn btn--secondary"
+                  href="/auth/login?returnTo=/dashboard"
+                >
+                  Sign in
+                </a>
+              </>
+            )}
           </div>
-          {!isSample && (
+          {signedIn ? (
+            !isSample && (
+              <p className="summary-micro">
+                Tomorrow’s review: 6 cards · about 3 minutes
+              </p>
+            )
+          ) : (
             <p className="summary-micro">
-              Tomorrow’s review: 6 cards · about 3 minutes
+              Sign in to keep track of your progress.
             </p>
           )}
         </div>

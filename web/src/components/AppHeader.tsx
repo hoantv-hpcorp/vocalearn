@@ -4,11 +4,13 @@ import { useEffect, useState, type ReactNode } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Icon } from "./Icon";
+import { useStreak } from "./StreakProvider";
 import { userNavLinks } from "./nav";
 
 export function AppHeader({ account }: { account?: ReactNode }) {
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
+  const { ready, current } = useStreak();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -41,9 +43,13 @@ export function AppHeader({ account }: { account?: ReactNode }) {
           ))}
         </nav>
         <div className="app-tools">
-          <Link className="streak-pill" href="/progress">
+          <Link
+            className="streak-pill"
+            href="/progress"
+            aria-label={ready ? `${current} day streak` : "Day streak"}
+          >
             <Icon name="flame" />
-            12-day
+            {ready ? `${current}-day` : "—"}
           </Link>
           {account}
         </div>
