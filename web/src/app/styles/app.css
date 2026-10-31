@@ -1247,19 +1247,85 @@
   opacity: 0.55;
 }
 
-.flash-prompt {
-  margin-top: 24px;
-  padding-top: 16px;
+.flash-reveal-row {
+  display: flex;
+  min-height: 52px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 22px;
+  padding-top: 12px;
   border-top: 1px solid var(--line);
+}
+
+.flash-prompt {
+  margin: 0;
   color: var(--ink-2);
   font-size: 14.5px;
-  line-height: 1.55;
+  line-height: 1.5;
+}
+
+.flash-peek {
+  display: inline-flex;
+  min-height: 44px;
+  flex: none;
+  align-items: center;
+  gap: 6px;
+  margin-left: auto;
+  margin-right: -10px;
+  padding: 0 10px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--forest);
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 0.16s var(--ease), color 0.16s var(--ease);
+}
+
+.flash-peek:hover {
+  background: var(--forest-soft);
+  color: var(--forest-deep);
+}
+
+.flash-peek:active {
+  background: #d5e6da;
+}
+
+.flash-peek .icon {
+  width: 14px;
+  height: 14px;
+  transition: transform 0.18s var(--ease);
+}
+
+.flash-peek[aria-expanded="true"] .icon {
+  transform: rotate(180deg);
 }
 
 .flash-answer {
-  margin-top: 16px;
-  padding-top: 16px;
-  border-top: 1px solid var(--line);
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.flash-answer[data-open="true"] {
+  grid-template-rows: 1fr;
+}
+
+.flash-answer-body {
+  min-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: opacity 0.24s ease, transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.flash-answer[data-open="true"] .flash-answer-body {
+  opacity: 1;
+  transform: none;
 }
 
 .answer-block + .answer-block {
@@ -1294,82 +1360,97 @@
   margin-top: 14px;
 }
 
-.flash-reveal {
-  margin-top: 22px;
-}
-
 .grade-row {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 8px;
-  margin-top: 22px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 18px;
 }
 
 .grade-btn {
   display: flex;
-  min-height: 58px;
-  flex-direction: column;
+  min-height: 62px;
   align-items: center;
-  justify-content: center;
-  gap: 3px;
+  gap: 9px;
+  padding: 10px 16px;
   border: 1px solid var(--line-strong);
-  border-radius: 10px;
+  border-radius: 12px;
   background: var(--surface);
-  font-size: 12.5px;
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 14.5px;
   font-weight: 600;
-  line-height: 1.1;
-  transition: background-color 0.16s var(--ease), border-color 0.16s var(--ease);
+  line-height: 1.15;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.16s var(--ease), border-color 0.16s var(--ease),
+    color 0.16s var(--ease), transform 0.16s var(--ease);
+}
+
+.grade-btn:active {
+  transform: translateY(1px);
+}
+
+.grade-btn .icon {
+  width: 19px;
+  height: 19px;
+  flex: none;
+}
+
+.grade-label {
+  min-width: 0;
 }
 
 .grade-kbd {
+  margin-left: auto;
   font-family: var(--font-mono);
-  font-size: 8.5px;
+  font-size: 9.5px;
   font-weight: 400;
-  opacity: 0.6;
+  opacity: 0.55;
 }
 
-.grade-btn--again {
-  border-color: #e5c3b6;
-  background: var(--clay-soft);
-  color: var(--clay-ink);
-}
-
-.grade-btn--again:hover {
-  border-color: var(--clay);
-  background: #efd2c7;
-}
-
-.grade-btn--hard {
-  border-color: #edcf92;
-  background: var(--marigold-soft);
-  color: #6f4c0b;
-}
-
-.grade-btn--hard:hover {
-  border-color: #c9942c;
-  background: #f8e6c2;
-}
-
-.grade-btn--good {
+.grade-btn--known {
   border-color: var(--forest);
   background: var(--forest);
   color: var(--surface);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12);
 }
 
-.grade-btn--good:hover {
+.grade-btn--known:hover {
   border-color: var(--forest-deep);
   background: var(--forest-deep);
 }
 
-.grade-btn--easy {
-  border-color: var(--forest-line);
-  background: var(--forest-soft);
-  color: var(--forest);
+.grade-btn--review {
+  border-color: var(--line-strong);
+  background: var(--surface);
 }
 
-.grade-btn--easy:hover {
-  border-color: var(--forest);
-  background: #d5e6da;
+.grade-btn--review:hover {
+  border-color: var(--ink-3);
+  background: var(--paper-warm);
+}
+
+@media (max-width: 520px) {
+  .grade-kbd {
+    display: none;
+  }
+}
+
+@media (max-width: 420px) {
+  .flash-prompt {
+    font-size: 13.5px;
+    line-height: 1.4;
+  }
+
+  .grade-btn {
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+    padding: 10px 8px;
+    font-size: 13.5px;
+    text-align: center;
+  }
 }
 
 .session-hint {
@@ -1395,6 +1476,12 @@
   font-family: var(--font-mono);
   font-size: 9px;
   line-height: 1;
+}
+
+@media (max-width: 767px), (hover: none) and (pointer: coarse) {
+  .session-hint {
+    display: none;
+  }
 }
 
 .session-summary {

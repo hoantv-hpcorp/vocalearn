@@ -142,10 +142,10 @@ export default function WordPage() {
                   </li>
                 </ul>
                 <div className="collocations">
-                  <span className="tag">leverage data</span>
-                  <span className="tag">leverage experience</span>
-                  <span className="tag">leverage a network</span>
-                  <span className="tag">leverage an asset</span>
+                  <span className="tag tag--phrase">leverage data</span>
+                  <span className="tag tag--phrase">leverage experience</span>
+                  <span className="tag tag--phrase">leverage a network</span>
+                  <span className="tag tag--phrase">leverage an asset</span>
                 </div>
               </section>
 

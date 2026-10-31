@@ -16,7 +16,7 @@ type Props = {
 export const metadata: Metadata = {
   title: "Daily review",
   description:
-    "Your five-minute WordStack review. One card at a time, revealed at the right moment.",
+    "Your five-minute WordStack review. Mark the words you know and reveal the meaning only when you need it.",
 };
 
 function pickRandom<T>(items: readonly T[], count: number): T[] {

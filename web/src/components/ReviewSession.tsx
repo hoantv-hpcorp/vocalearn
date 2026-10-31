@@ -123,6 +123,7 @@ export function ReviewSession({
   const [done, setDone] = useState(false);
   const [durationSeconds, setDurationSeconds] = useState(0);
   const [sessionStreak, setSessionStreak] = useState<number | null>(null);
+  const [grades, setGrades] = useState({ known: 0, review: 0 });
   const startedAt = useRef<number | null>(null);
   const firstRender = useRef(true);
   const wordRef = useRef<HTMLHeadingElement>(null);
@@ -133,8 +134,8 @@ export function ReviewSession({
   const live = done
     ? `Session complete. ${cards.length} cards reviewed.`
     : revealed
-      ? "Answer shown. Choose how well you knew it."
-      : `Card ${index + 1} of ${cards.length}`;
+      ? "Meaning shown. Mark it as known or review again."
+      : `Card ${index + 1} of ${cards.length}. Mark it as known, or show the meaning if you need it.`;
 
   useEffect(() => {
     startedAt.current = Date.now();
@@ -160,13 +161,16 @@ export function ReviewSession({
     }
   }
 
-  function reveal() {
-    if (revealed) return;
-    setRevealed(true);
+  function toggleAnswer() {
+    setRevealed((value) => !value);
   }
 
-  function grade() {
-    if (!revealed) return;
+  function grade(knewIt: boolean) {
+    setGrades((value) => ({
+      known: value.known + (knewIt ? 1 : 0),
+      review: value.review + (knewIt ? 0 : 1),
+    }));
+
     if (index + 1 >= cards.length) {
       const start = startedAt.current;
       if (start !== null) {
@@ -192,14 +196,17 @@ export function ReviewSession({
   useEffect(() => {
     function onKeyDown(event: KeyboardEvent) {
       if (done) return;
-      if (event.key === " " && !revealed) {
+      if (event.key === " " || event.key === "Spacebar") {
         const target = event.target as HTMLElement | null;
         if (target?.closest("button, a, input, select, textarea")) return;
         event.preventDefault();
-        reveal();
-      } else if (revealed && ["1", "2", "3", "4"].includes(event.key)) {
+        toggleAnswer();
+      } else if (event.key === "1") {
         event.preventDefault();
-        grade();
+        grade(true);
+      } else if (event.key === "2") {
+        event.preventDefault();
+        grade(false);
       }
     }
     document.addEventListener("keydown", onKeyDown);
@@ -283,68 +290,82 @@ export function ReviewSession({
             )}
           </div>
 
-          <p className="flash-prompt" id="session-prompt" hidden={revealed}>
-            Say the meaning in your own words, then reveal the answer.
-          </p>
+          <div className="flash-reveal-row">
+            <p className="flash-prompt" id="session-prompt" hidden={revealed}>
+              Do you know this word?
+            </p>
+            <button
+              className="flash-peek"
+              type="button"
+              id="session-reveal"
+              aria-expanded={revealed}
+              aria-controls="session-answer"
+              onClick={toggleAnswer}
+            >
+              {revealed ? "Hide meaning" : "Show meaning"}
+              <Icon name="chevron-down" />
+            </button>
+          </div>
 
-          <div className="flash-answer" id="session-answer" hidden={!revealed}>
-            <div className="answer-block">
-              <span className="mono-note">Plain English</span>
-              <p className="answer-def" id="session-definition">
-                {card.definition}
-              </p>
-            </div>
-            <div className="answer-block">
-              <span className="mono-note">At work</span>
-              <p className="answer-example" id="session-example">
-                “{card.example}”
-              </p>
-              <div className="answer-collocations" id="session-collocations">
-                {card.collocations.map((item) => (
-                  <span key={item} className="tag tag--outline">
-                    {item}
-                  </span>
-                ))}
+          <div
+            className="flash-answer"
+            id="session-answer"
+            data-open={revealed}
+            aria-hidden={!revealed}
+          >
+            <div className="flash-answer-body">
+              <div className="answer-block">
+                <span className="mono-note">Plain English</span>
+                <p className="answer-def" id="session-definition">
+                  {card.definition}
+                </p>
+              </div>
+              <div className="answer-block">
+                <span className="mono-note">At work</span>
+                <p className="answer-example" id="session-example">
+                  “{card.example}”
+                </p>
+                <div className="answer-collocations" id="session-collocations">
+                  {card.collocations.map((item) => (
+                    <span key={item} className="tag tag--outline tag--phrase">
+                      {item}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
 
-          <button
-            className="btn btn--primary btn--block flash-reveal"
-            type="button"
-            id="session-reveal"
-            hidden={revealed}
-            onClick={reveal}
-          >
-            Show answer
-            <Icon name="arrow-right" />
-          </button>
-
           <div
             className="grade-row"
             id="session-grades"
-            hidden={!revealed}
-            aria-label="How well did you know this word?"
+            role="group"
+            aria-label="Did you know this word?"
           >
-            {[
-              ["again", "Again", "1"],
-              ["hard", "Hard", "2"],
-              ["good", "Good", "3"],
-              ["easy", "Easy", "4"],
-            ].map(([key, label, kbd]) => (
-              <button
-                key={key}
-                className={`grade-btn grade-btn--${key}`}
-                type="button"
-                data-grade={key}
-                onClick={grade}
-              >
-                {label}
-                <span className="grade-kbd" aria-hidden="true">
-                  {kbd}
-                </span>
-              </button>
-            ))}
+            <button
+              className="grade-btn grade-btn--known"
+              type="button"
+              data-grade="known"
+              onClick={() => grade(true)}
+            >
+              <Icon name="check" />
+              <span className="grade-label">Knew it</span>
+              <span className="grade-kbd" aria-hidden="true">
+                1
+              </span>
+            </button>
+            <button
+              className="grade-btn grade-btn--review"
+              type="button"
+              data-grade="review"
+              onClick={() => grade(false)}
+            >
+              <Icon name="refresh" />
+              <span className="grade-label">Review again</span>
+              <span className="grade-kbd" aria-hidden="true">
+                2
+              </span>
+            </button>
           </div>
         </article>
       </div>
@@ -361,7 +382,9 @@ export function ReviewSession({
             {cards.length} words in under five minutes.{" "}
             {isSample
               ? "A sample from this pack — start the full pack to keep going."
-              : "Three will come back tomorrow; the rest are scheduled further out."}
+              : grades.review > 0
+                ? `${grades.review} ${grades.review === 1 ? "card" : "cards"} will come back tomorrow; the rest are scheduled further out.`
+                : "Every card is scheduled further out."}
           </p>
           <div className="summary-stats">
             <div>
@@ -421,16 +444,8 @@ export function ReviewSession({
       </section>
 
       <p className="session-hint" id="session-hint" hidden={done}>
-        {revealed ? (
-          <>
-            <kbd>1</kbd> Again · <kbd>2</kbd> Hard · <kbd>3</kbd> Good ·{" "}
-            <kbd>4</kbd> Easy
-          </>
-        ) : (
-          <>
-            <kbd>Space</kbd> to reveal · <kbd>1</kbd>–<kbd>4</kbd> to grade
-          </>
-        )}
+        <kbd>1</kbd> Knew it · <kbd>2</kbd> Review again · <kbd>Space</kbd>{" "}
+        Show / hide meaning
       </p>
       <p className="sr-only" id="session-live" aria-live="polite">
         {live}
