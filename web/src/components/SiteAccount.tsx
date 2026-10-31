@@ -1,12 +1,18 @@
+"use client";
+
+import { useUser } from "@auth0/nextjs-auth0/client";
 import { Icon } from "@/components/Icon";
-import { getCurrentUser } from "@/lib/auth";
 
 type Props = {
   variant: "desktop" | "mobile";
 };
 
-export async function SiteAccount({ variant }: Props) {
-  const user = await getCurrentUser();
+export function SiteAccount({ variant }: Props) {
+  const { user, isLoading } = useUser();
+
+  if (isLoading) {
+    return null;
+  }
 
   if (variant === "desktop") {
     if (!user) {
