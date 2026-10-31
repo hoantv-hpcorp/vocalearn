@@ -3,7 +3,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Icon } from "@/components/Icon";
 import { SpeakButton } from "@/components/SpeakButton";
-import { getCurrentUser, getUserFirstName } from "@/lib/auth";
+import { getCurrentUser } from "@/lib/auth";
+import { getUserFirstName } from "@/lib/user-name";
 
 export const metadata: Metadata = {
   title: "Today",

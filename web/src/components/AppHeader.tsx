@@ -4,6 +4,7 @@ import { useEffect, useState, type ReactNode } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Icon } from "./Icon";
+import { userNavLinks } from "./nav";
 
 export function AppHeader({ account }: { account?: ReactNode }) {
   const [scrolled, setScrolled] = useState(false);
@@ -15,13 +16,6 @@ export function AppHeader({ account }: { account?: ReactNode }) {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
-
-  const nav = [
-    { label: "Today", href: "/dashboard" },
-    { label: "Learn", href: "/packs" },
-    { label: "Review", href: "/session", badge: "9" },
-    { label: "Progress", href: "/progress" },
-  ];
 
   return (
     <header className={`app-header${scrolled ? " is-scrolled" : ""}`}>
@@ -35,7 +29,7 @@ export function AppHeader({ account }: { account?: ReactNode }) {
           WordStack
         </Link>
         <nav className="app-nav" aria-label="Product">
-          {nav.map((item) => (
+          {userNavLinks.map((item) => (
             <Link
               key={item.href}
               href={item.href}

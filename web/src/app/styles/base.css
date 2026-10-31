@@ -831,6 +831,9 @@ em,
 
 .nav-link {
   position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
   padding: 8px 0;
   color: var(--ink-2);
   font-size: 14px;
@@ -855,6 +858,37 @@ em,
   height: 2px;
   border-radius: 2px;
   background: var(--marigold);
+}
+
+/* Signed-in users get the same chrome as the product header. */
+.site-header--app .header-inner {
+  min-height: 64px;
+  gap: 20px;
+}
+
+.site-header--app .main-nav {
+  gap: 4px;
+}
+
+.site-header--app .nav-link {
+  min-height: 38px;
+  padding: 0 12px;
+  border-radius: 8px;
+  font-size: 13.5px;
+}
+
+.site-header--app .nav-link:hover {
+  background: rgba(19, 37, 31, 0.05);
+}
+
+.site-header--app .nav-link[aria-current="page"] {
+  background: var(--forest-soft);
+  color: var(--forest);
+  font-weight: 600;
+}
+
+.site-header--app .nav-link[aria-current="page"]::after {
+  display: none;
 }
 
 .header-actions {
@@ -920,6 +954,12 @@ em,
 
 .mobile-panel a:last-child {
   border-bottom: 0;
+}
+
+.mobile-panel-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .mobile-panel .icon {
@@ -1065,52 +1105,67 @@ em,
   display: grid;
   width: 44px;
   height: 44px;
+  padding: 0;
   place-items: center;
   border: 1px solid var(--forest-line);
   border-radius: 999px;
   background: var(--forest-soft);
   color: var(--forest);
+  font-family: inherit;
   font-size: 13px;
   font-weight: 600;
+  line-height: 1;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .app-account {
+  position: relative;
   display: flex;
   align-items: center;
-  gap: 10px;
 }
 
-.app-account-name {
-  max-width: 150px;
-  overflow: hidden;
+.app-account-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  z-index: 80;
+  min-width: 180px;
+  padding: 8px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--surface-raised);
+  box-shadow: var(--shadow-lift);
+}
+
+.app-account-greeting {
+  margin: 0;
+  padding: 6px 10px 8px;
+  border-bottom: 1px solid var(--line);
   color: var(--ink-2);
   font-size: 13px;
   font-weight: 600;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 
-.app-signout {
-  color: var(--ink-3);
+.app-account-signout {
+  display: block;
+  margin-top: 4px;
+  padding: 8px 10px;
+  border-radius: var(--radius-xs);
+  color: var(--ink-2);
   font-size: 13px;
   font-weight: 500;
   text-decoration: none;
 }
 
-.app-signout:hover {
+.app-account-signout:hover {
+  background: var(--paper-deep);
   color: var(--ink);
 }
 
 .app-user--loading {
   border-color: transparent;
   background: var(--forest-soft);
-}
-
-@media (max-width: 899px) {
-  .app-account-name {
-    display: none;
-  }
 }
 
 @media (min-width: 900px) {

@@ -2,8 +2,9 @@ import { Suspense } from "react";
 import type { Metadata } from "next";
 import { connection } from "next/server";
 import { ReviewSession, type SessionCard } from "@/components/ReviewSession";
-import { getCurrentUser, getUserFirstName } from "@/lib/auth";
+import { getCurrentUser } from "@/lib/auth";
 import { getPack } from "@/lib/packs";
+import { getUserFirstName } from "@/lib/user-name";
 
 const SAMPLE_SIZE = 5;
 

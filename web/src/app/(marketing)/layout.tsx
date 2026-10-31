@@ -1,5 +1,5 @@
+import { AccountMenu } from "@/components/AccountMenu";
 import { MarketingShell } from "@/components/MarketingShell";
-import { SiteAccount } from "@/components/SiteAccount";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 
@@ -9,10 +9,7 @@ export default function MarketingLayout({ children }: LayoutProps<"/">) {
       <a className="skip-link" href="#main">
         Skip to content
       </a>
-      <SiteHeader
-        account={<SiteAccount variant="desktop" />}
-        mobileAccount={<SiteAccount variant="mobile" />}
-      />
+      <SiteHeader account={<AccountMenu />} />
       {children}
       <SiteFooter />
     </MarketingShell>
